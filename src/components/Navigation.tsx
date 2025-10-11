@@ -12,10 +12,10 @@ export const Navigation = () => {
   return (
     <nav className="fixed top-8 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto bg-background/60 backdrop-blur-md rounded-full border border-border/50 shadow-lg">
-        <div className="flex items-center justify-between h-16 px-6">
+        <div className="flex items-center justify-between h-20 px-6">
           <div className="flex items-center">
-            <Link to="/">
-              <img src={gifLogo} alt="Global Impact Foundation" className="h-12 w-auto" />
+            <Link to="/" className="flex items-center">
+              <img src={gifLogo} alt="Global Impact Foundation" className="h-16 w-auto hover:scale-105 transition-transform" />
             </Link>
           </div>
 
