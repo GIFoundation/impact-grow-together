@@ -1,6 +1,6 @@
 import mindsetIcon from "@/assets/mindset-icon.jpg";
 import mandyPhoto from "@/assets/mandy.jpg";
-import morlaiPhoto from "@/assets/morlai.png";
+import morlaiPhoto from "@/assets/morlai2.png";
 import { ArrowRight } from "lucide-react";
 
 export const About = () => {
