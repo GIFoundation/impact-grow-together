@@ -56,12 +56,14 @@ export const Hero = () => {
                 </Link>
               </Button>
               <Button
-                onClick={() => scrollToSection("programs")}
+                asChild
                 size="lg"
                 variant="outline"
                 className="text-lg border-2 bg-white hover:bg-white/90 text-black border-white shadow-xl"
               >
-                Explore Programs
+                <Link to="/programs">
+                  Explore Programs
+                </Link>
               </Button>
             </div>
 
