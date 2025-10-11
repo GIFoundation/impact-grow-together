@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-image.jpg";
 import gifLogo from "@/assets/gif-logo.jpg";
 
@@ -45,12 +46,14 @@ export const Hero = () => {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
-                onClick={() => scrollToSection("get-involved")}
+                asChild
                 size="lg"
                 className="bg-black text-white hover:bg-black/90 text-lg group shadow-xl"
               >
-                Get Involved
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                <Link to="/get-involved">
+                  Get Involved
+                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                </Link>
               </Button>
               <Button
                 onClick={() => scrollToSection("programs")}
