@@ -1,0 +1,77 @@
+import mindsetIcon from "@/assets/mindset-icon.jpg";
+
+export const About = () => {
+  return (
+    <section id="about" className="py-24 bg-muted/30">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="space-y-6 animate-fade-in">
+            <div className="inline-block">
+              <span className="text-sm font-semibold text-primary uppercase tracking-wider bg-primary/10 px-4 py-2 rounded-full">
+                Our Story
+              </span>
+            </div>
+            
+            <h2 className="text-4xl sm:text-5xl font-display font-bold leading-tight">
+              Over 25 Years of{" "}
+              <span className="gradient-vibrant text-gradient">Impact</span>
+            </h2>
+
+            <p className="text-lg text-muted-foreground">
+              Global Impact Foundation brings together over 25 years of combined professional experience in working with young people and personal development. Our mission is simple yet powerful: to transform lives by transforming minds.
+            </p>
+
+            <p className="text-lg text-muted-foreground">
+              Through a series of innovative mindset programmes, we empower young people with the emotional skills, confidence, and belief systems needed to rise above their current circumstances and build sustainable, purpose-driven futures.
+            </p>
+
+            <div className="bg-card rounded-2xl p-8 border border-border shadow-lg">
+              <h3 className="text-xl font-display font-bold mb-4">Our Approach</h3>
+              <p className="text-muted-foreground">
+                Our programmes go beyond surface-level solutions - they get to the heart of the issue: mindset. We focus on the root causes that shape personal outcomes and economic opportunity, addressing the limiting beliefs that hold young people back.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 gap-6 pt-4">
+              <div className="space-y-2">
+                <div className="text-3xl font-display font-bold text-accent">2020</div>
+                <div className="text-sm text-muted-foreground">Founded during COVID-19</div>
+              </div>
+              <div className="space-y-2">
+                <div className="text-3xl font-display font-bold text-success">2</div>
+                <div className="text-sm text-muted-foreground">Passionate Founders</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="relative animate-scale-in">
+            <div className="absolute top-10 right-10 w-64 h-64 bg-gif-green/30 blob"></div>
+            <div className="absolute bottom-10 left-10 w-48 h-48 bg-gif-cyan/30 blob" style={{ animationDelay: "1.5s" }}></div>
+            <img
+              src={mindsetIcon}
+              alt="Mindset transformation illustration"
+              className="relative rounded-3xl shadow-2xl w-full object-cover"
+            />
+          </div>
+        </div>
+
+        {/* Founders Section */}
+        <div className="mt-24 text-center">
+          <h3 className="text-3xl font-display font-bold mb-12">Meet Our Founders</h3>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="bg-card rounded-2xl p-8 border border-border shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-gradient-energy"></div>
+              <h4 className="text-2xl font-display font-bold mb-2">Mandy</h4>
+              <p className="text-muted-foreground">Co-Founder</p>
+            </div>
+            <div className="bg-card rounded-2xl p-8 border border-border shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-gradient-growth"></div>
+              <h4 className="text-2xl font-display font-bold mb-2">Morlai</h4>
+              <p className="text-muted-foreground">Co-Founder</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
