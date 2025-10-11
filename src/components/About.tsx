@@ -95,7 +95,7 @@ export const About = () => {
                   <img 
                     src={morlaiPhoto} 
                     alt="Morlai - Co-Founder" 
-                    className="w-full h-40 mb-6 rounded-lg object-cover object-center shadow-md"
+                    className="w-full h-48 sm:h-40 mb-6 rounded-lg object-cover object-top shadow-md"
                   />
                   <h4 className="text-2xl font-display font-bold mb-2">Morlai</h4>
                   <p className="text-primary font-medium mb-4">Co-Founder</p>
