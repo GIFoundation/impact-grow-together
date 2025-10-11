@@ -14,7 +14,7 @@ export const Navigation = () => {
         <div className="flex items-center justify-between h-20 px-6">
           <div className="flex items-center">
             <Link to="/" className="font-display text-base sm:text-lg font-semibold text-foreground">
-              Transforming Lives, Transforming Minds
+              Transforming Minds, Transforming Lives
             </Link>
           </div>
 
