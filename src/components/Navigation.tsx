@@ -22,25 +22,25 @@ export const Navigation = () => {
           <div className="hidden md:flex items-center gap-8">
             <Link
               to="/about"
-              className="text-foreground hover:text-primary transition-colors font-medium"
+              className="text-sm text-foreground hover:text-primary transition-colors font-medium"
             >
               About
             </Link>
             <Link
               to="/programs"
-              className="text-foreground hover:text-primary transition-colors font-medium"
+              className="text-sm text-foreground hover:text-primary transition-colors font-medium"
             >
               Programs
             </Link>
             <Link
               to="/impact"
-              className="text-foreground hover:text-primary transition-colors font-medium"
+              className="text-sm text-foreground hover:text-primary transition-colors font-medium"
             >
               Impact
             </Link>
             <Link
               to="/get-involved"
-              className="text-foreground hover:text-primary transition-colors font-medium"
+              className="text-sm text-foreground hover:text-primary transition-colors font-medium"
             >
               Get Involved
             </Link>
