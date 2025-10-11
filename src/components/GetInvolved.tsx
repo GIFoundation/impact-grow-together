@@ -60,7 +60,7 @@ export const GetInvolved = () => {
           {ways.map((way, index) => (
             <Card
               key={index}
-              className="border-2 hover:border-primary/50 transition-all hover:shadow-xl group animate-scale-in"
+              className="border-2 hover:border-primary/50 hover:bg-muted/50 transition-all hover:shadow-xl group animate-scale-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardHeader>
