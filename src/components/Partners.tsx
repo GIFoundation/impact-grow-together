@@ -1,24 +1,46 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Globe, Users, Heart, Target } from "lucide-react";
-import empoweredGrowthImg from "@/assets/partners/empowered-growth.jpg";
+import accaImg from "@/assets/partners/acca.jpg";
+import affordImg from "@/assets/partners/afford.jpg";
+import acysdImg from "@/assets/partners/acysd.jpg";
 import africanImpactImg from "@/assets/partners/african-impact.jpg";
 import agapeImg from "@/assets/partners/agape.jpg";
-import acysdImg from "@/assets/partners/acysd.jpg";
+import botswanaYouthImg from "@/assets/partners/botswana-youth.jpg";
+import empoweredGrowthImg from "@/assets/partners/empowered-growth.jpg";
+import liberianYouthBankImg from "@/assets/partners/liberian-youth-bank.jpg";
 import youthCafeImg from "@/assets/partners/youth-cafe.jpg";
 
 const partners = [
   {
     country: "United Kingdom",
-    name: "Empowered Growth Marketing",
-    description: "EGM delivers AI-powered growth marketing solutions for premium brands in wellness, luxury, F&B, and tech. Specializing in culturally intelligent, governance-safe marketing strategies that drive measurable results across global markets.",
-    image: empoweredGrowthImg,
+    name: "ACCA",
+    description: "ACCA (Association of Chartered Certified Accountants) is the largest global accountancy body. GIF partners with Moracle Foundation to deliver practical hands-on experience in accountancy, AI, and mindset to ACCA students in or just leaving university.",
+    image: accaImg,
     highlights: [
-      "AI Marketing Agents delivered in 10 days",
-      "Cross-cultural GTM expertise across EMEA, APAC, and NA",
-      "200% conversion increase, 40% lower customer acquisition costs",
-      "Governance-first approach for premium brand safety",
+      "Global reach with students worldwide",
+      "Completed 2 pilot projects with approximately 80 students",
+      "Expanding to 400 students annually",
+      "Focus on practical accountancy skills, AI, and mindset development",
     ],
+  },
+  {
+    country: "United Kingdom",
+    name: "AFFORD",
+    description: "AFFORD partners with GIF to roll out mindset programmes integrated into their delivery to Africa and the Diaspora worldwide. They have significant database access and funding reach across global communities.",
+    image: affordImg,
+    highlights: [
+      "Global reach across Africa and Diaspora communities",
+      "Significant database and funding access",
+      "Integrated mindset programming",
+      "Strong leadership partnership",
+    ],
+  },
+  {
+    country: "Nigeria",
+    name: "African Center for Youth Sports and Development",
+    description: "ACYSD strives to raise the value of youth sports by providing accessible opportunities for young people to engage in sports activities, develop their talents, and unlock their full potential. Through their programmes, ACYSD aims to instil the values of teamwork, discipline, leadership, and resilience, while promoting a healthy and active lifestyle.",
+    image: acysdImg,
   },
   {
     country: "Zambia",
@@ -59,10 +81,28 @@ const partners = [
     ],
   },
   {
-    country: "Nigeria",
-    name: "African Center for Youth Sports and Development",
-    description: "ACYSD strives to raise the value of youth sports by providing accessible opportunities for young people to engage in sports activities, develop their talents, and unlock their full potential. Through their programmes, ACYSD aims to instil the values of teamwork, discipline, leadership, and resilience, while promoting a healthy and active lifestyle.",
-    image: acysdImg,
+    country: "Botswana",
+    name: "Botswana Ministry of Youth and BNYC",
+    description: "Partnership with Botswana's Ministry of Youth and the Botswana National Youth Council to deliver impactful youth development programmes across the nation.",
+    image: botswanaYouthImg,
+  },
+  {
+    country: "United Kingdom",
+    name: "Empowered Growth Marketing",
+    description: "EGM delivers AI-powered growth marketing solutions for premium brands in wellness, luxury, F&B, and tech. A unique partnership combining international GTM and cross-cultural trade expertise with mindset development, delivering three-tier programmes to businesses with over 100 staff.",
+    image: empoweredGrowthImg,
+    highlights: [
+      "AI Marketing Agents delivered in 10 days",
+      "Cross-cultural GTM expertise across EMEA, APAC, and NA",
+      "200% conversion increase, 40% lower customer acquisition costs",
+      "Governance-first approach for premium brand safety",
+    ],
+  },
+  {
+    country: "Liberia",
+    name: "Liberian Youth National Bank",
+    description: "Initiative from the LYNB to increase youth entrepreneurship, creativity, and innovation for youth and national sustainability. Focused on empowering young Liberians with financial literacy and entrepreneurial skills.",
+    image: liberianYouthBankImg,
   },
   {
     country: "Kenya",

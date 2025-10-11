@@ -3,18 +3,25 @@ import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Globe, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import accaImg from "@/assets/partners/acca.jpg";
+import affordImg from "@/assets/partners/afford.jpg";
 import empoweredGrowthImg from "@/assets/partners/empowered-growth.jpg";
 import africanImpactImg from "@/assets/partners/african-impact.jpg";
-import agapeImg from "@/assets/partners/agape.jpg";
-import acysdImg from "@/assets/partners/acysd.jpg";
 import youthCafeImg from "@/assets/partners/youth-cafe.jpg";
+import liberianYouthBankImg from "@/assets/partners/liberian-youth-bank.jpg";
 
 const partnersPreview = [
   {
     country: "United Kingdom",
-    name: "Empowered Growth Marketing",
-    description: "AI-powered growth marketing solutions for premium brands across global markets.",
-    image: empoweredGrowthImg,
+    name: "ACCA",
+    description: "Global accountancy body partnering to deliver practical experience in accountancy, AI, and mindset development.",
+    image: accaImg,
+  },
+  {
+    country: "United Kingdom",
+    name: "AFFORD",
+    description: "Delivering mindset programmes across Africa and the Diaspora with global reach and funding access.",
+    image: affordImg,
   },
   {
     country: "Zambia",
@@ -23,16 +30,16 @@ const partnersPreview = [
     image: africanImpactImg,
   },
   {
-    country: "Cameroon",
-    name: "AGAPE Association",
-    description: "Supporting vulnerable children through education and social integration programs.",
-    image: agapeImg,
+    country: "United Kingdom",
+    name: "Empowered Growth Marketing",
+    description: "AI-powered growth marketing solutions for premium brands across global markets.",
+    image: empoweredGrowthImg,
   },
   {
-    country: "Nigeria",
-    name: "African Center for Youth Sports and Development",
-    description: "Developing youth potential through sports, teamwork, and leadership programs.",
-    image: acysdImg,
+    country: "Liberia",
+    name: "Liberian Youth National Bank",
+    description: "Empowering youth entrepreneurship, creativity, and innovation for national sustainability.",
+    image: liberianYouthBankImg,
   },
   {
     country: "Kenya",
