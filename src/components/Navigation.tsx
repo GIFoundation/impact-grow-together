@@ -1,17 +1,12 @@
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setIsOpen(false);
-    }
-  };
+  const location = useLocation();
+  const isHome = location.pathname === "/";
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
@@ -26,35 +21,32 @@ export const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <button
-              onClick={() => scrollToSection("about")}
+            <Link
+              to="/about"
               className="text-foreground hover:text-primary transition-colors font-medium"
             >
               About
-            </button>
-            <button
-              onClick={() => scrollToSection("programs")}
+            </Link>
+            <Link
+              to="/programs"
               className="text-foreground hover:text-primary transition-colors font-medium"
             >
               Programs
-            </button>
-            <button
-              onClick={() => scrollToSection("impact")}
+            </Link>
+            <Link
+              to="/impact"
               className="text-foreground hover:text-primary transition-colors font-medium"
             >
               Impact
-            </button>
-            <button
-              onClick={() => scrollToSection("get-involved")}
+            </Link>
+            <Link
+              to="/get-involved"
               className="text-foreground hover:text-primary transition-colors font-medium"
             >
               Get Involved
-            </button>
-            <Button
-              onClick={() => scrollToSection("contact")}
-              className="bg-primary text-primary-foreground hover:bg-primary/90"
-            >
-              Get In Touch
+            </Link>
+            <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
+              <Link to="/contact">Get In Touch</Link>
             </Button>
           </div>
 
@@ -76,35 +68,36 @@ export const Navigation = () => {
       {isOpen && (
         <div className="md:hidden border-t border-border bg-background">
           <div className="px-4 py-6 space-y-4">
-            <button
-              onClick={() => scrollToSection("about")}
+            <Link
+              to="/about"
+              onClick={() => setIsOpen(false)}
               className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
             >
               About
-            </button>
-            <button
-              onClick={() => scrollToSection("programs")}
+            </Link>
+            <Link
+              to="/programs"
+              onClick={() => setIsOpen(false)}
               className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
             >
               Programs
-            </button>
-            <button
-              onClick={() => scrollToSection("impact")}
+            </Link>
+            <Link
+              to="/impact"
+              onClick={() => setIsOpen(false)}
               className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
             >
               Impact
-            </button>
-            <button
-              onClick={() => scrollToSection("get-involved")}
+            </Link>
+            <Link
+              to="/get-involved"
+              onClick={() => setIsOpen(false)}
               className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
             >
               Get Involved
-            </button>
-            <Button
-              onClick={() => scrollToSection("contact")}
-              className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
-            >
-              Get In Touch
+            </Link>
+            <Button asChild className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
+              <Link to="/contact" onClick={() => setIsOpen(false)}>Get In Touch</Link>
             </Button>
           </div>
         </div>
