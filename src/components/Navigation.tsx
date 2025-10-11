@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import gifLogo from "@/assets/gif-logo.png";
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,8 +13,8 @@ export const Navigation = () => {
       <div className="max-w-5xl mx-auto bg-background/60 backdrop-blur-md rounded-full border border-border/50 shadow-lg">
         <div className="flex items-center justify-between h-20 px-6">
           <div className="flex items-center">
-            <Link to="/" className="flex items-center">
-              <img src={gifLogo} alt="Global Impact Foundation" className="h-16 w-auto hover:scale-105 transition-transform" />
+            <Link to="/" className="font-display text-xl font-bold">
+              <span className="text-primary">GIF</span>
             </Link>
           </div>
 

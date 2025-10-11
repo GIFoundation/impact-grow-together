@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
+import gifLogo from "@/assets/gif-logo.png";
 
 export const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -12,6 +13,11 @@ export const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+      {/* Logo in top-left corner */}
+      <div className="absolute top-8 left-8 z-30">
+        <img src={gifLogo} alt="Global Impact Foundation" className="h-24 sm:h-32 w-auto drop-shadow-2xl" />
+      </div>
+
       {/* Vibrant gradient background */}
       <div className="absolute inset-0 -z-20 bg-gradient-to-br from-gif-orange via-gif-yellow to-gif-cyan"></div>
       
