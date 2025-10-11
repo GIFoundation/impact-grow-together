@@ -187,7 +187,7 @@ export const ProgramsDetail = () => {
                   <p className="text-muted-foreground">Join a community of learners on our Visiion platform for peer support and collaboration.</p>
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-2">🎯 Personalized Support</h4>
+                  <h4 className="font-semibold mb-2">🎯 Personalised Support</h4>
                   <p className="text-muted-foreground">Mentorship and coaching to ensure best outcomes in your mindset transformation.</p>
                 </div>
               </div>

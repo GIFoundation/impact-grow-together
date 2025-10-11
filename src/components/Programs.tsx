@@ -44,9 +44,9 @@ export const Programs = () => {
     <section id="programs" className="py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in">
-          <span className="text-sm font-semibold text-primary uppercase tracking-wider bg-primary/10 px-4 py-2 rounded-full">
-            Our Programs
-          </span>
+            <span className="text-sm font-semibold text-primary uppercase tracking-wider bg-primary/10 px-4 py-2 rounded-full">
+              Our Programmes
+            </span>
           <h2 className="text-4xl sm:text-5xl font-display font-bold mt-6 mb-4">
             Innovative <span className="gradient-energy text-gradient">Mindset</span> Programmes
           </h2>

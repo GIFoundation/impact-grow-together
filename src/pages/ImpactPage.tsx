@@ -1,5 +1,6 @@
 import { Navigation } from "@/components/Navigation";
 import { Impact } from "@/components/Impact";
+import { TheoryOfChange } from "@/components/TheoryOfChange";
 import { Footer } from "@/components/Footer";
 
 const ImpactPage = () => {
@@ -26,6 +27,7 @@ const ImpactPage = () => {
           </div>
         </section>
         <Impact />
+        <TheoryOfChange />
       </main>
       <Footer />
     </div>

@@ -62,7 +62,7 @@ export const Hero = () => {
                 className="text-lg border-2 bg-white hover:bg-white/90 text-black border-white shadow-xl"
               >
                 <Link to="/programs">
-                  Explore Programs
+                  Explore Programmes
                 </Link>
               </Button>
             </div>

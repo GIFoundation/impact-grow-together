@@ -30,7 +30,7 @@ export const GetInvolved = () => {
     {
       icon: Briefcase,
       title: "Partner with GIF",
-      description: "Collaborate with us to bring transformative programmes to your organization or community. Let's create change together.",
+      description: "Collaborate with us to bring transformative programmes to your organisation or community. Let's create change together.",
       cta: "Explore Partnership",
       color: "text-gif-green",
       bgColor: "bg-gif-green/10",

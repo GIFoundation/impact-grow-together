@@ -20,6 +20,25 @@ export const About = () => {
               <span className="gradient-vibrant text-gradient">Impact</span>
             </h2>
 
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+              <div className="text-center p-6 bg-gradient-to-br from-gif-orange/10 to-gif-yellow/10 rounded-2xl border border-primary/20">
+                <div className="text-4xl font-display font-bold text-primary mb-2">2020</div>
+                <div className="text-sm text-muted-foreground">Founded</div>
+              </div>
+              <div className="text-center p-6 bg-gradient-to-br from-gif-cyan/10 to-gif-lime/10 rounded-2xl border border-primary/20">
+                <div className="text-4xl font-display font-bold text-accent mb-2">50+</div>
+                <div className="text-sm text-muted-foreground">Programmes Delivered</div>
+              </div>
+              <div className="text-center p-6 bg-gradient-to-br from-gif-green/10 to-accent/10 rounded-2xl border border-primary/20">
+                <div className="text-4xl font-display font-bold text-success mb-2">5M+</div>
+                <div className="text-sm text-muted-foreground">Global Goal</div>
+              </div>
+              <div className="text-center p-6 bg-gradient-to-br from-gif-lime/10 to-gif-cyan/10 rounded-2xl border border-primary/20">
+                <div className="text-4xl font-display font-bold text-primary mb-2">25+</div>
+                <div className="text-sm text-muted-foreground">Years Experience</div>
+              </div>
+            </div>
+
             <div className="space-y-6">
               <div className="bg-gradient-to-br from-gif-orange/10 to-gif-yellow/10 rounded-2xl p-8 border border-primary/20">
                 <h3 className="text-xl font-display font-bold mb-3 flex items-center gap-2">
@@ -35,39 +54,15 @@ export const About = () => {
                   <span className="text-2xl">🌍</span> Our Vision
                 </h3>
                 <p className="text-muted-foreground">
-                  A world where young people in Africa and Worldwide, empowered by transformative mindsets and sustainable economic opportunities, drive positive change in their communities and globally.
+                  A world where young people in Africa and worldwide, empowered by transformative mindsets and sustainable economic opportunities, drive positive change in their communities and globally.
                 </p>
               </div>
 
-              <div className="bg-gradient-to-br from-gif-green/10 to-accent/10 rounded-2xl p-8 border border-primary/20">
-                <h3 className="text-xl font-display font-bold mb-3 flex items-center gap-2">
-                  <span className="text-2xl">🚀</span> Global Footprint
-                </h3>
+              <div className="bg-card rounded-2xl p-8 border border-border shadow-lg">
+                <h3 className="text-xl font-display font-bold mb-4">Our Approach</h3>
                 <p className="text-muted-foreground">
-                  To touch the lives of more than five million young people across Africa and the rest of the world.
+                  Our programmes go beyond surface-level solutions - they get to the heart of the issue: mindset. We focus on the root causes that shape personal outcomes and economic opportunity, addressing the limiting beliefs that hold young people back.
                 </p>
-              </div>
-            </div>
-
-            <div className="bg-card rounded-2xl p-8 border border-border shadow-lg mt-6">
-              <h3 className="text-xl font-display font-bold mb-4">Our Approach</h3>
-              <p className="text-muted-foreground">
-                Our programmes go beyond surface-level solutions - they get to the heart of the issue: mindset. We focus on the root causes that shape personal outcomes and economic opportunity, addressing the limiting beliefs that hold young people back.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-3 gap-6 pt-4">
-              <div className="space-y-2">
-                <div className="text-3xl font-display font-bold text-accent">2020</div>
-                <div className="text-sm text-muted-foreground">Founded during COVID-19</div>
-              </div>
-              <div className="space-y-2">
-                <div className="text-3xl font-display font-bold text-success">5M+</div>
-                <div className="text-sm text-muted-foreground">Global Footprint Goal</div>
-              </div>
-              <div className="space-y-2">
-                <div className="text-3xl font-display font-bold text-primary">25+</div>
-                <div className="text-sm text-muted-foreground">Years Combined Experience</div>
               </div>
             </div>
           </div>

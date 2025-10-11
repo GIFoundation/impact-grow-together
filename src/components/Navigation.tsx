@@ -30,7 +30,7 @@ export const Navigation = () => {
               to="/programs"
               className="text-sm text-foreground hover:text-primary transition-colors font-medium"
             >
-              Programs
+              Programmes
             </Link>
             <Link
               to="/impact"
@@ -85,7 +85,7 @@ export const Navigation = () => {
               onClick={() => setIsOpen(false)}
               className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
             >
-              Programs
+              Programmes
             </Link>
             <Link
               to="/impact"

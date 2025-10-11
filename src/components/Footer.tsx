@@ -42,7 +42,7 @@ export const Footer = () => {
                   onClick={() => scrollToSection("programs")}
                   className="text-white/80 hover:text-white transition-colors"
                 >
-                  Our Programs
+                  Our Programmes
                 </button>
               </li>
               <li>
