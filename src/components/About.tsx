@@ -70,7 +70,7 @@ export const About = () => {
                   <img 
                     src={mandyPhoto} 
                     alt="Mandy - Co-Founder" 
-                    className="w-32 h-32 mb-6 rounded-full object-cover shadow-md"
+                    className="w-full h-40 mb-6 rounded-lg object-cover shadow-md"
                   />
                   <h4 className="text-2xl font-display font-bold mb-2">Mandy</h4>
                   <p className="text-primary font-medium mb-4">Co-Founder</p>
@@ -95,7 +95,7 @@ export const About = () => {
                   <img 
                     src={morlaiPhoto} 
                     alt="Morlai - Co-Founder" 
-                    className="w-32 h-32 mb-6 rounded-full object-cover shadow-md scale-[2]"
+                    className="w-full h-40 mb-6 rounded-lg object-cover object-top shadow-md scale-[2]"
                   />
                   <h4 className="text-2xl font-display font-bold mb-2">Morlai</h4>
                   <p className="text-primary font-medium mb-4">Co-Founder</p>
