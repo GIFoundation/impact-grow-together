@@ -13,7 +13,7 @@ export const Navigation = () => {
       <div className="max-w-5xl mx-auto bg-background/60 backdrop-blur-md rounded-full border border-border/50 shadow-lg">
         <div className="flex items-center justify-between h-16 px-6">
           <div className="flex items-center">
-            <Link to="/" className="font-display text-sm font-medium text-muted-foreground">
+            <Link to="/" className="font-display text-xs font-medium text-muted-foreground">
               Transforming Minds, Transforming Lives
             </Link>
           </div>
