@@ -1,11 +1,30 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Globe, Users, Heart, Target } from "lucide-react";
+import empoweredGrowthImg from "@/assets/partners/empowered-growth.jpg";
+import africanImpactImg from "@/assets/partners/african-impact.jpg";
+import agapeImg from "@/assets/partners/agape.jpg";
+import acysdImg from "@/assets/partners/acysd.jpg";
+import youthCafeImg from "@/assets/partners/youth-cafe.jpg";
 
 const partners = [
+  {
+    country: "United Kingdom",
+    name: "Empowered Growth Marketing",
+    description: "EGM delivers AI-powered growth marketing solutions for premium brands in wellness, luxury, F&B, and tech. Specializing in culturally intelligent, governance-safe marketing strategies that drive measurable results across global markets.",
+    image: empoweredGrowthImg,
+    highlights: [
+      "AI Marketing Agents delivered in 10 days",
+      "Cross-cultural GTM expertise across EMEA, APAC, and NA",
+      "200% conversion increase, 40% lower customer acquisition costs",
+      "Governance-first approach for premium brand safety",
+    ],
+  },
   {
     country: "Zambia",
     name: "African Impact Foundation",
     description: "African Impact Foundation's holistic approach gives young people in Southern and Eastern Africa the best chance of real, long-term change to break the cycle of poverty for themselves and their community.",
+    image: africanImpactImg,
     pillars: [
       {
         title: "Gender Equality",
@@ -29,6 +48,7 @@ const partners = [
     country: "Cameroon",
     name: "AGAPE Association",
     description: "AGAPE is a non-lucrative association who works in a multidimensional way in the care of Vulnerable Children in order to facilitate the optimization of their social, educational, professional status and their integration into society.",
+    image: agapeImg,
     objectives: [
       "Improve the living conditions of vulnerable children",
       "Remove children from the street where they were begging or working",
@@ -42,11 +62,13 @@ const partners = [
     country: "Nigeria",
     name: "African Center for Youth Sports and Development",
     description: "ACYSD strives to raise the value of youth sports by providing accessible opportunities for young people to engage in sports activities, develop their talents, and unlock their full potential. Through their programmes, ACYSD aims to instil the values of teamwork, discipline, leadership, and resilience, while promoting a healthy and active lifestyle.",
+    image: acysdImg,
   },
   {
     country: "Kenya",
     name: "Youth Café",
     description: "The Youth Cafe is Africa's largest and most diverse convening community of professionals harnessing youth advocacy, policy, and research for socio-economic and political impact, with over 3,500 member organisations, over 1,200 experts, and over 947,000 individual members aged between 18 to 35 virtually from every country in Africa.",
+    image: youthCafeImg,
   },
 ];
 
@@ -66,64 +88,102 @@ export const Partners = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {partners.map((partner, index) => (
-            <Card key={index} className="group hover:shadow-lg transition-all duration-300">
-              <CardHeader>
-                <div className="flex items-center gap-3 mb-2">
-                  <Globe className="h-5 w-5 text-primary" />
-                  <span className="text-sm font-semibold text-primary uppercase tracking-wide">
-                    {partner.country}
-                  </span>
-                </div>
-                <CardTitle className="text-2xl">{partner.name}</CardTitle>
-                <CardDescription className="text-base leading-relaxed pt-2">
-                  {partner.description}
-                </CardDescription>
-              </CardHeader>
-              
-              {(partner.pillars || partner.objectives) && (
-                <CardContent>
-                  <div className="space-y-3">
-                    {partner.pillars && (
-                      <>
-                        <div className="flex items-center gap-2 text-sm font-semibold text-foreground mb-3">
-                          <Target className="h-4 w-4 text-primary" />
-                          Four Pillars:
-                        </div>
-                        <div className="grid gap-3">
-                          {partner.pillars.map((pillar, idx) => (
-                            <div key={idx} className="bg-secondary/30 p-3 rounded-lg">
-                              <h4 className="font-semibold text-sm mb-1">{pillar.title}</h4>
-                              <p className="text-sm text-muted-foreground">{pillar.description}</p>
-                            </div>
-                          ))}
-                        </div>
-                      </>
-                    )}
-                    
-                    {partner.objectives && (
-                      <>
-                        <div className="flex items-center gap-2 text-sm font-semibold text-foreground mb-3">
-                          <Heart className="h-4 w-4 text-primary" />
-                          Our Objectives:
-                        </div>
-                        <ul className="space-y-2">
-                          {partner.objectives.map((objective, idx) => (
-                            <li key={idx} className="flex items-start gap-2 text-sm">
-                              <span className="text-primary mt-1">•</span>
-                              <span className="text-muted-foreground">{objective}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </>
-                    )}
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="w-full max-w-6xl mx-auto"
+        >
+          <CarouselContent>
+            {partners.map((partner, index) => (
+              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2">
+                <Card className="group hover:shadow-xl transition-all duration-300 h-full">
+                  <div className="relative h-48 overflow-hidden rounded-t-lg">
+                    <img
+                      src={partner.image}
+                      alt={`${partner.name} - ${partner.country}`}
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div className="absolute bottom-4 left-4 flex items-center gap-2">
+                      <Globe className="h-5 w-5 text-white" />
+                      <span className="text-sm font-semibold text-white uppercase tracking-wide">
+                        {partner.country}
+                      </span>
+                    </div>
                   </div>
-                </CardContent>
-              )}
-            </Card>
-          ))}
-        </div>
+                  
+                  <CardHeader>
+                    <CardTitle className="text-2xl">{partner.name}</CardTitle>
+                    <CardDescription className="text-base leading-relaxed pt-2">
+                      {partner.description}
+                    </CardDescription>
+                  </CardHeader>
+                  
+                  {(partner.highlights || partner.pillars || partner.objectives) && (
+                    <CardContent>
+                      <div className="space-y-3">
+                        {partner.highlights && (
+                          <>
+                            <div className="flex items-center gap-2 text-sm font-semibold text-foreground mb-3">
+                              <Target className="h-4 w-4 text-primary" />
+                              Key Highlights:
+                            </div>
+                            <ul className="space-y-2">
+                              {partner.highlights.map((highlight, idx) => (
+                                <li key={idx} className="flex items-start gap-2 text-sm">
+                                  <span className="text-primary mt-1">•</span>
+                                  <span className="text-muted-foreground">{highlight}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </>
+                        )}
+                        
+                        {partner.pillars && (
+                          <>
+                            <div className="flex items-center gap-2 text-sm font-semibold text-foreground mb-3">
+                              <Target className="h-4 w-4 text-primary" />
+                              Four Pillars:
+                            </div>
+                            <div className="grid gap-3">
+                              {partner.pillars.map((pillar, idx) => (
+                                <div key={idx} className="bg-secondary/30 p-3 rounded-lg">
+                                  <h4 className="font-semibold text-sm mb-1">{pillar.title}</h4>
+                                  <p className="text-sm text-muted-foreground">{pillar.description}</p>
+                                </div>
+                              ))}
+                            </div>
+                          </>
+                        )}
+                        
+                        {partner.objectives && (
+                          <>
+                            <div className="flex items-center gap-2 text-sm font-semibold text-foreground mb-3">
+                              <Heart className="h-4 w-4 text-primary" />
+                              Our Objectives:
+                            </div>
+                            <ul className="space-y-2">
+                              {partner.objectives.map((objective, idx) => (
+                                <li key={idx} className="flex items-start gap-2 text-sm">
+                                  <span className="text-primary mt-1">•</span>
+                                  <span className="text-muted-foreground">{objective}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </>
+                        )}
+                      </div>
+                    </CardContent>
+                  )}
+                </Card>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="-left-12" />
+          <CarouselNext className="-right-12" />
+        </Carousel>
 
         {/* Call to action */}
         <div className="mt-16 text-center">
