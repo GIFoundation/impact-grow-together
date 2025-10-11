@@ -33,7 +33,7 @@ export const Hero = () => {
         <div className="absolute bottom-32 right-1/3 w-56 h-56 bg-gif-yellow/40 blob animate-float" style={{ animationDelay: "3s" }}></div>
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 pb-24">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8 animate-fade-in">
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-display font-bold leading-tight text-white drop-shadow-lg">
@@ -98,27 +98,28 @@ export const Hero = () => {
                 {/* Event 1: Financial Reality Workshop */}
                 <CarouselItem>
                   <div className="bg-card rounded-3xl shadow-2xl overflow-hidden border-2 border-gif-orange">
-                    <div className="relative h-48 w-full overflow-hidden">
+                    <div className="relative h-32 w-full overflow-hidden">
                       <img 
                         src={financialEventImage} 
                         alt="4 Days to a New Financial Reality Workshop"
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover brightness-75"
                       />
-                      <div className="absolute top-4 left-4 flex items-center gap-2 bg-gif-orange/90 backdrop-blur-sm px-3 py-2 rounded-full">
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                      <div className="absolute top-3 left-4 flex items-center gap-2 bg-gif-orange/90 backdrop-blur-sm px-3 py-1.5 rounded-full">
                         <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-                        <span className="text-sm font-semibold text-white uppercase tracking-wider">
+                        <span className="text-xs font-semibold text-white uppercase tracking-wider">
                           Upcoming Event
                         </span>
                       </div>
-                    </div>
-                    <div className="p-8">
-                      <h3 className="text-2xl sm:text-3xl font-display font-bold mb-4">
+                      <h3 className="absolute bottom-3 left-4 right-4 text-xl sm:text-2xl font-display font-bold text-white drop-shadow-lg">
                         4 Days to a New Financial Reality
                       </h3>
-                      <p className="text-lg font-medium text-primary mb-2">
+                    </div>
+                    <div className="p-6">
+                      <p className="text-lg font-medium text-primary mb-3">
                         Business and Wealth Reset Workshop
                       </p>
-                      <div className="flex items-center gap-4 text-muted-foreground mb-6">
+                      <div className="flex items-center gap-4 text-muted-foreground mb-4">
                         <div className="flex items-center gap-2">
                           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -133,12 +134,12 @@ export const Hero = () => {
                           <span>4-Day Workshop</span>
                         </div>
                       </div>
-                      <p className="text-muted-foreground mb-6">
+                      <p className="text-muted-foreground mb-4 text-sm">
                         Join us for an intensive workshop designed to transform your mindset around business and wealth creation. Learn practical strategies to reset your financial reality and build sustainable prosperity.
                       </p>
                       <Button
                         asChild
-                        className="bg-gif-orange hover:bg-gif-orange/90 text-white"
+                        className="bg-gif-orange hover:bg-gif-orange/90 text-white w-full"
                       >
                         <Link to="/contact">
                           Register Now
@@ -151,27 +152,28 @@ export const Hero = () => {
                 {/* Event 2: UK-Africa Summit 2025 */}
                 <CarouselItem>
                   <div className="bg-card rounded-3xl shadow-2xl overflow-hidden border-2 border-gif-cyan">
-                    <div className="relative h-48 w-full overflow-hidden">
+                    <div className="relative h-32 w-full overflow-hidden">
                       <img 
                         src={ukAfricaSummitImage} 
                         alt="UK-Africa Summit 2025 - THINK Programme Launch"
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover brightness-75"
                       />
-                      <div className="absolute top-4 left-4 flex items-center gap-2 bg-gif-cyan/90 backdrop-blur-sm px-3 py-2 rounded-full">
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                      <div className="absolute top-3 left-4 flex items-center gap-2 bg-gif-cyan/90 backdrop-blur-sm px-3 py-1.5 rounded-full">
                         <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-                        <span className="text-sm font-semibold text-white uppercase tracking-wider">
+                        <span className="text-xs font-semibold text-white uppercase tracking-wider">
                           Upcoming Event
                         </span>
                       </div>
-                    </div>
-                    <div className="p-8">
-                      <h3 className="text-2xl sm:text-3xl font-display font-bold mb-4">
+                      <h3 className="absolute bottom-3 left-4 right-4 text-xl sm:text-2xl font-display font-bold text-white drop-shadow-lg">
                         UK-Africa Summit 2025
                       </h3>
-                      <p className="text-lg font-medium text-primary mb-2">
+                    </div>
+                    <div className="p-6">
+                      <p className="text-lg font-medium text-primary mb-3">
                         EGM + GIF Partnership - THINK Programme Launch
                       </p>
-                      <div className="flex items-center gap-4 text-muted-foreground mb-6">
+                      <div className="flex items-center gap-4 text-muted-foreground mb-4">
                         <div className="flex items-center gap-2">
                           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -186,12 +188,12 @@ export const Hero = () => {
                           <span>November 5, 2025</span>
                         </div>
                       </div>
-                      <p className="text-muted-foreground mb-6">
+                      <p className="text-muted-foreground mb-4 text-sm">
                         We're launching THINK at the UK-Africa Summit! Meet us and discover how our innovative mindset programme is transforming businesses and empowering entrepreneurs across continents.
                       </p>
                       <Button
                         asChild
-                        className="bg-gif-cyan hover:bg-gif-cyan/90 text-white"
+                        className="bg-gif-cyan hover:bg-gif-cyan/90 text-white w-full"
                       >
                         <Link to="/contact">
                           Learn More
