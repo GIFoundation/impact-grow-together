@@ -1,5 +1,6 @@
 import { Navigation } from "@/components/Navigation";
 import { Programs } from "@/components/Programs";
+import { ProgramsDetail } from "@/components/ProgramsDetail";
 import { Footer } from "@/components/Footer";
 
 const ProgramsPage = () => {
@@ -26,6 +27,7 @@ const ProgramsPage = () => {
           </div>
         </section>
         <Programs />
+        <ProgramsDetail />
       </main>
       <Footer />
     </div>

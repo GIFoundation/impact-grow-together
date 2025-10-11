@@ -8,29 +8,33 @@ export const Programs = () => {
   const programs = [
     {
       icon: Brain,
-      title: "Mindset Transformation",
-      description: "Core programmes that address limiting beliefs and build confidence from the ground up.",
+      title: "IMPACT 6 Months Mindset Programme",
+      duration: "6 Months",
+      description: "Comprehensive training to develop positive and proactive mindsets. Twelve logical, practical lessons that translate into tangible results in all aspects of life, work, relationships, confidence and leadership.",
       color: "text-gif-orange",
       bgColor: "bg-gif-orange/10",
     },
     {
       icon: Users,
-      title: "Youth Empowerment",
-      description: "Collaborative workshops designed to build emotional intelligence and leadership skills.",
+      title: "IMPACT 3 Months (Global Impact)",
+      duration: "3 Months",
+      description: "A condensed version of our 6-month flagship programme, intensifying the learning and increasing impact over a shorter period of time.",
       color: "text-gif-cyan",
       bgColor: "bg-gif-cyan/10",
     },
     {
       icon: Target,
-      title: "Purpose-Driven Development",
-      description: "Programmes that help young people identify their purpose and create sustainable pathways to success.",
+      title: "The Entrepreneurial Mindset Code",
+      duration: "8 Weeks",
+      description: "A transformative journey designed to ignite the inner entrepreneur, rewire thinking, and empower participants to turn ideas into impactful ventures.",
       color: "text-gif-green",
       bgColor: "bg-gif-green/10",
     },
     {
       icon: Sparkles,
-      title: "Economic Opportunity",
-      description: "Skills and mindset training that opens doors to economic empowerment and financial independence.",
+      title: "From the Inside Out",
+      duration: "3 Months",
+      description: "Intensive programme to empower, inspire and enable changed thinking and beliefs for improved personal outcomes. Specifically designed for current and former prison members.",
       color: "text-gif-lime",
       bgColor: "bg-gif-lime/10",
     },
@@ -62,7 +66,12 @@ export const Programs = () => {
                 <div className={`w-16 h-16 rounded-2xl ${program.bgColor} flex items-center justify-center mb-4`}>
                   <program.icon className={`h-8 w-8 ${program.color}`} />
                 </div>
-                <CardTitle className="text-2xl">{program.title}</CardTitle>
+                <div className="mb-2">
+                  <span className={`inline-block px-3 py-1 rounded-full text-sm font-semibold ${program.bgColor} ${program.color}`}>
+                    {program.duration}
+                  </span>
+                </div>
+                <CardTitle className="text-2xl mb-3">{program.title}</CardTitle>
                 <CardDescription className="text-base">{program.description}</CardDescription>
               </CardHeader>
             </Card>

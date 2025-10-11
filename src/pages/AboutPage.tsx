@@ -1,5 +1,6 @@
 import { Navigation } from "@/components/Navigation";
 import { About } from "@/components/About";
+import { TheoryOfChange } from "@/components/TheoryOfChange";
 import { Footer } from "@/components/Footer";
 
 const AboutPage = () => {
@@ -26,6 +27,7 @@ const AboutPage = () => {
           </div>
         </section>
         <About />
+        <TheoryOfChange />
       </main>
       <Footer />
     </div>

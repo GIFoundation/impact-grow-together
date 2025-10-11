@@ -20,29 +20,54 @@ export const About = () => {
               <span className="gradient-vibrant text-gradient">Impact</span>
             </h2>
 
-            <p className="text-lg text-muted-foreground">
-              Global Impact Foundation brings together over 25 years of combined professional experience in working with young people and personal development. Our mission is simple yet powerful: to transform lives by transforming minds.
-            </p>
+            <div className="space-y-6">
+              <div className="bg-gradient-to-br from-gif-orange/10 to-gif-yellow/10 rounded-2xl p-8 border border-primary/20">
+                <h3 className="text-xl font-display font-bold mb-3 flex items-center gap-2">
+                  <span className="text-2xl">🎯</span> Our Mission
+                </h3>
+                <p className="text-muted-foreground">
+                  To cultivate transformative mindsets that drive sustainable economic development, and build strategic partnerships to empower young people in Africa and worldwide. To provide impactful and accessible mindset training and community-driven initiatives, while establishing ourselves as a leading authority in mindset transformation.
+                </p>
+              </div>
 
-            <p className="text-lg text-muted-foreground">
-              Through a series of innovative mindset programmes, we empower young people with the emotional skills, confidence, and belief systems needed to rise above their current circumstances and build sustainable, purpose-driven futures.
-            </p>
+              <div className="bg-gradient-to-br from-gif-cyan/10 to-gif-lime/10 rounded-2xl p-8 border border-primary/20">
+                <h3 className="text-xl font-display font-bold mb-3 flex items-center gap-2">
+                  <span className="text-2xl">🌍</span> Our Vision
+                </h3>
+                <p className="text-muted-foreground">
+                  A world where young people in Africa and Worldwide, empowered by transformative mindsets and sustainable economic opportunities, drive positive change in their communities and globally.
+                </p>
+              </div>
 
-            <div className="bg-card rounded-2xl p-8 border border-border shadow-lg">
+              <div className="bg-gradient-to-br from-gif-green/10 to-accent/10 rounded-2xl p-8 border border-primary/20">
+                <h3 className="text-xl font-display font-bold mb-3 flex items-center gap-2">
+                  <span className="text-2xl">🚀</span> Global Footprint
+                </h3>
+                <p className="text-muted-foreground">
+                  To touch the lives of more than five million young people across Africa and the rest of the world.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-card rounded-2xl p-8 border border-border shadow-lg mt-6">
               <h3 className="text-xl font-display font-bold mb-4">Our Approach</h3>
               <p className="text-muted-foreground">
                 Our programmes go beyond surface-level solutions - they get to the heart of the issue: mindset. We focus on the root causes that shape personal outcomes and economic opportunity, addressing the limiting beliefs that hold young people back.
               </p>
             </div>
 
-            <div className="grid grid-cols-2 gap-6 pt-4">
+            <div className="grid grid-cols-3 gap-6 pt-4">
               <div className="space-y-2">
                 <div className="text-3xl font-display font-bold text-accent">2020</div>
                 <div className="text-sm text-muted-foreground">Founded during COVID-19</div>
               </div>
               <div className="space-y-2">
-                <div className="text-3xl font-display font-bold text-success">2</div>
-                <div className="text-sm text-muted-foreground">Passionate Founders</div>
+                <div className="text-3xl font-display font-bold text-success">5M+</div>
+                <div className="text-sm text-muted-foreground">Global Footprint Goal</div>
+              </div>
+              <div className="space-y-2">
+                <div className="text-3xl font-display font-bold text-primary">25+</div>
+                <div className="text-sm text-muted-foreground">Years Combined Experience</div>
               </div>
             </div>
           </div>
