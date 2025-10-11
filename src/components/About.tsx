@@ -1,6 +1,7 @@
 import mindsetIcon from "@/assets/mindset-icon.jpg";
 import mandyPhoto from "@/assets/mandy.jpg";
 import morlaiPhoto from "@/assets/morlai.png";
+import { ArrowRight } from "lucide-react";
 
 export const About = () => {
   return (
@@ -73,7 +74,7 @@ export const About = () => {
                   />
                   <h4 className="text-2xl font-display font-bold mb-2">Mandy</h4>
                   <p className="text-primary font-medium mb-4">Co-Founder</p>
-                  <p className="text-xs text-foreground/80 italic font-medium">Hover to read bio</p>
+                  <ArrowRight className="text-foreground/80" size={20} />
                 </div>
                 {/* Back */}
                 <div className="absolute inset-0 rounded-2xl p-8 border-2 border-gif-yellow shadow-2xl [backface-visibility:hidden] [transform:rotateY(180deg)] bg-gradient-to-br from-gif-yellow/50 to-gif-orange/50 flex flex-col items-center justify-center">
@@ -98,7 +99,7 @@ export const About = () => {
                   />
                   <h4 className="text-2xl font-display font-bold mb-2">Morlai</h4>
                   <p className="text-primary font-medium mb-4">Co-Founder</p>
-                  <p className="text-xs text-foreground/80 italic font-medium">Hover to read bio</p>
+                  <ArrowRight className="text-foreground/80" size={20} />
                 </div>
                 {/* Back */}
                 <div className="absolute inset-0 rounded-2xl p-8 border-2 border-gif-cyan shadow-2xl [backface-visibility:hidden] [transform:rotateY(180deg)] bg-gradient-to-br from-gif-cyan/50 to-gif-lime/50 flex flex-col items-center justify-center">
