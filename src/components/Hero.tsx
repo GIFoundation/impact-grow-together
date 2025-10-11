@@ -15,7 +15,7 @@ export const Hero = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Logo in top-left corner */}
       <div className="absolute top-8 left-8 z-30">
-        <img src={gifLogo} alt="Global Impact Foundation" className="h-24 sm:h-32 w-auto drop-shadow-2xl" />
+        <img src={gifLogo} alt="Global Impact Foundation" className="h-16 sm:h-20 w-auto drop-shadow-2xl" />
       </div>
 
       {/* Vibrant gradient background */}
