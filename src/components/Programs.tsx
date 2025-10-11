@@ -78,16 +78,14 @@ export const Programs = () => {
                   Featured Programme
                 </span>
               </div>
-              <div className="flex items-center gap-4 mb-2">
-                <img 
-                  src={thinkLogo} 
-                  alt="THINK Programme" 
-                  className="h-12 w-auto"
-                />
-                <h3 className="text-3xl sm:text-4xl font-display font-bold">
-                  Programme with EGM
-                </h3>
-              </div>
+              <img 
+                src={thinkLogo} 
+                alt="THINK Programme" 
+                className="h-20 w-auto mb-4"
+              />
+              <h3 className="text-3xl sm:text-4xl font-display font-bold">
+                Programme with EGM
+              </h3>
               <p className="text-lg text-muted-foreground">
                 In partnership with Empowered Growth Marketing, we're launching an innovative programme designed for companies. This revenue-generating initiative combines mindset transformation with business growth strategies.
               </p>
