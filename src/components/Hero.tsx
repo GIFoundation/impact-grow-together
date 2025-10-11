@@ -16,7 +16,7 @@ export const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 sm:pt-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-40 sm:pt-32">
       {/* Logo in top-left corner */}
       <div className="absolute top-24 sm:top-8 left-8 z-30">
         <img src={gifLogo} alt="Global Impact Foundation" className="h-12 sm:h-16 w-auto drop-shadow-2xl" />
