@@ -1,7 +1,11 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
 
 export const TheoryOfChange = () => {
+  const [expandedStage, setExpandedStage] = useState<number | null>(null);
+
   const stages = [
     {
       title: "Inputs",
@@ -50,31 +54,45 @@ export const TheoryOfChange = () => {
           </p>
         </div>
 
-        <div className="grid gap-6 max-w-6xl mx-auto">
+        <div className="flex flex-wrap justify-center gap-3 max-w-5xl mx-auto mb-12">
           {stages.map((stage, index) => (
-            <div key={index} className="flex items-center gap-4">
-              <Card className={`flex-1 border-2 ${stage.borderColor} bg-gradient-to-r ${stage.color} animate-scale-in`}
-                style={{ animationDelay: `${index * 0.1}s` }}>
-                <CardHeader>
-                  <CardTitle className="text-2xl mb-4">{stage.title}</CardTitle>
-                  <CardContent className="p-0">
-                    <ul className="space-y-2">
-                      {stage.items.map((item, itemIndex) => (
-                        <li key={itemIndex} className="flex items-start gap-2">
-                          <span className="text-primary mt-1">•</span>
-                          <span className="text-muted-foreground">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </CardHeader>
-              </Card>
+            <div key={index} className="flex items-center">
+              <button
+                onClick={() => setExpandedStage(expandedStage === index ? null : index)}
+                className={`px-6 py-4 rounded-2xl border-2 ${stage.borderColor} bg-gradient-to-r ${stage.color} text-center animate-scale-in transition-all hover:scale-105 cursor-pointer`}
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <h3 className="text-lg font-display font-bold flex items-center gap-2">
+                  {stage.title}
+                  <ChevronDown 
+                    className={`h-4 w-4 transition-transform ${expandedStage === index ? 'rotate-180' : ''}`} 
+                  />
+                </h3>
+              </button>
               {index < stages.length - 1 && (
-                <ArrowRight className="text-primary flex-shrink-0 hidden sm:block" size={32} />
+                <ArrowRight className="text-primary mx-2 flex-shrink-0" size={24} />
               )}
             </div>
           ))}
         </div>
+
+        {expandedStage !== null && (
+          <Card className={`max-w-3xl mx-auto mb-12 border-2 ${stages[expandedStage].borderColor} bg-gradient-to-r ${stages[expandedStage].color} animate-fade-in`}>
+            <CardHeader>
+              <CardTitle className="text-2xl mb-4">{stages[expandedStage].title}</CardTitle>
+              <CardContent className="p-0">
+                <ul className="space-y-3">
+                  {stages[expandedStage].items.map((item, itemIndex) => (
+                    <li key={itemIndex} className="flex items-start gap-3">
+                      <span className="text-primary mt-1 text-lg">•</span>
+                      <span className="text-foreground text-lg">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </CardHeader>
+          </Card>
+        )}
 
         <div className="mt-16 bg-card rounded-2xl p-8 border border-border shadow-lg max-w-4xl mx-auto">
           <h3 className="text-2xl font-display font-bold mb-4">Creating Lasting Change</h3>

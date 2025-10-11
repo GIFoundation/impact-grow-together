@@ -22,31 +22,41 @@ export const Navigation = () => {
           <div className="hidden md:flex items-center gap-8">
             <Link
               to="/about"
-              className="text-sm text-foreground hover:text-primary transition-colors font-medium"
+              className={`text-sm text-foreground hover:text-primary transition-colors font-medium ${
+                location.pathname === '/about' ? 'border-b-2 border-primary' : ''
+              }`}
             >
               About
             </Link>
             <Link
               to="/programs"
-              className="text-sm text-foreground hover:text-primary transition-colors font-medium"
+              className={`text-sm text-foreground hover:text-primary transition-colors font-medium ${
+                location.pathname === '/programs' ? 'border-b-2 border-primary' : ''
+              }`}
             >
               Programmes
             </Link>
             <Link
               to="/impact"
-              className="text-sm text-foreground hover:text-primary transition-colors font-medium"
+              className={`text-sm text-foreground hover:text-primary transition-colors font-medium ${
+                location.pathname === '/impact' ? 'border-b-2 border-primary' : ''
+              }`}
             >
               Impact
             </Link>
             <Link
               to="/partners"
-              className="text-sm text-foreground hover:text-primary transition-colors font-medium"
+              className={`text-sm text-foreground hover:text-primary transition-colors font-medium ${
+                location.pathname === '/partners' ? 'border-b-2 border-primary' : ''
+              }`}
             >
               Partners
             </Link>
             <Link
               to="/get-involved"
-              className="text-sm text-foreground hover:text-primary transition-colors font-medium"
+              className={`text-sm text-foreground hover:text-primary transition-colors font-medium ${
+                location.pathname === '/get-involved' ? 'border-b-2 border-primary' : ''
+              }`}
             >
               Get Involved
             </Link>
@@ -76,35 +86,45 @@ export const Navigation = () => {
             <Link
               to="/about"
               onClick={() => setIsOpen(false)}
-              className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
+              className={`block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2 ${
+                location.pathname === '/about' ? 'border-b-2 border-primary' : ''
+              }`}
             >
               About
             </Link>
             <Link
               to="/programs"
               onClick={() => setIsOpen(false)}
-              className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
+              className={`block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2 ${
+                location.pathname === '/programs' ? 'border-b-2 border-primary' : ''
+              }`}
             >
               Programmes
             </Link>
             <Link
               to="/impact"
               onClick={() => setIsOpen(false)}
-              className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
+              className={`block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2 ${
+                location.pathname === '/impact' ? 'border-b-2 border-primary' : ''
+              }`}
             >
               Impact
             </Link>
             <Link
               to="/partners"
               onClick={() => setIsOpen(false)}
-              className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
+              className={`block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2 ${
+                location.pathname === '/partners' ? 'border-b-2 border-primary' : ''
+              }`}
             >
               Partners
             </Link>
             <Link
               to="/get-involved"
               onClick={() => setIsOpen(false)}
-              className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
+              className={`block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2 ${
+                location.pathname === '/get-involved' ? 'border-b-2 border-primary' : ''
+              }`}
             >
               Get Involved
             </Link>

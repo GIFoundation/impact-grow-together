@@ -59,7 +59,7 @@ export const Programs = () => {
           {programs.map((program, index) => (
             <Card
               key={index}
-              className="border-2 hover:border-primary/50 transition-all hover:shadow-lg animate-scale-in"
+              className="border-2 hover:border-primary transition-all hover:shadow-lg hover:bg-muted/50 animate-scale-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardHeader>
