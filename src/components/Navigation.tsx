@@ -39,6 +39,12 @@ export const Navigation = () => {
               Impact
             </Link>
             <Link
+              to="/partners"
+              className="text-sm text-foreground hover:text-primary transition-colors font-medium"
+            >
+              Partners
+            </Link>
+            <Link
               to="/get-involved"
               className="text-sm text-foreground hover:text-primary transition-colors font-medium"
             >
@@ -87,6 +93,13 @@ export const Navigation = () => {
               className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
             >
               Impact
+            </Link>
+            <Link
+              to="/partners"
+              onClick={() => setIsOpen(false)}
+              className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
+            >
+              Partners
             </Link>
             <Link
               to="/get-involved"
