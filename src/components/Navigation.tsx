@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const Navigation = () => {
@@ -13,8 +13,8 @@ export const Navigation = () => {
       <div className="max-w-5xl mx-auto bg-background/60 backdrop-blur-md rounded-full border border-border/50 shadow-lg">
         <div className="flex items-center justify-between h-16 px-6">
           <div className="flex items-center">
-            <Link to="/" className="font-display text-xs font-medium text-muted-foreground">
-              Transforming Minds, Transforming Lives
+            <Link to="/" className="text-muted-foreground hover:text-primary transition-colors">
+              <Home size={20} />
             </Link>
           </div>
 
