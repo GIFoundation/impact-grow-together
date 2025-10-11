@@ -81,7 +81,7 @@ export const Programs = () => {
               <img 
                 src={thinkLogo} 
                 alt="THINK Programme" 
-                className="h-32 w-auto mb-4"
+                className="h-24 w-auto mb-4"
               />
               <h3 className="text-3xl sm:text-4xl font-display font-bold">
                 Programme with EGM
