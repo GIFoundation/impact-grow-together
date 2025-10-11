@@ -12,26 +12,26 @@ export const Impact = () => {
 
   const testimonials = [
     {
-      before: "I spent over a year searching desperately for work, relying heavily on my family, and wondering if my education had been in vain.",
-      story: "Everything changed when I discovered the IMPACT Mindset Programme. Almost immediately after starting, I secured a position with one of Sierra Leone's top accountancy firms. For the first time, I felt the ground beneath my feet. But the programme also opened my eyes. As I worked on shifting my mindset, I realized that the job I had just landed wasn't truly my future. With new clarity and confidence, I made the bold decision to resign. Soon after, I reached out to an international accountancy firm in the UK—something I would have never imagined myself doing before. To my amazement, they welcomed me onto their team. Fast forward just two years, and my life looks completely different. I am married, have taken my professional exams, and now serve in a lead role with that very same international firm—right here in Sierra Leone. My monthly earnings surpass what most civil servants here make in an entire year. Today, I am more than just an employee—I am an ambassador and champion for mindset work in my country. I share my story so that others can see what's possible when you shift the way you think, and step into the opportunities that are waiting for you.",
+      transformationMoment: "Everything changed when I discovered the IMPACT Mindset Programme.",
+      story: "Almost immediately after starting, I secured a position with one of Sierra Leone's top accountancy firms. For the first time, I felt the ground beneath my feet. But the programme also opened my eyes. As I worked on shifting my mindset, I realized that the job I had just landed wasn't truly my future. With new clarity and confidence, I made the bold decision to resign. Soon after, I reached out to an international accountancy firm in the UK—something I would have never imagined myself doing before. To my amazement, they welcomed me onto their team. Fast forward just two years, and my life looks completely different. I am married, have taken my professional exams, and now serve in a lead role with that very same international firm—right here in Sierra Leone. My monthly earnings surpass what most civil servants here make in an entire year. Today, I am more than just an employee—I am an ambassador and champion for mindset work in my country.",
       author: "Noah",
       role: "Programme Graduate, Sierra Leone",
     },
     {
-      before: "I couldn't find employment, and I started doubting myself and my future.",
-      story: "Then I enrolled in the IMPACT Mindset Programme—and everything shifted. Almost immediately, I landed my first job. But more than that, I began to see myself differently. My confidence grew, my belief in my abilities strengthened, and my thinking about what's truly possible transformed. Today, I am financially self-sufficient and thriving. In my current role, I've expanded my professional reach beyond Sierra Leone, taking on accountability for services in other African countries. The programme didn't just help me get a job—it gave me the tools to build a career, a future, and a sense of purpose I never thought possible.",
+      transformationMoment: "Then I enrolled in the IMPACT Mindset Programme—and everything shifted.",
+      story: "Almost immediately, I landed my first job. But more than that, I began to see myself differently. My confidence grew, my belief in my abilities strengthened, and my thinking about what's truly possible transformed. Today, I am financially self-sufficient and thriving. In my current role, I've expanded my professional reach beyond Sierra Leone, taking on accountability for services in other African countries. The programme didn't just help me get a job—it gave me the tools to build a career, a future, and a sense of purpose I never thought possible.",
       author: "Jessica",
       role: "Programme Graduate, Sierra Leone",
     },
     {
-      before: "I wanted to elevate my skills and make a meaningful change in my life.",
-      story: "Participating in the IMPACT Mindset Programme has been a transformative experience for me. The skills and insights I gained have significantly impacted my personal and professional growth. The curriculum was both engaging and practical, allowing me to apply what I learned in real-world scenarios. I particularly appreciated the collaborative environment and the opportunity to connect with like-minded individuals who share my passion for growth and development. I wholeheartedly recommend the IMPACT Programme to anyone looking to elevate their skills and make a meaningful change in their life. It's an experience I'll carry with me for years to come.",
+      transformationMoment: "Participating in the IMPACT Mindset Programme has been a transformative experience for me.",
+      story: "The skills and insights I gained have significantly impacted my personal and professional growth. The curriculum was both engaging and practical, allowing me to apply what I learned in real-world scenarios. I particularly appreciated the collaborative environment and the opportunity to connect with like-minded individuals who share my passion for growth and development. I wholeheartedly recommend the IMPACT Programme to anyone looking to elevate their skills and make a meaningful change in their life.",
       author: "Henok",
       role: "Programme Graduate",
     },
     {
-      before: "I wanted more for myself—but I didn't know how to get there.",
-      story: "Joining the IMPACT Mindset Programme was a true game changer. I was eager to do it, because for so long people had told me that I couldn't follow my passion for beautifying women—as I had no formal qualifications. But during the programme, something shifted. I stepped out boldly, and before long I had secured fourteen paying clients. That was just the beginning. With the income I earned, I was able to put myself through university. Today, I am a trained nurse, living out the work I know I was meant for. The greatest lesson I've learned is this: with the right mindset, I can do anything I set my heart on—no matter what other people think.",
+      transformationMoment: "Joining the IMPACT Mindset Programme was a true game changer.",
+      story: "I was eager to do it, because for so long people had told me that I couldn't follow my passion for beautifying women—as I had no formal qualifications. But during the programme, something shifted. I stepped out boldly, and before long I had secured fourteen paying clients. That was just the beginning. With the income I earned, I was able to put myself through university. Today, I am a trained nurse, living out the work I know I was meant for. The greatest lesson I've learned is this: with the right mindset, I can do anything I set my heart on—no matter what other people think.",
       author: "Rebecca",
       role: "Programme Graduate",
     },
@@ -84,7 +84,7 @@ export const Impact = () => {
                   <Card className="border-2 hover:border-primary/50 transition-all hover:shadow-lg h-full overflow-hidden">
                     <div className="bg-gradient-to-r from-primary/10 via-accent/10 to-gif-lime/10 p-6 border-b">
                       <Quote className="h-8 w-8 text-primary/40 mb-3" />
-                      <p className="text-lg font-semibold text-foreground italic">"{testimonial.before}"</p>
+                      <p className="text-lg font-semibold text-foreground italic">"{testimonial.transformationMoment}"</p>
                     </div>
                     <CardContent className="pt-6 flex flex-col h-full">
                       <p className="text-muted-foreground mb-6 flex-grow overflow-y-auto max-h-72">{testimonial.story}</p>
