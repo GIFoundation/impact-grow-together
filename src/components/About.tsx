@@ -61,29 +61,54 @@ export const About = () => {
         <div className="mt-24 text-center">
           <h3 className="text-3xl font-display font-bold mb-12">Meet Our Founders</h3>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="group bg-card rounded-2xl p-8 border border-border shadow-lg hover:shadow-2xl transition-all duration-300 hover:border-gif-yellow hover:bg-gradient-to-br hover:from-gif-yellow/5 hover:to-gif-orange/5">
-              <img 
-                src={mandyPhoto} 
-                alt="Mandy - Co-Founder" 
-                className="w-32 h-32 mx-auto mb-6 rounded-full object-cover shadow-md transition-transform duration-300 group-hover:scale-110"
-              />
-              <h4 className="text-2xl font-display font-bold mb-2">Mandy</h4>
-              <p className="text-primary font-medium mb-4">Co-Founder</p>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                With over 15 years of experience in youth development and personal transformation, Mandy is passionate about empowering young people to break through limiting beliefs and unlock their full potential. Her expertise in mindset coaching has helped hundreds of individuals transform their lives.
-              </p>
+            {/* Mandy Card */}
+            <div className="group h-[400px] [perspective:1000px]">
+              <div className="relative h-full w-full transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                {/* Front */}
+                <div className="absolute inset-0 bg-card rounded-2xl p-8 border border-border shadow-lg [backface-visibility:hidden] flex flex-col items-center justify-center bg-gradient-to-br from-gif-yellow/10 to-gif-orange/10">
+                  <img 
+                    src={mandyPhoto} 
+                    alt="Mandy - Co-Founder" 
+                    className="w-32 h-32 mb-6 rounded-full object-cover shadow-md"
+                  />
+                  <h4 className="text-2xl font-display font-bold mb-2">Mandy</h4>
+                  <p className="text-primary font-medium mb-4">Co-Founder</p>
+                  <p className="text-xs text-muted-foreground italic">Hover to read bio</p>
+                </div>
+                {/* Back */}
+                <div className="absolute inset-0 bg-card rounded-2xl p-8 border border-gif-yellow shadow-2xl [backface-visibility:hidden] [transform:rotateY(180deg)] bg-gradient-to-br from-gif-yellow/5 to-gif-orange/5 flex flex-col items-center justify-center">
+                  <h4 className="text-2xl font-display font-bold mb-2">Mandy</h4>
+                  <p className="text-primary font-medium mb-4">Co-Founder</p>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    With over 15 years of experience in youth development and personal transformation, Mandy is passionate about empowering young people to break through limiting beliefs and unlock their full potential. Her expertise in mindset coaching has helped hundreds of individuals transform their lives.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="group bg-card rounded-2xl p-8 border border-border shadow-lg hover:shadow-2xl transition-all duration-300 hover:border-gif-cyan hover:bg-gradient-to-br hover:from-gif-cyan/5 hover:to-gif-lime/5">
-              <img 
-                src={morlaiPhoto} 
-                alt="Morlai - Co-Founder" 
-                className="w-32 h-32 mx-auto mb-6 rounded-full object-cover shadow-md scale-150 transition-transform duration-300 group-hover:scale-[1.65]"
-              />
-              <h4 className="text-2xl font-display font-bold mb-2">Morlai</h4>
-              <p className="text-primary font-medium mb-4">Co-Founder</p>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                Bringing 10+ years of experience in education and community development, Morlai specializes in creating innovative programmes that address systemic barriers to success. His work focuses on emotional intelligence and sustainable personal growth for marginalized youth.
-              </p>
+
+            {/* Morlai Card */}
+            <div className="group h-[400px] [perspective:1000px]">
+              <div className="relative h-full w-full transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                {/* Front */}
+                <div className="absolute inset-0 bg-card rounded-2xl p-8 border border-border shadow-lg [backface-visibility:hidden] flex flex-col items-center justify-center bg-gradient-to-br from-gif-cyan/10 to-gif-lime/10">
+                  <img 
+                    src={morlaiPhoto} 
+                    alt="Morlai - Co-Founder" 
+                    className="w-32 h-32 mb-6 rounded-full object-cover shadow-md scale-150"
+                  />
+                  <h4 className="text-2xl font-display font-bold mb-2">Morlai</h4>
+                  <p className="text-primary font-medium mb-4">Co-Founder</p>
+                  <p className="text-xs text-muted-foreground italic">Hover to read bio</p>
+                </div>
+                {/* Back */}
+                <div className="absolute inset-0 bg-card rounded-2xl p-8 border border-gif-cyan shadow-2xl [backface-visibility:hidden] [transform:rotateY(180deg)] bg-gradient-to-br from-gif-cyan/5 to-gif-lime/5 flex flex-col items-center justify-center">
+                  <h4 className="text-2xl font-display font-bold mb-2">Morlai</h4>
+                  <p className="text-primary font-medium mb-4">Co-Founder</p>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    Bringing 10+ years of experience in education and community development, Morlai specializes in creating innovative programmes that address systemic barriers to success. His work focuses on emotional intelligence and sustainable personal growth for marginalized youth.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
