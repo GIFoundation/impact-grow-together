@@ -65,7 +65,7 @@ export const About = () => {
             <div className="group h-[400px] [perspective:1000px]">
               <div className="relative h-full w-full transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                 {/* Front */}
-                <div className="absolute inset-0 bg-card rounded-2xl p-8 border border-border shadow-lg [backface-visibility:hidden] flex flex-col items-center justify-center bg-gradient-to-br from-gif-yellow/10 to-gif-orange/10">
+                <div className="absolute inset-0 rounded-2xl p-8 border-2 border-gif-yellow shadow-lg [backface-visibility:hidden] flex flex-col items-center justify-center bg-gradient-to-br from-gif-yellow/40 to-gif-orange/40">
                   <img 
                     src={mandyPhoto} 
                     alt="Mandy - Co-Founder" 
@@ -73,13 +73,13 @@ export const About = () => {
                   />
                   <h4 className="text-2xl font-display font-bold mb-2">Mandy</h4>
                   <p className="text-primary font-medium mb-4">Co-Founder</p>
-                  <p className="text-xs text-muted-foreground italic">Hover to read bio</p>
+                  <p className="text-xs text-foreground/80 italic font-medium">Hover to read bio</p>
                 </div>
                 {/* Back */}
-                <div className="absolute inset-0 bg-card rounded-2xl p-8 border border-gif-yellow shadow-2xl [backface-visibility:hidden] [transform:rotateY(180deg)] bg-gradient-to-br from-gif-yellow/5 to-gif-orange/5 flex flex-col items-center justify-center">
+                <div className="absolute inset-0 rounded-2xl p-8 border-2 border-gif-yellow shadow-2xl [backface-visibility:hidden] [transform:rotateY(180deg)] bg-gradient-to-br from-gif-yellow/50 to-gif-orange/50 flex flex-col items-center justify-center">
                   <h4 className="text-2xl font-display font-bold mb-2">Mandy</h4>
                   <p className="text-primary font-medium mb-4">Co-Founder</p>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <p className="text-foreground/90 text-sm leading-relaxed">
                     With over 15 years of experience in youth development and personal transformation, Mandy is passionate about empowering young people to break through limiting beliefs and unlock their full potential. Her expertise in mindset coaching has helped hundreds of individuals transform their lives.
                   </p>
                 </div>
@@ -90,7 +90,7 @@ export const About = () => {
             <div className="group h-[400px] [perspective:1000px]">
               <div className="relative h-full w-full transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                 {/* Front */}
-                <div className="absolute inset-0 bg-card rounded-2xl p-8 border border-border shadow-lg [backface-visibility:hidden] flex flex-col items-center justify-center bg-gradient-to-br from-gif-cyan/10 to-gif-lime/10">
+                <div className="absolute inset-0 rounded-2xl p-8 border-2 border-gif-cyan shadow-lg [backface-visibility:hidden] flex flex-col items-center justify-center bg-gradient-to-br from-gif-cyan/40 to-gif-lime/40">
                   <img 
                     src={morlaiPhoto} 
                     alt="Morlai - Co-Founder" 
@@ -98,13 +98,13 @@ export const About = () => {
                   />
                   <h4 className="text-2xl font-display font-bold mb-2">Morlai</h4>
                   <p className="text-primary font-medium mb-4">Co-Founder</p>
-                  <p className="text-xs text-muted-foreground italic">Hover to read bio</p>
+                  <p className="text-xs text-foreground/80 italic font-medium">Hover to read bio</p>
                 </div>
                 {/* Back */}
-                <div className="absolute inset-0 bg-card rounded-2xl p-8 border border-gif-cyan shadow-2xl [backface-visibility:hidden] [transform:rotateY(180deg)] bg-gradient-to-br from-gif-cyan/5 to-gif-lime/5 flex flex-col items-center justify-center">
+                <div className="absolute inset-0 rounded-2xl p-8 border-2 border-gif-cyan shadow-2xl [backface-visibility:hidden] [transform:rotateY(180deg)] bg-gradient-to-br from-gif-cyan/50 to-gif-lime/50 flex flex-col items-center justify-center">
                   <h4 className="text-2xl font-display font-bold mb-2">Morlai</h4>
                   <p className="text-primary font-medium mb-4">Co-Founder</p>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <p className="text-foreground/90 text-sm leading-relaxed">
                     Bringing 10+ years of experience in education and community development, Morlai specializes in creating innovative programmes that address systemic barriers to success. His work focuses on emotional intelligence and sustainable personal growth for marginalized youth.
                   </p>
                 </div>
