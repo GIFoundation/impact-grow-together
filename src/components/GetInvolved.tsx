@@ -18,6 +18,7 @@ export const GetInvolved = () => {
       cta: "Donate Now",
       color: "text-gif-orange",
       bgColor: "bg-gif-orange/10",
+      hoverBgColor: "hover:bg-gif-orange/20",
     },
     {
       icon: Users,
@@ -26,6 +27,7 @@ export const GetInvolved = () => {
       cta: "Join as Volunteer",
       color: "text-gif-cyan",
       bgColor: "bg-gif-cyan/10",
+      hoverBgColor: "hover:bg-gif-cyan/20",
     },
     {
       icon: Briefcase,
@@ -34,6 +36,7 @@ export const GetInvolved = () => {
       cta: "Explore Partnership",
       color: "text-gif-green",
       bgColor: "bg-gif-green/10",
+      hoverBgColor: "hover:bg-gif-green/20",
     },
   ];
 
@@ -60,7 +63,7 @@ export const GetInvolved = () => {
           {ways.map((way, index) => (
             <Card
               key={index}
-              className="border-2 hover:border-primary/50 hover:bg-muted/50 transition-all hover:shadow-xl group animate-scale-in"
+              className={`border-2 hover:border-primary/50 ${way.hoverBgColor} transition-all hover:shadow-xl group animate-scale-in`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardHeader>
