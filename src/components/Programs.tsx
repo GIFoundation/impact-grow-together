@@ -2,7 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Brain, Users, Target, Sparkles, ExternalLink } from "lucide-react";
 import programImage from "@/assets/program-image.jpg";
-import thinkLogo from "@/assets/think-logo.png";
+import thinkLogo from "@/assets/think-logo-2.png";
 
 export const Programs = () => {
   const programs = [
