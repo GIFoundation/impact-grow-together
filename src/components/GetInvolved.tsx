@@ -7,6 +7,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Heart, Users, Briefcase, CheckCircle, ArrowRight, Mail, Phone, MapPin } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { Link } from "react-router-dom";
 
 export const GetInvolved = () => {
   const { toast } = useToast();
@@ -143,12 +144,14 @@ export const GetInvolved = () => {
 
           <div className="text-center">
             <Button
-              onClick={scrollToContact}
+              asChild
               size="lg"
               className="bg-gif-orange text-white hover:bg-gif-orange/90 text-lg group"
             >
-              Start Making a Difference
-              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              <Link to="/donate">
+                Start Making a Difference
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Link>
             </Button>
           </div>
         </div>
