@@ -2,6 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Brain, Users, Target, Sparkles, ExternalLink } from "lucide-react";
 import programImage from "@/assets/program-image.jpg";
+import thinkLogo from "@/assets/think-logo.png";
 
 export const Programs = () => {
   const programs = [
@@ -94,11 +95,11 @@ export const Programs = () => {
                 </a>
               </Button>
             </div>
-            <div className="relative">
+            <div className="relative flex items-center justify-center">
               <img
-                src={programImage}
-                alt="THINK Programme workshop"
-                className="rounded-2xl shadow-2xl w-full object-cover"
+                src={thinkLogo}
+                alt="THINK Programme"
+                className="w-full max-w-md h-auto"
               />
             </div>
           </div>
