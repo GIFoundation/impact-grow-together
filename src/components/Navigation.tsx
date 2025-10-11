@@ -9,9 +9,9 @@ export const Navigation = () => {
   const isHome = location.pathname === "/";
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+    <nav className="fixed top-4 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto bg-background/60 backdrop-blur-md rounded-full border border-border/50 shadow-lg">
+        <div className="flex items-center justify-between h-16 px-6">
           <div className="flex items-center">
             <a href="/" className="font-display text-2xl font-bold">
               <span className="text-primary">Global Impact</span>{" "}
@@ -66,8 +66,8 @@ export const Navigation = () => {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden border-t border-border bg-background">
-          <div className="px-4 py-6 space-y-4">
+        <div className="md:hidden mt-2 bg-background/95 backdrop-blur-md rounded-3xl border border-border/50 shadow-lg">
+          <div className="px-6 py-6 space-y-4">
             <Link
               to="/about"
               onClick={() => setIsOpen(false)}
