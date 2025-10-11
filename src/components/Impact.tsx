@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Quote } from "lucide-react";
 
 export const Impact = () => {
@@ -11,19 +12,24 @@ export const Impact = () => {
 
   const testimonials = [
     {
-      quote: "This programme completely changed how I see myself and my future. I now have the confidence to pursue my dreams.",
-      author: "Sarah M.",
-      role: "Programme Graduate, Kenya",
+      quote: "When I graduated from university in Sierra Leone, I was full of hope. But reality hit hard—I spent over a year searching desperately for work, relying heavily on my family, and wondering if my education had been in vain. Everything changed when I discovered the IMPACT Mindset Programme. Almost immediately after starting, I secured a position with one of Sierra Leone's top accountancy firms. For the first time, I felt the ground beneath my feet. But the programme also opened my eyes. As I worked on shifting my mindset, I realized that the job I had just landed wasn't truly my future. With new clarity and confidence, I made the bold decision to resign. Soon after, I reached out to an international accountancy firm in the UK—something I would have never imagined myself doing before. To my amazement, they welcomed me onto their team. Fast forward just two years, and my life looks completely different. I am married, have taken my professional exams, and now serve in a lead role with that very same international firm—right here in Sierra Leone. My monthly earnings surpass what most civil servants here make in an entire year. Today, I am more than just an employee—I am an ambassador and champion for mindset work in my country. I share my story so that others can see what's possible when you shift the way you think, and step into the opportunities that are waiting for you.",
+      author: "Noah",
+      role: "Programme Graduate, Sierra Leone",
     },
     {
-      quote: "The mindset transformation was exactly what I needed. I've started my own business and I'm helping others in my community.",
-      author: "David O.",
-      role: "Programme Graduate, Nigeria",
+      quote: "When I finished university, I felt completely stuck. With no work experience, every application I sent seemed to go nowhere. I couldn't find employment, and I started doubting myself and my future. Then I enrolled in the IMPACT Mindset Programme—and everything shifted. Almost immediately, I landed my first job. But more than that, I began to see myself differently. My confidence grew, my belief in my abilities strengthened, and my thinking about what's truly possible transformed. Today, I am financially self-sufficient and thriving. In my current role, I've expanded my professional reach beyond Sierra Leone, taking on accountability for services in other African countries. The programme didn't just help me get a job—it gave me the tools to build a career, a future, and a sense of purpose I never thought possible.",
+      author: "Jessica",
+      role: "Programme Graduate, Sierra Leone",
     },
     {
-      quote: "GIF showed me that my circumstances don't define my destiny. I'm now studying at university and giving back.",
-      author: "Amina K.",
-      role: "Programme Graduate, Ghana",
+      quote: "Participating in the IMPACT Mindset Programme has been a transformative experience for me. The skills and insights I gained have significantly impacted my personal and professional growth. The curriculum was both engaging and practical, allowing me to apply what I learned in real-world scenarios. I particularly appreciated the collaborative environment and the opportunity to connect with like-minded individuals who share my passion for growth and development. I wholeheartedly recommend the IMPACT Programme to anyone looking to elevate their skills and make a meaningful change in their life. It's an experience I'll carry with me for years to come.",
+      author: "Henok",
+      role: "Programme Graduate",
+    },
+    {
+      quote: "I grew up in an orphanage, and even after leaving, I was still very dependent on their support. Deep down, I wanted more for myself—but I didn't know how to get there. Joining the IMPACT Mindset Programme was a true game changer. I was eager to do it, because for so long people had told me that I couldn't follow my passion for beautifying women—as I had no formal qualifications. But during the programme, something shifted. I stepped out boldly, and before long I had secured fourteen paying clients. That was just the beginning. With the income I earned, I was able to put myself through university. Today, I am a trained nurse, living out the work I know I was meant for. The greatest lesson I've learned is this: with the right mindset, I can do anything I set my heart on—no matter what other people think.",
+      author: "Rebecca",
+      role: "Programme Graduate",
     },
   ];
 
@@ -61,24 +67,32 @@ export const Impact = () => {
         {/* Success Stories */}
         <div className="mb-12">
           <h3 className="text-3xl font-display font-bold text-center mb-12">Success Stories</h3>
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card
-                key={index}
-                className="border-2 hover:border-primary/50 transition-all hover:shadow-lg animate-fade-in"
-                style={{ animationDelay: `${index * 0.2}s` }}
-              >
-                <CardContent className="pt-6">
-                  <Quote className="h-10 w-10 text-primary/20 mb-4" />
-                  <p className="text-muted-foreground mb-6 italic">"{testimonial.quote}"</p>
-                  <div>
-                    <div className="font-semibold">{testimonial.author}</div>
-                    <div className="text-sm text-muted-foreground">{testimonial.role}</div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full max-w-5xl mx-auto"
+          >
+            <CarouselContent>
+              {testimonials.map((testimonial, index) => (
+                <CarouselItem key={index} className="md:basis-1/2">
+                  <Card className="border-2 hover:border-primary/50 transition-all hover:shadow-lg h-full">
+                    <CardContent className="pt-6 flex flex-col h-full">
+                      <Quote className="h-10 w-10 text-primary/20 mb-4 flex-shrink-0" />
+                      <p className="text-muted-foreground mb-6 italic flex-grow overflow-y-auto max-h-96">"{testimonial.quote}"</p>
+                      <div className="flex-shrink-0">
+                        <div className="font-semibold">{testimonial.author}</div>
+                        <div className="text-sm text-muted-foreground">{testimonial.role}</div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="-left-12" />
+            <CarouselNext className="-right-12" />
+          </Carousel>
         </div>
 
         {/* Global Reach */}
