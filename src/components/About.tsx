@@ -1,4 +1,6 @@
 import mindsetIcon from "@/assets/mindset-icon.jpg";
+import mandyPhoto from "@/assets/mandy.jpg";
+import morlaiPhoto from "@/assets/morlai.png";
 
 export const About = () => {
   return (
@@ -60,14 +62,24 @@ export const About = () => {
           <h3 className="text-3xl font-display font-bold mb-12">Meet Our Founders</h3>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="bg-card rounded-2xl p-8 border border-border shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-gradient-energy"></div>
+              <img 
+                src={mandyPhoto} 
+                alt="Mandy - Co-Founder" 
+                className="w-32 h-32 mx-auto mb-6 rounded-full object-cover shadow-md"
+              />
               <h4 className="text-2xl font-display font-bold mb-2">Mandy</h4>
-              <p className="text-muted-foreground">Co-Founder</p>
+              <p className="text-primary font-medium mb-4">Co-Founder</p>
+              <p className="text-muted-foreground text-sm">Bio coming soon...</p>
             </div>
             <div className="bg-card rounded-2xl p-8 border border-border shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-gradient-growth"></div>
+              <img 
+                src={morlaiPhoto} 
+                alt="Morlai - Co-Founder" 
+                className="w-32 h-32 mx-auto mb-6 rounded-full object-cover shadow-md"
+              />
               <h4 className="text-2xl font-display font-bold mb-2">Morlai</h4>
-              <p className="text-muted-foreground">Co-Founder</p>
+              <p className="text-primary font-medium mb-4">Co-Founder</p>
+              <p className="text-muted-foreground text-sm">Bio coming soon...</p>
             </div>
           </div>
         </div>
