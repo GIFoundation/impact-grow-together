@@ -78,9 +78,16 @@ export const Programs = () => {
                   Featured Programme
                 </span>
               </div>
-              <h3 className="text-3xl sm:text-4xl font-display font-bold">
-                THINK Programme with EGM
-              </h3>
+              <div className="flex items-center gap-4 mb-2">
+                <img 
+                  src={thinkLogo} 
+                  alt="THINK Programme" 
+                  className="h-12 w-auto"
+                />
+                <h3 className="text-3xl sm:text-4xl font-display font-bold">
+                  Programme with EGM
+                </h3>
+              </div>
               <p className="text-lg text-muted-foreground">
                 In partnership with Empowered Growth Marketing, we're launching an innovative programme designed for companies. This revenue-generating initiative combines mindset transformation with business growth strategies.
               </p>
@@ -95,11 +102,11 @@ export const Programs = () => {
                 </a>
               </Button>
             </div>
-            <div className="relative flex items-center justify-center">
+            <div className="relative">
               <img
-                src={thinkLogo}
-                alt="THINK Programme"
-                className="w-full max-w-md h-auto"
+                src={programImage}
+                alt="THINK Programme workshop"
+                className="rounded-2xl shadow-2xl w-full object-cover"
               />
             </div>
           </div>
