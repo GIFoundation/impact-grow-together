@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Brain, Users, Target, Sparkles, ExternalLink } from "lucide-react";
+import teamCollaboration from "@/assets/team-collaboration.jpg";
 import programImage from "@/assets/program-image.jpg";
 import thinkLogo from "@/assets/think-logo-2.png";
 
@@ -111,8 +112,8 @@ export const Programs = () => {
             </div>
             <div className="relative">
               <img
-                src={programImage}
-                alt="THINK Programme workshop"
+                src={teamCollaboration}
+                alt="THINK Programme - Team collaboration and growth"
                 className="rounded-2xl shadow-2xl w-full object-cover"
               />
             </div>

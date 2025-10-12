@@ -1,5 +1,5 @@
 import teamCollaboration from "@/assets/team-collaboration.jpg";
-import mindsetIcon from "@/assets/mindset-icon.jpg";
+import programImage from "@/assets/program-image.jpg";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
@@ -56,8 +56,8 @@ export const AboutPreview = () => {
             <div className="absolute top-10 right-10 w-64 h-64 bg-gif-green/30 blob"></div>
             <div className="absolute bottom-10 left-10 w-48 h-48 bg-gif-cyan/30 blob" style={{ animationDelay: "1.5s" }}></div>
             <img
-              src={teamCollaboration}
-              alt="Team celebrating together"
+              src={programImage}
+              alt="Mindset transformation and community impact"
               className="relative rounded-3xl shadow-2xl w-full object-cover"
             />
           </div>

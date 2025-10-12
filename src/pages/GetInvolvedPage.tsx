@@ -1,6 +1,7 @@
 import { Navigation } from "@/components/Navigation";
 import { GetInvolved } from "@/components/GetInvolved";
 import { Footer } from "@/components/Footer";
+import volunteerEngagement from "@/assets/volunteer-engagement.jpg";
 
 const GetInvolvedPage = () => {
   return (
@@ -30,8 +31,8 @@ const GetInvolvedPage = () => {
             {/* Smooth fade blending into colored background */}
             {/* Smooth fade handled via mask only to avoid harsh lines and text overlap */}
             <img 
-              src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=2000&q=80" 
-              alt="People volunteering together" 
+              src={volunteerEngagement}
+              alt="Diverse volunteers working together" 
               className="w-full h-full object-cover"
               style={{ maskImage: 'linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.25) 18%, rgba(0,0,0,0.6) 35%, rgba(0,0,0,0.85) 55%, black 75%)', WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.25) 18%, rgba(0,0,0,0.6) 35%, rgba(0,0,0,0.85) 55%, black 75%)' }}
             />
