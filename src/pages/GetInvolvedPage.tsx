@@ -27,11 +27,15 @@ const GetInvolvedPage = () => {
           </div>
           {/* Hero image with fade effect */}
           <div className="absolute bottom-0 left-0 right-0 h-64 z-10">
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent z-10"></div>
+            {/* Fade at top of image */}
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-transparent z-10" style={{ 
+              background: 'linear-gradient(to bottom, rgba(251, 193, 8, 0.6) 0%, transparent 30%, transparent 70%, hsl(var(--background)) 100%)'
+            }}></div>
             <img 
               src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=2000&q=80" 
               alt="People volunteering together" 
               className="w-full h-full object-cover"
+              style={{ maskImage: 'linear-gradient(to bottom, transparent 0%, black 20%, black 100%)', WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 20%, black 100%)' }}
             />
           </div>
           {/* Curvy bottom border */}
