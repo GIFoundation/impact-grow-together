@@ -17,7 +17,7 @@ const GetInvolvedPage = () => {
             <div className="absolute bottom-48 left-32 w-40 h-40 bg-white/30 rounded-full"></div>
             <div className="absolute top-1/2 right-1/4 w-24 h-24 bg-white/35" style={{ clipPath: 'polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%)' }}></div>
           </div>
-          <div className="container mx-auto px-4 relative z-10 text-center pb-32">
+          <div className="container mx-auto px-4 relative z-20 text-center pb-20">
             <h1 className="font-display text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-lg">
               Building Brighter Futures
             </h1>
@@ -28,14 +28,12 @@ const GetInvolvedPage = () => {
           {/* Hero image with fade effect */}
           <div className="absolute bottom-0 left-0 right-0 h-64 z-10">
             {/* Smooth fade blending into colored background */}
-            <div className="absolute inset-0 z-10" style={{ 
-              background: 'linear-gradient(to bottom, rgba(251, 193, 8, 0.7) 0%, rgba(251, 193, 8, 0.5) 15%, transparent 40%, transparent 60%, hsl(var(--background)) 95%)'
-            }}></div>
+            {/* Smooth fade handled via mask only to avoid harsh lines and text overlap */}
             <img 
               src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=2000&q=80" 
               alt="People volunteering together" 
               className="w-full h-full object-cover"
-              style={{ maskImage: 'linear-gradient(to bottom, transparent 0%, black 25%, black 100%)', WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 25%, black 100%)' }}
+              style={{ maskImage: 'linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.25) 18%, rgba(0,0,0,0.6) 35%, rgba(0,0,0,0.85) 55%, black 75%)', WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.25) 18%, rgba(0,0,0,0.6) 35%, rgba(0,0,0,0.85) 55%, black 75%)' }}
             />
           </div>
           {/* Curvy bottom border */}
