@@ -19,7 +19,7 @@ const GetInvolvedPage = () => {
           </div>
           <div className="container mx-auto px-4 relative z-20 text-center pb-20">
             <h1 className="font-display text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-lg">
-              Building Brighter Futures
+              Get Involved
             </h1>
             <p className="text-xl md:text-2xl text-white drop-shadow-lg max-w-3xl mx-auto">
               Join us in transforming lives around the world

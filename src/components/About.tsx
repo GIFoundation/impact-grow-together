@@ -16,8 +16,8 @@ export const About = () => {
             </div>
             
             <h2 className="text-4xl sm:text-5xl font-display font-bold leading-tight">
-              Over 25 Years of{" "}
-              <span className="gradient-vibrant text-gradient">Impact</span>
+              Building{" "}
+              <span className="gradient-vibrant text-gradient">Brighter Futures</span>
             </h2>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
