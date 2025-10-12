@@ -38,7 +38,7 @@ export const Impact = () => {
   ];
 
   return (
-    <section id="impact" className="pt-6 pb-24 bg-muted/30">
+    <section id="impact" className="pt-6 pb-24 bg-gradient-to-b from-background to-muted/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in">
           <span className="text-sm font-semibold text-primary uppercase tracking-wider bg-primary/10 px-4 py-2 rounded-full">
