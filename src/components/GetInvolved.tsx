@@ -68,7 +68,7 @@ export const GetInvolved = () => {
   return (
     <div className="bg-background">
       {/* Become a Donor Section */}
-      <section id="become-donor" className="py-24 bg-gradient-to-b from-transparent via-gif-orange/5 to-background relative overflow-hidden">
+      <section id="become-donor" className="pt-12 pb-24 bg-gradient-to-b from-transparent via-gif-orange/5 to-background relative overflow-hidden">
         <div className="absolute top-20 right-10 w-96 h-96 bg-gif-orange/10 blob animate-float"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-16 animate-fade-in">

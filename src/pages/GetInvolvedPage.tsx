@@ -18,24 +18,24 @@ const GetInvolvedPage = () => {
             <div className="absolute top-1/2 right-1/4 w-24 h-24 bg-white/35" style={{ clipPath: 'polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%)' }}></div>
           </div>
           <div className="container mx-auto px-4 relative z-10 text-center pb-32">
-            <h1 className="font-display text-5xl md:text-7xl font-bold text-white mb-6">
+            <h1 className="font-display text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-lg">
               Building Brighter Futures
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-white drop-shadow-lg max-w-3xl mx-auto">
               Join us in transforming lives around the world
             </p>
           </div>
           {/* Hero image with fade effect */}
           <div className="absolute bottom-0 left-0 right-0 h-64 z-10">
-            {/* Fade at top of image */}
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-transparent z-10" style={{ 
-              background: 'linear-gradient(to bottom, rgba(251, 193, 8, 0.6) 0%, transparent 30%, transparent 70%, hsl(var(--background)) 100%)'
+            {/* Smooth fade blending into colored background */}
+            <div className="absolute inset-0 z-10" style={{ 
+              background: 'linear-gradient(to bottom, rgba(251, 193, 8, 0.7) 0%, rgba(251, 193, 8, 0.5) 15%, transparent 40%, transparent 60%, hsl(var(--background)) 95%)'
             }}></div>
             <img 
               src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=2000&q=80" 
               alt="People volunteering together" 
               className="w-full h-full object-cover"
-              style={{ maskImage: 'linear-gradient(to bottom, transparent 0%, black 20%, black 100%)', WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 20%, black 100%)' }}
+              style={{ maskImage: 'linear-gradient(to bottom, transparent 0%, black 25%, black 100%)', WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 25%, black 100%)' }}
             />
           </div>
           {/* Curvy bottom border */}
