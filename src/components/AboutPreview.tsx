@@ -40,14 +40,6 @@ export const AboutPreview = () => {
               </div>
             </div>
 
-            <div className="relative rounded-2xl overflow-hidden mb-6">
-              <img
-                src={mindsetIcon}
-                alt="Mindset transformation illustration"
-                className="w-full h-48 object-cover rounded-2xl shadow-lg"
-              />
-            </div>
-
             <p className="text-lg text-muted-foreground">
               Founded on decades of expertise in mindset transformation, we're cultivating transformative mindsets that drive sustainable economic development across Africa and beyond.
             </p>

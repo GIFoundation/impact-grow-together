@@ -16,7 +16,7 @@ export const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-40 sm:pt-32">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 sm:pt-32">
       {/* Logo in top-left corner */}
       <div className="absolute top-24 sm:top-8 left-8 z-30">
         <img src={gifLogo} alt="Global Impact Foundation" className="h-12 sm:h-16 w-auto drop-shadow-2xl" />
@@ -33,17 +33,17 @@ export const Hero = () => {
         <div className="absolute bottom-32 right-1/3 w-56 h-56 bg-gif-yellow/40 blob animate-float" style={{ animationDelay: "3s" }}></div>
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 pb-24">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8 animate-fade-in">
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-display font-bold leading-tight text-white drop-shadow-lg">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 pb-16 sm:pb-24">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div className="space-y-6 sm:space-y-8 animate-fade-in">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-tight text-white drop-shadow-lg">
               Transforming{" "}
               <span className="text-black">Lives</span>{" "}
               by Transforming{" "}
               <span className="text-black">Minds</span>
             </h1>
             
-            <p className="text-xl text-white/95 max-w-2xl drop-shadow">
+            <p className="text-base sm:text-lg lg:text-xl text-white/95 max-w-2xl drop-shadow">
               Empowering young people across Africa and beyond with innovative mindset programmes that build confidence, emotional skills, and sustainable futures.
             </p>
 
@@ -70,18 +70,18 @@ export const Hero = () => {
               </Button>
             </div>
 
-            <div className="flex gap-8 pt-4">
+            <div className="grid grid-cols-3 gap-4 sm:gap-6 lg:gap-8 pt-2 sm:pt-4">
               <div>
-                <div className="text-4xl font-display font-bold text-white drop-shadow">25+</div>
-                <div className="text-sm text-white/80">Years Experience</div>
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-white drop-shadow">25+</div>
+                <div className="text-xs sm:text-sm text-white/80">Years Experience</div>
               </div>
               <div>
-                <div className="text-4xl font-display font-bold text-white drop-shadow">3</div>
-                <div className="text-sm text-white/80">Continents</div>
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-white drop-shadow">3</div>
+                <div className="text-xs sm:text-sm text-white/80">Continents</div>
               </div>
               <div>
-                <div className="text-4xl font-display font-bold text-white drop-shadow">1000+</div>
-                <div className="text-sm text-white/80">Lives Impacted</div>
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-white drop-shadow">1000+</div>
+                <div className="text-xs sm:text-sm text-white/80">Lives Impacted</div>
               </div>
             </div>
           </div>
@@ -111,7 +111,7 @@ export const Hero = () => {
                           Upcoming Event
                         </span>
                       </div>
-                      <h3 className="absolute bottom-3 left-4 right-4 text-xl sm:text-2xl font-display font-bold text-white drop-shadow-lg">
+                      <h3 className="absolute bottom-3 left-4 right-4 text-lg sm:text-xl lg:text-2xl font-display font-bold text-white drop-shadow-lg">
                         4 Days to a New Financial Reality
                       </h3>
                     </div>
@@ -165,7 +165,7 @@ export const Hero = () => {
                           Upcoming Event
                         </span>
                       </div>
-                      <h3 className="absolute bottom-3 left-4 right-4 text-xl sm:text-2xl font-display font-bold text-white drop-shadow-lg">
+                      <h3 className="absolute bottom-3 left-4 right-4 text-lg sm:text-xl lg:text-2xl font-display font-bold text-white drop-shadow-lg">
                         UK-Africa Summit 2025
                       </h3>
                     </div>

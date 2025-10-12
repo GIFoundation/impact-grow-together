@@ -40,14 +40,6 @@ export const About = () => {
               </div>
             </div>
 
-            <div className="relative rounded-2xl overflow-hidden mb-6">
-              <img
-                src={mindsetIcon}
-                alt="Mindset transformation illustration"
-                className="w-full h-48 object-cover rounded-2xl shadow-lg"
-              />
-            </div>
-
             <div className="space-y-6">
               <div className="bg-gradient-to-br from-gif-orange/10 to-gif-yellow/10 rounded-2xl p-8 border border-primary/20">
                 <h3 className="text-xl font-display font-bold mb-3 flex items-center gap-2">
