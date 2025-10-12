@@ -94,7 +94,7 @@ export const Programs = () => {
                 className="h-24 w-auto mb-4"
               />
               <h3 className="text-3xl sm:text-4xl font-display font-bold">
-                Programme with EGM
+                Transforming Global Growth Through Strategy & Humanity
               </h3>
               <p className="text-lg text-muted-foreground">
                 In partnership with Empowered Growth Marketing, we're launching an innovative programme designed for companies. This revenue-generating initiative combines mindset transformation with business growth strategies.
