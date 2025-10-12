@@ -106,7 +106,7 @@ export const ProgramsDetail = () => {
   };
 
   return (
-    <section className="py-24 bg-background">
+    <section className="pt-8 pb-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* IMPACT 6 Months Programme Detail */}
         <div className="mb-20">

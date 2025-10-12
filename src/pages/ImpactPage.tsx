@@ -18,7 +18,7 @@ const ImpactPage = () => {
             <div className="absolute top-32 right-20 w-36 h-36 bg-white/40 rounded-full"></div>
             <div className="absolute bottom-32 left-20 w-32 h-32 bg-white/30 rotate-45" style={{ clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)' }}></div>
           </div>
-          <div className="container mx-auto px-4 relative z-20 text-center pb-12">
+          <div className="container mx-auto px-4 relative z-20 text-center pb-8">
             <h1 className="font-display text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-lg">
               Our Impact
             </h1>
@@ -38,7 +38,7 @@ const ImpactPage = () => {
           {/* Curvy bottom border */}
           <div className="absolute bottom-0 left-0 right-0 z-20">
             <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
-              <path d="M0,64 C360,20 720,20 1080,64 C1260,86 1350,108 1440,108 L1440,120 L0,120 Z" fill="hsl(var(--background))" />
+              <path d="M0,64 C360,20 720,20 1080,64 C1260,86 1350,108 1440,108 L1440,120 L0,120 Z" fill="hsl(var(--muted) / 0.3)" />
             </svg>
           </div>
         </section>

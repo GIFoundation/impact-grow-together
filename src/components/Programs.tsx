@@ -42,7 +42,7 @@ export const Programs = () => {
   ];
 
   return (
-    <section id="programs" className="py-24 bg-background">
+    <section id="programs" className="pt-8 pb-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in">
             <span className="text-sm font-semibold text-primary uppercase tracking-wider bg-primary/10 px-4 py-2 rounded-full">

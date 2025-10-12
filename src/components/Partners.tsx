@@ -114,7 +114,7 @@ const partners = [
 
 export const Partners = () => {
   return (
-    <section id="partners" className="py-24 relative overflow-hidden">
+    <section id="partners" className="pt-8 pb-24 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/5 to-background"></div>
       
