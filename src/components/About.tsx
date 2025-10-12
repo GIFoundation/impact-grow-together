@@ -79,57 +79,92 @@ export const About = () => {
           </div>
         </div>
 
-        {/* Founders Section */}
-        <div className="mt-24 text-center">
-          <h3 className="text-3xl font-display font-bold mb-12">Meet Our Founders</h3>
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {/* Mandy Card */}
-            <div className="group h-[400px] [perspective:1000px]">
-              <div className="relative h-full w-full transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                {/* Front */}
-                <div className="absolute inset-0 rounded-2xl p-8 border-2 border-gif-yellow shadow-lg [backface-visibility:hidden] flex flex-col items-center justify-center bg-gradient-to-br from-gif-yellow/40 to-gif-orange/40">
-                  <img 
-                    src={mandyPhoto} 
-                    alt="Mandy - Co-Founder" 
-                    className="w-full h-40 mb-6 rounded-lg object-cover shadow-md"
-                  />
-                  <h4 className="text-2xl font-display font-bold mb-2">Mandy</h4>
-                  <p className="text-primary font-medium mb-4">Co-Founder</p>
-                  <ArrowRight className="text-foreground/80" size={20} />
+        {/* Founders Bio Sections */}
+        <div className="mt-32 space-y-16">
+          {/* Mandy Evill Section */}
+          <div className="bg-gradient-to-br from-gif-yellow/10 to-gif-orange/10 border-2 border-gif-yellow/30 rounded-3xl p-8 lg:p-16">
+            <div className="max-w-7xl mx-auto grid lg:grid-cols-[400px_1fr] gap-12 lg:gap-16 items-start">
+              {/* Image */}
+              <div className="w-full">
+                <img
+                  src={mandyPhoto}
+                  alt="Mandy Evill - Master Mindset Strategist"
+                  className="w-full h-[500px] object-cover rounded-2xl shadow-2xl"
+                />
+              </div>
+              
+              {/* Content */}
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-4xl font-display font-bold text-gif-orange mb-2">Mandy Evill</h3>
+                  <p className="text-xl text-muted-foreground italic">Master Mindset Strategist & Bob Proctor Protégé</p>
                 </div>
-                {/* Back */}
-                <div className="absolute inset-0 rounded-2xl p-8 border-2 border-gif-yellow shadow-2xl [backface-visibility:hidden] [transform:rotateY(180deg)] bg-gradient-to-br from-gif-yellow/50 to-gif-orange/50 flex flex-col items-center justify-center">
-                  <h4 className="text-2xl font-display font-bold mb-2">Mandy</h4>
-                  <p className="text-primary font-medium mb-4">Co-Founder</p>
-                  <p className="text-foreground/90 text-sm leading-relaxed">
-                    With over 15 years of experience in youth development and personal transformation, Mandy is passionate about empowering young people to break through limiting beliefs and unlock their full potential. Her expertise in mindset coaching has helped hundreds of individuals transform their lives.
+                
+                <div className="space-y-4 text-base leading-relaxed text-muted-foreground">
+                  <p>
+                    With over 25 years of experience, Mandy has dedicated her career to transforming human potential into tangible business results through her proprietary Mindset Transformation Framework™. A direct mentee of renowned mindset mentor Bob Proctor, she blends deep psychological insights with actionable strategies that have empowered hundreds of executives and organizations to achieve breakthrough growth.
+                  </p>
+                  <p>
+                    Mandy's work bridges cultural gaps and unlocks hidden potential, supporting young people and leaders in developing empowered mindsets that foster sustainable success. Her expertise now significantly contributes to the mindset and cultural transformation initiatives of the Global Impact Foundation, driving positive change in sub-Saharan African communities.
                   </p>
                 </div>
+
+                {/* Quote Highlight */}
+                <div className="bg-gradient-to-br from-gif-yellow/20 to-gif-orange/20 rounded-xl p-8 border-l-8 border-gif-orange shadow-xl mt-8">
+                  <div className="text-8xl text-gif-orange/40 leading-none mb-4">"</div>
+                  <p className="text-xl italic font-medium leading-relaxed text-foreground">
+                    The missing element in most global expansion strategies isn't data or technology—it's the human mindset required to truly connect across cultures.
+                  </p>
+                  <p className="text-sm text-muted-foreground mt-4">— Mandy Evill</p>
+                </div>
+
+                <p className="text-base leading-relaxed text-muted-foreground pt-4">
+                  Mandy brings this unique philosophy to the THINK program, where strategy meets humanity to enable growth.
+                </p>
               </div>
             </div>
+          </div>
 
-            {/* Morlai Card */}
-            <div className="group h-[400px] [perspective:1000px]">
-              <div className="relative h-full w-full transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                {/* Front */}
-                <div className="absolute inset-0 rounded-2xl p-8 border-2 border-gif-cyan shadow-lg [backface-visibility:hidden] flex flex-col items-center justify-center bg-gradient-to-br from-gif-cyan/40 to-gif-lime/40">
-                  <img 
-                    src={morlaiPhoto} 
-                    alt="Morlai - Co-Founder" 
-                    className="w-full h-40 mb-6 rounded-lg object-cover shadow-md"
-                  />
-                  <h4 className="text-2xl font-display font-bold mb-2">Morlai</h4>
-                  <p className="text-primary font-medium mb-4">Co-Founder</p>
-                  <ArrowRight className="text-foreground/80" size={20} />
+          {/* Morlai Kargbo Section */}
+          <div className="bg-gradient-to-br from-gif-cyan/10 to-gif-lime/10 border-2 border-gif-cyan/30 rounded-3xl p-8 lg:p-16">
+            <div className="max-w-7xl mx-auto grid lg:grid-cols-[1fr_400px] gap-12 lg:gap-16 items-start">
+              {/* Content */}
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-4xl font-display font-bold text-gif-cyan mb-2">Morlai Kargbo</h3>
+                  <p className="text-xl text-muted-foreground italic">Financial Strategist & Governance Expert</p>
                 </div>
-                {/* Back */}
-                <div className="absolute inset-0 rounded-2xl p-8 border-2 border-gif-cyan shadow-2xl [backface-visibility:hidden] [transform:rotateY(180deg)] bg-gradient-to-br from-gif-cyan/50 to-gif-lime/50 flex flex-col items-center justify-center">
-                  <h4 className="text-2xl font-display font-bold mb-2">Morlai</h4>
-                  <p className="text-primary font-medium mb-4">Co-Founder</p>
-                  <p className="text-foreground/90 text-sm leading-relaxed">
-                    Bringing 10+ years of experience in education and community development, Morlai specializes in creating innovative programmes that address systemic barriers to success. His work focuses on emotional intelligence and sustainable personal growth for marginalized youth.
+                
+                <div className="space-y-4 text-base leading-relaxed text-muted-foreground">
+                  <p>
+                    Morlai is an accomplished ACCA Award Winner and Fellow with extensive expertise in financial strategy, governance, and management services. As founder of Moracle, he has developed innovative accounting and auditing solutions for clients spanning corporate, private, and non-profit sectors globally.
+                  </p>
+                  <p>
+                    Known for exceptional leadership and mentorship—exemplified through his role as former Chair of the ACCA North London Members Network—Morlai combines robust financial frameworks with human development to create balanced and sustainable organizational growth. His passion for leveraging financial expertise to empower communities echoes through his ongoing work with the Global Impact Foundation and the Moracle Foundation, fostering impactful social initiatives in Africa.
                   </p>
                 </div>
+
+                {/* Quote Highlight */}
+                <div className="bg-gradient-to-br from-gif-cyan/20 to-gif-lime/20 rounded-xl p-8 border-l-8 border-gif-cyan shadow-xl mt-8">
+                  <div className="text-8xl text-gif-cyan/40 leading-none mb-4">"</div>
+                  <p className="text-xl italic font-medium leading-relaxed text-foreground">
+                    Successful global expansions combine cultural intelligence with solid financial and governance structures, creating a foundation where business integrity and human connection reinforce each other.
+                  </p>
+                  <p className="text-sm text-muted-foreground mt-4">— Morlai Kargbo</p>
+                </div>
+
+                <p className="text-base leading-relaxed text-muted-foreground pt-4">
+                  Morlai applies these principles within the THINK program, merging strategy and humanity to foster growth.
+                </p>
+              </div>
+
+              {/* Image */}
+              <div className="w-full lg:order-last">
+                <img
+                  src={morlaiPhoto}
+                  alt="Morlai Kargbo - Financial Strategist"
+                  className="w-full h-[500px] object-cover rounded-2xl shadow-2xl"
+                />
               </div>
             </div>
           </div>
