@@ -20,7 +20,7 @@ const Index = () => {
         <ImpactPreview />
         <PartnersPreview />
         <TheoryOfChangePreview />
-        <GetInvolved />
+        <GetInvolved simplified />
         <Contact />
       </main>
       <Footer />

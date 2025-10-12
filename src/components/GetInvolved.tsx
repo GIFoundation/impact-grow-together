@@ -12,7 +12,11 @@ import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from "@/com
 import { CarouselDots } from "@/components/ui/carousel-dots";
 import React from "react";
 
-export const GetInvolved = () => {
+interface GetInvolvedProps {
+  simplified?: boolean;
+}
+
+export const GetInvolved = ({ simplified = false }: GetInvolvedProps) => {
   const { toast } = useToast();
   const [carouselApi, setCarouselApi] = React.useState<CarouselApi>();
   const [currentSlide, setCurrentSlide] = React.useState(0);
@@ -250,277 +254,295 @@ export const GetInvolved = () => {
             </div>
           </div>
 
-          {/* Find Your Volunteer Opportunity */}
-          <div className="mb-16">
-            <h3 className="text-3xl font-display font-bold text-center mb-8">
-              Find Your Volunteer Opportunity
-            </h3>
-            <div className="max-w-5xl mx-auto">
-              <Carousel
-                setApi={setCarouselApi}
-                opts={{
-                  align: "start",
-                  loop: true,
-                }}
-                className="w-full"
+          {simplified ? (
+            /* Simplified CTA for homepage */
+            <div className="text-center">
+              <Button
+                asChild
+                size="lg"
+                className="bg-gif-cyan text-white hover:bg-gif-cyan/90 text-lg group"
               >
-                <CarouselContent>
-                  <CarouselItem className="md:basis-1/2">
-                    <Card className="border-2 hover:border-gif-cyan/50 hover:bg-gif-cyan/5 transition-all h-full">
-                      <CardHeader>
-                        <div className="w-12 h-12 rounded-xl bg-gif-cyan/10 flex items-center justify-center mb-3">
-                          <Megaphone className="h-6 w-6 text-gif-cyan" />
-                        </div>
-                        <CardTitle className="text-lg">Volunteer Corporate Fundraiser (UK)</CardTitle>
-                        <CardDescription>Remote Worldwide</CardDescription>
-                      </CardHeader>
-                      <CardContent className="space-y-4">
-                        <div>
-                          <h4 className="font-semibold mb-2">About the Position</h4>
-                          <p className="text-sm text-muted-foreground">
-                            Lead our corporate fundraising efforts in the UK and US. This role combines hands-on prospecting (cold calling and emailing) with strategic planning to develop and implement a corporate fundraising strategy.
-                          </p>
-                        </div>
-                        <div>
-                          <p className="text-sm font-medium mb-2">Key Responsibilities:</p>
-                          <ul className="space-y-1.5 text-sm text-muted-foreground">
-                            <li className="flex items-start gap-2">
-                              <CheckCircle className="h-4 w-4 text-gif-cyan mt-0.5 flex-shrink-0" />
-                              <span>Research and identify potential corporate donors</span>
-                            </li>
-                            <li className="flex items-start gap-2">
-                              <CheckCircle className="h-4 w-4 text-gif-cyan mt-0.5 flex-shrink-0" />
-                              <span>Develop corporate fundraising strategy</span>
-                            </li>
-                            <li className="flex items-start gap-2">
-                              <CheckCircle className="h-4 w-4 text-gif-cyan mt-0.5 flex-shrink-0" />
-                              <span>Build relationships with corporate partners</span>
-                            </li>
-                          </ul>
-                        </div>
-                        <div className="pt-2 border-t">
-                          <p className="text-xs text-muted-foreground">
-                            <strong>Commitment:</strong> 20 hours/week for 12 months (Unpaid, Remote)
-                          </p>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </CarouselItem>
-
-                  <CarouselItem className="md:basis-1/2">
-                    <Card className="border-2 hover:border-gif-cyan/50 hover:bg-gif-cyan/5 transition-all h-full">
-                      <CardHeader>
-                        <div className="w-12 h-12 rounded-xl bg-gif-cyan/10 flex items-center justify-center mb-3">
-                          <Palette className="h-6 w-6 text-gif-cyan" />
-                        </div>
-                        <CardTitle className="text-lg">Volunteer Digital Marketing & Content Creator (UK)</CardTitle>
-                        <CardDescription>Remote Worldwide</CardDescription>
-                      </CardHeader>
-                      <CardContent className="space-y-4">
-                        <div>
-                          <h4 className="font-semibold mb-2">About the Position</h4>
-                          <p className="text-sm text-muted-foreground">
-                            Lead and execute our online presence. This role combines digital marketing strategy with hands-on content creation (graphics and video) to grow our reach and engage supporters.
-                          </p>
-                        </div>
-                        <div>
-                          <p className="text-sm font-medium mb-2">Key Responsibilities:</p>
-                          <ul className="space-y-1.5 text-sm text-muted-foreground">
-                            <li className="flex items-start gap-2">
-                              <CheckCircle className="h-4 w-4 text-gif-cyan mt-0.5 flex-shrink-0" />
-                              <span>Plan and implement digital marketing campaigns</span>
-                            </li>
-                            <li className="flex items-start gap-2">
-                              <CheckCircle className="h-4 w-4 text-gif-cyan mt-0.5 flex-shrink-0" />
-                              <span>Create graphics, video, and social media content</span>
-                            </li>
-                            <li className="flex items-start gap-2">
-                              <CheckCircle className="h-4 w-4 text-gif-cyan mt-0.5 flex-shrink-0" />
-                              <span>Manage social media and track analytics</span>
-                            </li>
-                          </ul>
-                        </div>
-                        <div className="pt-2 border-t">
-                          <p className="text-xs text-muted-foreground">
-                            <strong>Commitment:</strong> 15-20 hours/week for 12 months (Unpaid, Remote)
-                          </p>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </CarouselItem>
-
-                  <CarouselItem className="md:basis-1/2">
-                    <Card className="border-2 hover:border-gif-cyan/50 hover:bg-gif-cyan/5 transition-all h-full">
-                      <CardHeader>
-                        <div className="w-12 h-12 rounded-xl bg-gif-cyan/10 flex items-center justify-center mb-3">
-                          <Users className="h-6 w-6 text-gif-cyan" />
-                        </div>
-                        <CardTitle className="text-lg">Event Support</CardTitle>
-                        <CardDescription>Help at workshops, conferences, and community events</CardDescription>
-                      </CardHeader>
-                      <CardContent className="space-y-4">
-                        <p className="text-sm text-muted-foreground">
-                          Support our impactful events and workshops where young people learn valuable mindset skills and connect with their communities.
-                        </p>
-                        <ul className="space-y-1.5 text-sm text-muted-foreground">
-                          <li className="flex items-start gap-2">
-                            <CheckCircle className="h-4 w-4 text-gif-cyan mt-0.5 flex-shrink-0" />
-                            <span>Event setup and coordination</span>
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <CheckCircle className="h-4 w-4 text-gif-cyan mt-0.5 flex-shrink-0" />
-                            <span>Participant registration and support</span>
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <CheckCircle className="h-4 w-4 text-gif-cyan mt-0.5 flex-shrink-0" />
-                            <span>Workshop assistance</span>
-                          </li>
-                        </ul>
-                      </CardContent>
-                    </Card>
-                  </CarouselItem>
-
-                  <CarouselItem className="md:basis-1/2">
-                    <Card className="border-2 hover:border-gif-cyan/50 hover:bg-gif-cyan/5 transition-all h-full">
-                      <CardHeader>
-                        <div className="w-12 h-12 rounded-xl bg-gif-cyan/10 flex items-center justify-center mb-3">
-                          <Briefcase className="h-6 w-6 text-gif-cyan" />
-                        </div>
-                        <CardTitle className="text-lg">Administrative Support</CardTitle>
-                        <CardDescription>Support our operations behind the scenes</CardDescription>
-                      </CardHeader>
-                      <CardContent className="space-y-4">
-                        <p className="text-sm text-muted-foreground">
-                          Help us run smoothly by providing essential administrative support that keeps our programmes operating effectively.
-                        </p>
-                        <ul className="space-y-1.5 text-sm text-muted-foreground">
-                          <li className="flex items-start gap-2">
-                            <CheckCircle className="h-4 w-4 text-gif-cyan mt-0.5 flex-shrink-0" />
-                            <span>Data entry and management</span>
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <CheckCircle className="h-4 w-4 text-gif-cyan mt-0.5 flex-shrink-0" />
-                            <span>Communications support</span>
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <CheckCircle className="h-4 w-4 text-gif-cyan mt-0.5 flex-shrink-0" />
-                            <span>Project coordination</span>
-                          </li>
-                        </ul>
-                      </CardContent>
-                    </Card>
-                  </CarouselItem>
-                </CarouselContent>
-              </Carousel>
-              <CarouselDots 
-                total={4} 
-                current={currentSlide}
-                onDotClick={(index) => carouselApi?.scrollTo(index)}
-              />
+                <Link to="/get-involved">
+                  Find Your Volunteer Opportunity
+                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </Button>
             </div>
-          </div>
-
-          {/* Apply to Volunteer */}
-          <div className="max-w-3xl mx-auto">
-            <div className="bg-gradient-to-r from-gif-cyan via-gif-lime to-gif-cyan rounded-3xl p-1">
-              <div className="bg-background rounded-3xl p-8 md:p-12">
-                <h3 className="text-3xl font-display font-bold text-center mb-6">
-                  Apply to Volunteer
+          ) : (
+            <>
+              {/* Find Your Volunteer Opportunity */}
+              <div className="mb-16">
+                <h3 className="text-3xl font-display font-bold text-center mb-8">
+                  Find Your Volunteer Opportunity
                 </h3>
-                <p className="text-center text-muted-foreground mb-8">
-                  Fill out the form below and we'll be in touch to discuss the best opportunities for you.
-                </p>
-
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <Label htmlFor="name">Full Name *</Label>
-                      <Input
-                        id="name"
-                        required
-                        value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        placeholder="Your name"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="email">Email *</Label>
-                      <Input
-                        id="email"
-                        type="email"
-                        required
-                        value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        placeholder="your@email.com"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <Label htmlFor="phone">Phone Number</Label>
-                      <Input
-                        id="phone"
-                        type="tel"
-                        value={formData.phone}
-                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        placeholder="+1 (555) 000-0000"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="location">Location</Label>
-                      <Input
-                        id="location"
-                        value={formData.location}
-                        onChange={(e) => setFormData({ ...formData, location: e.target.value })}
-                        placeholder="City, Country"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="space-y-3">
-                    <Label>Areas of Interest *</Label>
-                    <div className="grid md:grid-cols-2 gap-4">
-                      {["Corporate Fundraising", "Digital Marketing & Content", "Event Support", "Administrative Support"].map((interest) => (
-                        <div key={interest} className="flex items-center space-x-2">
-                          <Checkbox
-                            id={interest}
-                            checked={formData.interests.includes(interest)}
-                            onCheckedChange={() => handleInterestToggle(interest)}
-                          />
-                          <label
-                            htmlFor={interest}
-                            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 cursor-pointer"
-                          >
-                            {interest}
-                          </label>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="message">Tell Us About Yourself</Label>
-                    <Textarea
-                      id="message"
-                      value={formData.message}
-                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      placeholder="Share your skills, experience, and why you want to volunteer with GIF..."
-                      rows={5}
-                    />
-                  </div>
-
-                  <Button
-                    type="submit"
-                    size="lg"
-                    className="w-full bg-gif-cyan text-white hover:bg-gif-cyan/90 text-lg"
+                <div className="max-w-5xl mx-auto">
+                  <Carousel
+                    setApi={setCarouselApi}
+                    opts={{
+                      align: "start",
+                      loop: true,
+                    }}
+                    className="w-full"
                   >
-                    Submit Application
-                  </Button>
-                </form>
+                    <CarouselContent>
+                      <CarouselItem className="md:basis-1/2">
+                        <Card className="border-2 hover:border-gif-cyan/50 hover:bg-gif-cyan/5 transition-all h-full">
+                          <CardHeader>
+                            <div className="w-12 h-12 rounded-xl bg-gif-cyan/10 flex items-center justify-center mb-3">
+                              <Megaphone className="h-6 w-6 text-gif-cyan" />
+                            </div>
+                            <CardTitle className="text-lg">Volunteer Corporate Fundraiser (UK)</CardTitle>
+                            <CardDescription>Remote Worldwide</CardDescription>
+                          </CardHeader>
+                          <CardContent className="space-y-4">
+                            <div>
+                              <h4 className="font-semibold mb-2">About the Position</h4>
+                              <p className="text-sm text-muted-foreground">
+                                Lead our corporate fundraising efforts in the UK and US. This role combines hands-on prospecting (cold calling and emailing) with strategic planning to develop and implement a corporate fundraising strategy.
+                              </p>
+                            </div>
+                            <div>
+                              <p className="text-sm font-medium mb-2">Key Responsibilities:</p>
+                              <ul className="space-y-1.5 text-sm text-muted-foreground">
+                                <li className="flex items-start gap-2">
+                                  <CheckCircle className="h-4 w-4 text-gif-cyan mt-0.5 flex-shrink-0" />
+                                  <span>Research and identify potential corporate donors</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                  <CheckCircle className="h-4 w-4 text-gif-cyan mt-0.5 flex-shrink-0" />
+                                  <span>Develop corporate fundraising strategy</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                  <CheckCircle className="h-4 w-4 text-gif-cyan mt-0.5 flex-shrink-0" />
+                                  <span>Build relationships with corporate partners</span>
+                                </li>
+                              </ul>
+                            </div>
+                            <div className="pt-2 border-t">
+                              <p className="text-xs text-muted-foreground">
+                                <strong>Commitment:</strong> 20 hours/week for 12 months (Unpaid, Remote)
+                              </p>
+                            </div>
+                          </CardContent>
+                        </Card>
+                      </CarouselItem>
+
+                      <CarouselItem className="md:basis-1/2">
+                        <Card className="border-2 hover:border-gif-cyan/50 hover:bg-gif-cyan/5 transition-all h-full">
+                          <CardHeader>
+                            <div className="w-12 h-12 rounded-xl bg-gif-cyan/10 flex items-center justify-center mb-3">
+                              <Palette className="h-6 w-6 text-gif-cyan" />
+                            </div>
+                            <CardTitle className="text-lg">Volunteer Digital Marketing & Content Creator (UK)</CardTitle>
+                            <CardDescription>Remote Worldwide</CardDescription>
+                          </CardHeader>
+                          <CardContent className="space-y-4">
+                            <div>
+                              <h4 className="font-semibold mb-2">About the Position</h4>
+                              <p className="text-sm text-muted-foreground">
+                                Lead and execute our online presence. This role combines digital marketing strategy with hands-on content creation (graphics and video) to grow our reach and engage supporters.
+                              </p>
+                            </div>
+                            <div>
+                              <p className="text-sm font-medium mb-2">Key Responsibilities:</p>
+                              <ul className="space-y-1.5 text-sm text-muted-foreground">
+                                <li className="flex items-start gap-2">
+                                  <CheckCircle className="h-4 w-4 text-gif-cyan mt-0.5 flex-shrink-0" />
+                                  <span>Plan and implement digital marketing campaigns</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                  <CheckCircle className="h-4 w-4 text-gif-cyan mt-0.5 flex-shrink-0" />
+                                  <span>Create graphics, video, and social media content</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                  <CheckCircle className="h-4 w-4 text-gif-cyan mt-0.5 flex-shrink-0" />
+                                  <span>Manage social media and track analytics</span>
+                                </li>
+                              </ul>
+                            </div>
+                            <div className="pt-2 border-t">
+                              <p className="text-xs text-muted-foreground">
+                                <strong>Commitment:</strong> 15-20 hours/week for 12 months (Unpaid, Remote)
+                              </p>
+                            </div>
+                          </CardContent>
+                        </Card>
+                      </CarouselItem>
+
+                      <CarouselItem className="md:basis-1/2">
+                        <Card className="border-2 hover:border-gif-cyan/50 hover:bg-gif-cyan/5 transition-all h-full">
+                          <CardHeader>
+                            <div className="w-12 h-12 rounded-xl bg-gif-cyan/10 flex items-center justify-center mb-3">
+                              <Users className="h-6 w-6 text-gif-cyan" />
+                            </div>
+                            <CardTitle className="text-lg">Event Support</CardTitle>
+                            <CardDescription>Help at workshops, conferences, and community events</CardDescription>
+                          </CardHeader>
+                          <CardContent className="space-y-4">
+                            <p className="text-sm text-muted-foreground">
+                              Support our impactful events and workshops where young people learn valuable mindset skills and connect with their communities.
+                            </p>
+                            <ul className="space-y-1.5 text-sm text-muted-foreground">
+                              <li className="flex items-start gap-2">
+                                <CheckCircle className="h-4 w-4 text-gif-cyan mt-0.5 flex-shrink-0" />
+                                <span>Event setup and coordination</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <CheckCircle className="h-4 w-4 text-gif-cyan mt-0.5 flex-shrink-0" />
+                                <span>Participant registration and support</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <CheckCircle className="h-4 w-4 text-gif-cyan mt-0.5 flex-shrink-0" />
+                                <span>Workshop assistance</span>
+                              </li>
+                            </ul>
+                          </CardContent>
+                        </Card>
+                      </CarouselItem>
+
+                      <CarouselItem className="md:basis-1/2">
+                        <Card className="border-2 hover:border-gif-cyan/50 hover:bg-gif-cyan/5 transition-all h-full">
+                          <CardHeader>
+                            <div className="w-12 h-12 rounded-xl bg-gif-cyan/10 flex items-center justify-center mb-3">
+                              <Briefcase className="h-6 w-6 text-gif-cyan" />
+                            </div>
+                            <CardTitle className="text-lg">Administrative Support</CardTitle>
+                            <CardDescription>Support our operations behind the scenes</CardDescription>
+                          </CardHeader>
+                          <CardContent className="space-y-4">
+                            <p className="text-sm text-muted-foreground">
+                              Help us run smoothly by providing essential administrative support that keeps our programmes operating effectively.
+                            </p>
+                            <ul className="space-y-1.5 text-sm text-muted-foreground">
+                              <li className="flex items-start gap-2">
+                                <CheckCircle className="h-4 w-4 text-gif-cyan mt-0.5 flex-shrink-0" />
+                                <span>Data entry and management</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <CheckCircle className="h-4 w-4 text-gif-cyan mt-0.5 flex-shrink-0" />
+                                <span>Communications support</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <CheckCircle className="h-4 w-4 text-gif-cyan mt-0.5 flex-shrink-0" />
+                                <span>Project coordination</span>
+                              </li>
+                            </ul>
+                          </CardContent>
+                        </Card>
+                      </CarouselItem>
+                    </CarouselContent>
+                  </Carousel>
+                  <CarouselDots 
+                    total={4} 
+                    current={currentSlide}
+                    onDotClick={(index) => carouselApi?.scrollTo(index)}
+                  />
+                </div>
               </div>
-            </div>
-          </div>
+
+              {/* Apply to Volunteer */}
+              <div className="max-w-3xl mx-auto">
+                <div className="bg-gradient-to-r from-gif-cyan via-gif-lime to-gif-cyan rounded-3xl p-1">
+                  <div className="bg-background rounded-3xl p-8 md:p-12">
+                    <h3 className="text-3xl font-display font-bold text-center mb-6">
+                      Apply to Volunteer
+                    </h3>
+                    <p className="text-center text-muted-foreground mb-8">
+                      Fill out the form below and we'll be in touch to discuss the best opportunities for you.
+                    </p>
+
+                    <form onSubmit={handleSubmit} className="space-y-6">
+                      <div className="grid md:grid-cols-2 gap-6">
+                        <div className="space-y-2">
+                          <Label htmlFor="name">Full Name *</Label>
+                          <Input
+                            id="name"
+                            required
+                            value={formData.name}
+                            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                            placeholder="Your name"
+                          />
+                        </div>
+                        <div className="space-y-2">
+                          <Label htmlFor="email">Email *</Label>
+                          <Input
+                            id="email"
+                            type="email"
+                            required
+                            value={formData.email}
+                            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                            placeholder="your@email.com"
+                          />
+                        </div>
+                      </div>
+
+                      <div className="grid md:grid-cols-2 gap-6">
+                        <div className="space-y-2">
+                          <Label htmlFor="phone">Phone Number</Label>
+                          <Input
+                            id="phone"
+                            type="tel"
+                            value={formData.phone}
+                            onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                            placeholder="+1 (555) 000-0000"
+                          />
+                        </div>
+                        <div className="space-y-2">
+                          <Label htmlFor="location">Location</Label>
+                          <Input
+                            id="location"
+                            value={formData.location}
+                            onChange={(e) => setFormData({ ...formData, location: e.target.value })}
+                            placeholder="City, Country"
+                          />
+                        </div>
+                      </div>
+
+                      <div className="space-y-3">
+                        <Label>Areas of Interest *</Label>
+                        <div className="grid md:grid-cols-2 gap-4">
+                          {["Corporate Fundraising", "Digital Marketing & Content", "Event Support", "Administrative Support"].map((interest) => (
+                            <div key={interest} className="flex items-center space-x-2">
+                              <Checkbox
+                                id={interest}
+                                checked={formData.interests.includes(interest)}
+                                onCheckedChange={() => handleInterestToggle(interest)}
+                              />
+                              <label
+                                htmlFor={interest}
+                                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 cursor-pointer"
+                              >
+                                {interest}
+                              </label>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+
+                      <div className="space-y-2">
+                        <Label htmlFor="message">Tell Us About Yourself</Label>
+                        <Textarea
+                          id="message"
+                          value={formData.message}
+                          onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                          placeholder="Share your skills, experience, and why you want to volunteer with GIF..."
+                          rows={5}
+                        />
+                      </div>
+
+                      <Button
+                        type="submit"
+                        size="lg"
+                        className="w-full bg-gif-cyan text-white hover:bg-gif-cyan/90 text-lg"
+                      >
+                        Submit Application
+                      </Button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </>
+          )}
         </div>
       </section>
 
