@@ -1,3 +1,4 @@
+import teamCollaboration from "@/assets/team-collaboration.jpg";
 import mindsetIcon from "@/assets/mindset-icon.jpg";
 import mandyPhoto from "@/assets/mandy.jpg";
 import morlaiPhoto from "@/assets/morlai2.png";
@@ -39,6 +40,14 @@ export const About = () => {
               </div>
             </div>
 
+            <div className="relative rounded-2xl overflow-hidden mb-6">
+              <img
+                src={mindsetIcon}
+                alt="Mindset transformation illustration"
+                className="w-full h-48 object-cover rounded-2xl shadow-lg"
+              />
+            </div>
+
             <div className="space-y-6">
               <div className="bg-gradient-to-br from-gif-orange/10 to-gif-yellow/10 rounded-2xl p-8 border border-primary/20">
                 <h3 className="text-xl font-display font-bold mb-3 flex items-center gap-2">
@@ -71,8 +80,8 @@ export const About = () => {
             <div className="absolute top-10 right-10 w-64 h-64 bg-gif-green/30 blob"></div>
             <div className="absolute bottom-10 left-10 w-48 h-48 bg-gif-cyan/30 blob" style={{ animationDelay: "1.5s" }}></div>
             <img
-              src={mindsetIcon}
-              alt="Mindset transformation illustration"
+              src={teamCollaboration}
+              alt="Team celebrating together"
               className="relative rounded-3xl shadow-2xl w-full object-cover"
             />
           </div>

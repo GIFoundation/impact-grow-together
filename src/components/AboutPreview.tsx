@@ -1,3 +1,4 @@
+import teamCollaboration from "@/assets/team-collaboration.jpg";
 import mindsetIcon from "@/assets/mindset-icon.jpg";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -39,6 +40,14 @@ export const AboutPreview = () => {
               </div>
             </div>
 
+            <div className="relative rounded-2xl overflow-hidden mb-6">
+              <img
+                src={mindsetIcon}
+                alt="Mindset transformation illustration"
+                className="w-full h-48 object-cover rounded-2xl shadow-lg"
+              />
+            </div>
+
             <p className="text-lg text-muted-foreground">
               Founded on decades of expertise in mindset transformation, we're cultivating transformative mindsets that drive sustainable economic development across Africa and beyond.
             </p>
@@ -55,8 +64,8 @@ export const AboutPreview = () => {
             <div className="absolute top-10 right-10 w-64 h-64 bg-gif-green/30 blob"></div>
             <div className="absolute bottom-10 left-10 w-48 h-48 bg-gif-cyan/30 blob" style={{ animationDelay: "1.5s" }}></div>
             <img
-              src={mindsetIcon}
-              alt="Mindset transformation illustration"
+              src={teamCollaboration}
+              alt="Team celebrating together"
               className="relative rounded-3xl shadow-2xl w-full object-cover"
             />
           </div>
