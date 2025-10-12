@@ -18,7 +18,7 @@ const ProgramsPage = () => {
             <div className="absolute top-40 left-1/4 w-40 h-40 bg-white/40 rounded-lg rotate-45"></div>
             <div className="absolute bottom-40 right-1/3 w-28 h-28 bg-white/30" style={{ clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)' }}></div>
           </div>
-          <div className="container mx-auto px-4 relative z-20 text-center pb-20">
+          <div className="container mx-auto px-4 relative z-20 text-center pb-12">
             <h1 className="font-display text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-lg">
               Our Programmes
             </h1>

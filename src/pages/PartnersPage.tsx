@@ -17,7 +17,7 @@ const PartnersPage = () => {
             <div className="absolute top-32 right-20 w-36 h-36 bg-white/40 rounded-full"></div>
             <div className="absolute bottom-32 left-20 w-32 h-32 bg-white/30 rotate-45" style={{ clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)' }}></div>
           </div>
-          <div className="container mx-auto px-4 relative z-20 text-center pb-20">
+          <div className="container mx-auto px-4 relative z-20 text-center pb-12">
             <h1 className="font-display text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-lg">
               Our Partners
             </h1>
