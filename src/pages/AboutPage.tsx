@@ -35,10 +35,8 @@ const AboutPage = () => {
               style={{ maskImage: 'linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.25) 18%, rgba(0,0,0,0.6) 35%, rgba(0,0,0,0.85) 55%, black 75%)', WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.25) 18%, rgba(0,0,0,0.6) 35%, rgba(0,0,0,0.85) 55%, black 75%)' }}
             />
           </div>
-          {/* Bottom overlay to blend with next section */}
-          <div className="absolute bottom-0 left-0 right-0 h-[120px] bg-muted/30 z-20"></div>
           {/* Curvy bottom border */}
-          <div className="absolute bottom-0 left-0 right-0 z-30">
+          <div className="absolute bottom-0 left-0 right-0 z-20">
             <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
               <path d="M0,64 C360,20 720,20 1080,64 C1260,86 1350,108 1440,108 L1440,120 L0,120 Z" fill="hsl(var(--background))" />
             </svg>
