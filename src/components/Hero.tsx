@@ -118,7 +118,10 @@ export const Hero = () => {
           </div>
 
           {/* Carousel - Order first on mobile, second on desktop */}
-          <div className="relative animate-scale-in order-1 lg:order-2">
+          <div
+            className="relative animate-scale-in order-2 lg:order-2"
+            style={{ height: "100%" }}
+          >
             <Carousel
               opts={{
                 align: "start",

@@ -17,7 +17,8 @@ export const Footer = () => {
               Global Impact Foundation
             </h3>
             <p className="text-white/80 mb-4">
-              Transforming lives by transforming minds. Empowering young people across Africa and beyond.
+              Transforming lives by transforming minds. Empowering young people
+              across Africa and beyond.
             </p>
             <div className="flex items-center gap-2 text-sm text-white/60">
               <span>Registered in UK & US</span>
@@ -106,11 +107,12 @@ export const Footer = () => {
         <div className="border-t border-white/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-white/60 text-sm">
-              © {new Date().getFullYear()} Global Impact Foundation. All rights reserved.
+              © {new Date().getFullYear()} Global Impact Foundation. All rights
+              reserved.
             </p>
             <div className="flex items-center gap-2 text-sm text-white/60">
-              <span>Made with</span>
-              <Heart className="h-4 w-4 text-gif-orange fill-gif-orange" />
+              <span>Made</span>
+              {/* <Heart className="h-4 w-4 text-gif-orange fill-gif-orange" /> */}
               <span>for transforming minds</span>
             </div>
           </div>

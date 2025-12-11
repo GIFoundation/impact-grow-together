@@ -21,7 +21,9 @@ export const Contact = () => {
     setFormData({ name: "", email: "", subject: "", message: "" });
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -91,7 +93,7 @@ export const Contact = () => {
 
                 <div className="space-y-2">
                   <label htmlFor="message" className="text-sm font-medium">
-                    Message *
+                    Message
                   </label>
                   <Textarea
                     id="message"
@@ -100,7 +102,6 @@ export const Contact = () => {
                     onChange={handleChange}
                     placeholder="Tell us more about your inquiry..."
                     rows={6}
-                    required
                   />
                 </div>
 
@@ -116,7 +117,10 @@ export const Contact = () => {
           </Card>
 
           {/* Contact Information */}
-          <div className="space-y-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+          <div
+            className="space-y-6 animate-fade-in"
+            style={{ animationDelay: "0.2s" }}
+          >
             <Card className="border-2 hover:border-primary/50 transition-colors">
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
@@ -165,7 +169,10 @@ export const Contact = () => {
                     <p className="text-muted-foreground text-sm">
                       Available Mon-Fri, 9am-5pm
                       <br />
-                      <a href="tel:+44000000000" className="hover:text-primary transition-colors">
+                      <a
+                        href="tel:+44000000000"
+                        className="hover:text-primary transition-colors"
+                      >
                         Contact for number
                       </a>
                     </p>
@@ -175,9 +182,12 @@ export const Contact = () => {
             </Card>
 
             <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-6">
-              <h3 className="font-display font-bold text-xl mb-3">Quick Response</h3>
+              <h3 className="font-display font-bold text-xl mb-3">
+                Quick Response
+              </h3>
               <p className="text-sm text-muted-foreground">
-                We typically respond within 24 hours. For urgent inquiries, please mention it in your message.
+                We typically respond within 48 hours. For urgent inquiries,
+                please mention it in your message.
               </p>
             </div>
           </div>
