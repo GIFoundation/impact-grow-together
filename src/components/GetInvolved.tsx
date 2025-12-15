@@ -1,16 +1,39 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Heart, Users, Briefcase, CheckCircle, ArrowRight, Mail, Phone, MapPin, Megaphone, Palette } from "lucide-react";
+import {
+  Heart,
+  Users,
+  Briefcase,
+  CheckCircle,
+  ArrowRight,
+  Mail,
+  Phone,
+  MapPin,
+  Megaphone,
+  Palette,
+} from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Link } from "react-router-dom";
-import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from "@/components/ui/carousel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  type CarouselApi,
+} from "@/components/ui/carousel";
 import { CarouselDots } from "@/components/ui/carousel-dots";
 import React from "react";
+import { VolunteerForm } from "./VolunteerForm";
 
 interface GetInvolvedProps {
   simplified?: boolean;
@@ -61,18 +84,21 @@ export const GetInvolved = ({ simplified = false }: GetInvolvedProps) => {
   };
 
   const handleInterestToggle = (interest: string) => {
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
       interests: prev.interests.includes(interest)
-        ? prev.interests.filter(i => i !== interest)
-        : [...prev.interests, interest]
+        ? prev.interests.filter((i) => i !== interest)
+        : [...prev.interests, interest],
     }));
   };
 
   return (
     <div className="bg-background">
       {/* Become a Donor Section */}
-      <section id="become-donor" className="pt-6 pb-20 bg-gradient-to-b from-transparent via-gif-orange/5 to-background relative overflow-hidden">
+      <section
+        id="become-donor"
+        className="pt-6 pb-20 bg-gradient-to-b from-transparent via-gif-orange/5 to-background relative overflow-hidden"
+      >
         <div className="absolute top-20 right-10 w-96 h-96 bg-gif-orange/10 blob animate-float"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-16 animate-fade-in">
@@ -81,7 +107,8 @@ export const GetInvolved = ({ simplified = false }: GetInvolvedProps) => {
               Become a <span className="text-gif-orange">Donor</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Your contribution directly funds mindset programmes for young people who need them most.
+              Your contribution directly funds mindset programmes for young
+              people who need them most.
             </p>
           </div>
 
@@ -89,7 +116,9 @@ export const GetInvolved = ({ simplified = false }: GetInvolvedProps) => {
             <Card className="border-2 hover:border-gif-orange/50 hover:bg-gif-orange/5 transition-all">
               <CardHeader>
                 <CardTitle className="text-xl">One-Time Donation</CardTitle>
-                <CardDescription>Make an immediate impact with a single contribution</CardDescription>
+                <CardDescription>
+                  Make an immediate impact with a single contribution
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-3">
@@ -115,13 +144,17 @@ export const GetInvolved = ({ simplified = false }: GetInvolvedProps) => {
                   Most Popular
                 </div>
                 <CardTitle className="text-xl">Monthly Giving</CardTitle>
-                <CardDescription>Sustain our mission with regular contributions</CardDescription>
+                <CardDescription>
+                  Sustain our mission with regular contributions
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-gif-orange mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Predictable support for planning</span>
+                    <span className="text-sm">
+                      Predictable support for planning
+                    </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-gif-orange mt-0.5 flex-shrink-0" />
@@ -138,17 +171,23 @@ export const GetInvolved = ({ simplified = false }: GetInvolvedProps) => {
             <Card className="border-2 hover:border-gif-orange/50 hover:bg-gif-orange/5 transition-all">
               <CardHeader>
                 <CardTitle className="text-xl">Corporate Partnership</CardTitle>
-                <CardDescription>Partner with us for greater impact</CardDescription>
+                <CardDescription>
+                  Partner with us for greater impact
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-gif-orange mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Customized giving programmes</span>
+                    <span className="text-sm">
+                      Customized giving programmes
+                    </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-gif-orange mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Employee engagement opportunities</span>
+                    <span className="text-sm">
+                      Employee engagement opportunities
+                    </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-gif-orange mt-0.5 flex-shrink-0" />
@@ -175,8 +214,14 @@ export const GetInvolved = ({ simplified = false }: GetInvolvedProps) => {
       </section>
 
       {/* Volunteer with Us Section */}
-      <section id="volunteer" className="py-24 bg-gradient-to-br from-gif-cyan/10 via-background to-gif-lime/10 relative overflow-hidden">
-        <div className="absolute bottom-20 left-10 w-80 h-80 bg-gif-cyan/10 blob animate-float" style={{ animationDelay: "2s" }}></div>
+      <section
+        id="volunteer"
+        className="py-24 bg-gradient-to-br from-gif-cyan/10 via-background to-gif-lime/10 relative overflow-hidden"
+      >
+        <div
+          className="absolute bottom-20 left-10 w-80 h-80 bg-gif-cyan/10 blob animate-float"
+          style={{ animationDelay: "2s" }}
+        ></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-16 animate-fade-in">
             <Users className="h-16 w-16 text-gif-cyan mx-auto mb-6" />
@@ -200,7 +245,9 @@ export const GetInvolved = ({ simplified = false }: GetInvolvedProps) => {
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <p className="text-muted-foreground">
-                    Volunteering with GIF gives you the opportunity to make a real difference in young people's lives while developing your own skills and expanding your network.
+                    Volunteering with GIF gives you the opportunity to make a
+                    real difference in young people's lives while developing
+                    your own skills and expanding your network.
                   </p>
                   <ul className="space-y-2">
                     <li className="flex items-start gap-2">
@@ -213,11 +260,15 @@ export const GetInvolved = ({ simplified = false }: GetInvolvedProps) => {
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="h-5 w-5 text-gif-cyan mt-0.5 flex-shrink-0" />
-                      <span className="text-sm">Join a passionate community</span>
+                      <span className="text-sm">
+                        Join a passionate community
+                      </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="h-5 w-5 text-gif-cyan mt-0.5 flex-shrink-0" />
-                      <span className="text-sm">Flexible commitment options</span>
+                      <span className="text-sm">
+                        Flexible commitment options
+                      </span>
                     </li>
                   </ul>
                 </CardContent>
@@ -229,7 +280,8 @@ export const GetInvolved = ({ simplified = false }: GetInvolvedProps) => {
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <p className="text-muted-foreground">
-                    We provide comprehensive support to ensure your volunteering experience is rewarding and impactful.
+                    We provide comprehensive support to ensure your volunteering
+                    experience is rewarding and impactful.
                   </p>
                   <ul className="space-y-2">
                     <li className="flex items-start gap-2">
@@ -238,15 +290,21 @@ export const GetInvolved = ({ simplified = false }: GetInvolvedProps) => {
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="h-5 w-5 text-gif-cyan mt-0.5 flex-shrink-0" />
-                      <span className="text-sm">Ongoing support from our team</span>
+                      <span className="text-sm">
+                        Ongoing support from our team
+                      </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="h-5 w-5 text-gif-cyan mt-0.5 flex-shrink-0" />
-                      <span className="text-sm">Recognition for your contributions</span>
+                      <span className="text-sm">
+                        Recognition for your contributions
+                      </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="h-5 w-5 text-gif-cyan mt-0.5 flex-shrink-0" />
-                      <span className="text-sm">Volunteer appreciation events</span>
+                      <span className="text-sm">
+                        Volunteer appreciation events
+                      </span>
                     </li>
                   </ul>
                 </CardContent>
@@ -291,36 +349,54 @@ export const GetInvolved = ({ simplified = false }: GetInvolvedProps) => {
                             <div className="w-12 h-12 rounded-xl bg-gif-cyan/10 flex items-center justify-center mb-3">
                               <Megaphone className="h-6 w-6 text-gif-cyan" />
                             </div>
-                            <CardTitle className="text-lg">Volunteer Corporate Fundraiser (UK)</CardTitle>
+                            <CardTitle className="text-lg">
+                              Volunteer Corporate Fundraiser (UK)
+                            </CardTitle>
                             <CardDescription>Remote Worldwide</CardDescription>
                           </CardHeader>
                           <CardContent className="space-y-4">
                             <div>
-                              <h4 className="font-semibold mb-2">About the Position</h4>
+                              <h4 className="font-semibold mb-2">
+                                About the Position
+                              </h4>
                               <p className="text-sm text-muted-foreground">
-                                Lead our corporate fundraising efforts in the UK and US. This role combines hands-on prospecting (cold calling and emailing) with strategic planning to develop and implement a corporate fundraising strategy.
+                                Lead our corporate fundraising efforts in the UK
+                                and US. This role combines hands-on prospecting
+                                (cold calling and emailing) with strategic
+                                planning to develop and implement a corporate
+                                fundraising strategy.
                               </p>
                             </div>
                             <div>
-                              <p className="text-sm font-medium mb-2">Key Responsibilities:</p>
+                              <p className="text-sm font-medium mb-2">
+                                Key Responsibilities:
+                              </p>
                               <ul className="space-y-1.5 text-sm text-muted-foreground">
                                 <li className="flex items-start gap-2">
                                   <CheckCircle className="h-4 w-4 text-gif-cyan mt-0.5 flex-shrink-0" />
-                                  <span>Research and identify potential corporate donors</span>
+                                  <span>
+                                    Research and identify potential corporate
+                                    donors
+                                  </span>
                                 </li>
                                 <li className="flex items-start gap-2">
                                   <CheckCircle className="h-4 w-4 text-gif-cyan mt-0.5 flex-shrink-0" />
-                                  <span>Develop corporate fundraising strategy</span>
+                                  <span>
+                                    Develop corporate fundraising strategy
+                                  </span>
                                 </li>
                                 <li className="flex items-start gap-2">
                                   <CheckCircle className="h-4 w-4 text-gif-cyan mt-0.5 flex-shrink-0" />
-                                  <span>Build relationships with corporate partners</span>
+                                  <span>
+                                    Build relationships with corporate partners
+                                  </span>
                                 </li>
                               </ul>
                             </div>
                             <div className="pt-2 border-t">
                               <p className="text-xs text-muted-foreground">
-                                <strong>Commitment:</strong> 20 hours/week for 12 months (Unpaid, Remote)
+                                <strong>Commitment:</strong> 20 hours/week for
+                                12 months (Unpaid, Remote)
                               </p>
                             </div>
                           </CardContent>
@@ -333,36 +409,54 @@ export const GetInvolved = ({ simplified = false }: GetInvolvedProps) => {
                             <div className="w-12 h-12 rounded-xl bg-gif-cyan/10 flex items-center justify-center mb-3">
                               <Palette className="h-6 w-6 text-gif-cyan" />
                             </div>
-                            <CardTitle className="text-lg">Volunteer Digital Marketing & Content Creator (UK)</CardTitle>
+                            <CardTitle className="text-lg">
+                              Volunteer Digital Marketing & Content Creator (UK)
+                            </CardTitle>
                             <CardDescription>Remote Worldwide</CardDescription>
                           </CardHeader>
                           <CardContent className="space-y-4">
                             <div>
-                              <h4 className="font-semibold mb-2">About the Position</h4>
+                              <h4 className="font-semibold mb-2">
+                                About the Position
+                              </h4>
                               <p className="text-sm text-muted-foreground">
-                                Lead and execute our online presence. This role combines digital marketing strategy with hands-on content creation (graphics and video) to grow our reach and engage supporters.
+                                Lead and execute our online presence. This role
+                                combines digital marketing strategy with
+                                hands-on content creation (graphics and video)
+                                to grow our reach and engage supporters.
                               </p>
                             </div>
                             <div>
-                              <p className="text-sm font-medium mb-2">Key Responsibilities:</p>
+                              <p className="text-sm font-medium mb-2">
+                                Key Responsibilities:
+                              </p>
                               <ul className="space-y-1.5 text-sm text-muted-foreground">
                                 <li className="flex items-start gap-2">
                                   <CheckCircle className="h-4 w-4 text-gif-cyan mt-0.5 flex-shrink-0" />
-                                  <span>Plan and implement digital marketing campaigns</span>
+                                  <span>
+                                    Plan and implement digital marketing
+                                    campaigns
+                                  </span>
                                 </li>
                                 <li className="flex items-start gap-2">
                                   <CheckCircle className="h-4 w-4 text-gif-cyan mt-0.5 flex-shrink-0" />
-                                  <span>Create graphics, video, and social media content</span>
+                                  <span>
+                                    Create graphics, video, and social media
+                                    content
+                                  </span>
                                 </li>
                                 <li className="flex items-start gap-2">
                                   <CheckCircle className="h-4 w-4 text-gif-cyan mt-0.5 flex-shrink-0" />
-                                  <span>Manage social media and track analytics</span>
+                                  <span>
+                                    Manage social media and track analytics
+                                  </span>
                                 </li>
                               </ul>
                             </div>
                             <div className="pt-2 border-t">
                               <p className="text-xs text-muted-foreground">
-                                <strong>Commitment:</strong> 15-20 hours/week for 12 months (Unpaid, Remote)
+                                <strong>Commitment:</strong> 15-20 hours/week
+                                for 12 months (Unpaid, Remote)
                               </p>
                             </div>
                           </CardContent>
@@ -375,12 +469,19 @@ export const GetInvolved = ({ simplified = false }: GetInvolvedProps) => {
                             <div className="w-12 h-12 rounded-xl bg-gif-cyan/10 flex items-center justify-center mb-3">
                               <Users className="h-6 w-6 text-gif-cyan" />
                             </div>
-                            <CardTitle className="text-lg">Event Support</CardTitle>
-                            <CardDescription>Help at workshops, conferences, and community events</CardDescription>
+                            <CardTitle className="text-lg">
+                              Event Support
+                            </CardTitle>
+                            <CardDescription>
+                              Help at workshops, conferences, and community
+                              events
+                            </CardDescription>
                           </CardHeader>
                           <CardContent className="space-y-4">
                             <p className="text-sm text-muted-foreground">
-                              Support our impactful events and workshops where young people learn valuable mindset skills and connect with their communities.
+                              Support our impactful events and workshops where
+                              young people learn valuable mindset skills and
+                              connect with their communities.
                             </p>
                             <ul className="space-y-1.5 text-sm text-muted-foreground">
                               <li className="flex items-start gap-2">
@@ -389,7 +490,9 @@ export const GetInvolved = ({ simplified = false }: GetInvolvedProps) => {
                               </li>
                               <li className="flex items-start gap-2">
                                 <CheckCircle className="h-4 w-4 text-gif-cyan mt-0.5 flex-shrink-0" />
-                                <span>Participant registration and support</span>
+                                <span>
+                                  Participant registration and support
+                                </span>
                               </li>
                               <li className="flex items-start gap-2">
                                 <CheckCircle className="h-4 w-4 text-gif-cyan mt-0.5 flex-shrink-0" />
@@ -406,12 +509,18 @@ export const GetInvolved = ({ simplified = false }: GetInvolvedProps) => {
                             <div className="w-12 h-12 rounded-xl bg-gif-cyan/10 flex items-center justify-center mb-3">
                               <Briefcase className="h-6 w-6 text-gif-cyan" />
                             </div>
-                            <CardTitle className="text-lg">Administrative Support</CardTitle>
-                            <CardDescription>Support our operations behind the scenes</CardDescription>
+                            <CardTitle className="text-lg">
+                              Administrative Support
+                            </CardTitle>
+                            <CardDescription>
+                              Support our operations behind the scenes
+                            </CardDescription>
                           </CardHeader>
                           <CardContent className="space-y-4">
                             <p className="text-sm text-muted-foreground">
-                              Help us run smoothly by providing essential administrative support that keeps our programmes operating effectively.
+                              Help us run smoothly by providing essential
+                              administrative support that keeps our programmes
+                              operating effectively.
                             </p>
                             <ul className="space-y-1.5 text-sm text-muted-foreground">
                               <li className="flex items-start gap-2">
@@ -432,8 +541,8 @@ export const GetInvolved = ({ simplified = false }: GetInvolvedProps) => {
                       </CarouselItem>
                     </CarouselContent>
                   </Carousel>
-                  <CarouselDots 
-                    total={4} 
+                  <CarouselDots
+                    total={4}
                     current={currentSlide}
                     onDotClick={(index) => carouselApi?.scrollTo(index)}
                   />
@@ -441,113 +550,17 @@ export const GetInvolved = ({ simplified = false }: GetInvolvedProps) => {
               </div>
 
               {/* Apply to Volunteer */}
-              <div className="max-w-3xl mx-auto">
-                <div className="bg-gradient-to-r from-gif-cyan via-gif-lime to-gif-cyan rounded-3xl p-1">
-                  <div className="bg-background rounded-3xl p-8 md:p-12">
-                    <h3 className="text-3xl font-display font-bold text-center mb-6">
-                      Apply to Volunteer
-                    </h3>
-                    <p className="text-center text-muted-foreground mb-8">
-                      Fill out the form below and we'll be in touch to discuss the best opportunities for you.
-                    </p>
-
-                    <form onSubmit={handleSubmit} className="space-y-6">
-                      <div className="grid md:grid-cols-2 gap-6">
-                        <div className="space-y-2">
-                          <Label htmlFor="name">Full Name *</Label>
-                          <Input
-                            id="name"
-                            required
-                            value={formData.name}
-                            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                            placeholder="Your name"
-                          />
-                        </div>
-                        <div className="space-y-2">
-                          <Label htmlFor="email">Email *</Label>
-                          <Input
-                            id="email"
-                            type="email"
-                            required
-                            value={formData.email}
-                            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                            placeholder="your@email.com"
-                          />
-                        </div>
-                      </div>
-
-                      <div className="grid md:grid-cols-2 gap-6">
-                        <div className="space-y-2">
-                          <Label htmlFor="phone">Phone Number</Label>
-                          <Input
-                            id="phone"
-                            type="tel"
-                            value={formData.phone}
-                            onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                            placeholder="+1 (555) 000-0000"
-                          />
-                        </div>
-                        <div className="space-y-2">
-                          <Label htmlFor="location">Location</Label>
-                          <Input
-                            id="location"
-                            value={formData.location}
-                            onChange={(e) => setFormData({ ...formData, location: e.target.value })}
-                            placeholder="City, Country"
-                          />
-                        </div>
-                      </div>
-
-                      <div className="space-y-3">
-                        <Label>Areas of Interest *</Label>
-                        <div className="grid md:grid-cols-2 gap-4">
-                          {["Corporate Fundraising", "Digital Marketing & Content", "Event Support", "Administrative Support"].map((interest) => (
-                            <div key={interest} className="flex items-center space-x-2">
-                              <Checkbox
-                                id={interest}
-                                checked={formData.interests.includes(interest)}
-                                onCheckedChange={() => handleInterestToggle(interest)}
-                              />
-                              <label
-                                htmlFor={interest}
-                                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 cursor-pointer"
-                              >
-                                {interest}
-                              </label>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-
-                      <div className="space-y-2">
-                        <Label htmlFor="message">Tell Us About Yourself</Label>
-                        <Textarea
-                          id="message"
-                          value={formData.message}
-                          onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                          placeholder="Share your skills, experience, and why you want to volunteer with GIF..."
-                          rows={5}
-                        />
-                      </div>
-
-                      <Button
-                        type="submit"
-                        size="lg"
-                        className="w-full bg-gif-cyan text-white hover:bg-gif-cyan/90 text-lg"
-                      >
-                        Submit Application
-                      </Button>
-                    </form>
-                  </div>
-                </div>
-              </div>
+              <VolunteerForm />
             </>
           )}
         </div>
       </section>
 
       {/* Partner with GIF Section */}
-      <section id="partner" className="py-24 bg-gradient-to-br from-gif-green/10 via-background to-gif-lime/10 relative overflow-hidden">
+      <section
+        id="partner"
+        className="py-24 bg-gradient-to-br from-gif-green/10 via-background to-gif-lime/10 relative overflow-hidden"
+      >
         <div className="absolute top-20 right-10 w-96 h-96 bg-gif-green/10 blob animate-float"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-16 animate-fade-in">
@@ -556,7 +569,8 @@ export const GetInvolved = ({ simplified = false }: GetInvolvedProps) => {
               Partner with <span className="text-gif-green">GIF</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Collaborate with us to bring transformative programmes to your organisation or community.
+              Collaborate with us to bring transformative programmes to your
+              organisation or community.
             </p>
           </div>
 
@@ -566,9 +580,12 @@ export const GetInvolved = ({ simplified = false }: GetInvolvedProps) => {
                 <div className="w-16 h-16 rounded-2xl bg-gif-green/10 flex items-center justify-center mb-4">
                   <Briefcase className="h-8 w-8 text-gif-green" />
                 </div>
-                <CardTitle className="text-2xl">Corporate Partnerships</CardTitle>
+                <CardTitle className="text-2xl">
+                  Corporate Partnerships
+                </CardTitle>
                 <CardDescription className="text-base">
-                  Engage your employees and give back to communities through our programmes.
+                  Engage your employees and give back to communities through our
+                  programmes.
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -579,11 +596,15 @@ export const GetInvolved = ({ simplified = false }: GetInvolvedProps) => {
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-gif-green mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Employee volunteering opportunities</span>
+                    <span className="text-sm">
+                      Employee volunteering opportunities
+                    </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-gif-green mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Brand visibility and recognition</span>
+                    <span className="text-sm">
+                      Brand visibility and recognition
+                    </span>
                   </li>
                 </ul>
               </CardContent>
@@ -594,7 +615,9 @@ export const GetInvolved = ({ simplified = false }: GetInvolvedProps) => {
                 <div className="w-16 h-16 rounded-2xl bg-gif-green/10 flex items-center justify-center mb-4">
                   <Users className="h-8 w-8 text-gif-green" />
                 </div>
-                <CardTitle className="text-2xl">Educational Institutions</CardTitle>
+                <CardTitle className="text-2xl">
+                  Educational Institutions
+                </CardTitle>
                 <CardDescription className="text-base">
                   Bring our mindset programmes to your students and staff.
                 </CardDescription>
@@ -603,7 +626,9 @@ export const GetInvolved = ({ simplified = false }: GetInvolvedProps) => {
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-gif-green mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Curriculum integration support</span>
+                    <span className="text-sm">
+                      Curriculum integration support
+                    </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-gif-green mt-0.5 flex-shrink-0" />
@@ -611,7 +636,9 @@ export const GetInvolved = ({ simplified = false }: GetInvolvedProps) => {
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-gif-green mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Student development programmes</span>
+                    <span className="text-sm">
+                      Student development programmes
+                    </span>
                   </li>
                 </ul>
               </CardContent>
@@ -622,7 +649,9 @@ export const GetInvolved = ({ simplified = false }: GetInvolvedProps) => {
                 <div className="w-16 h-16 rounded-2xl bg-gif-green/10 flex items-center justify-center mb-4">
                   <MapPin className="h-8 w-8 text-gif-green" />
                 </div>
-                <CardTitle className="text-2xl">Community Organizations</CardTitle>
+                <CardTitle className="text-2xl">
+                  Community Organizations
+                </CardTitle>
                 <CardDescription className="text-base">
                   Co-deliver programmes in your local community.
                 </CardDescription>
@@ -639,7 +668,9 @@ export const GetInvolved = ({ simplified = false }: GetInvolvedProps) => {
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-gif-green mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Community impact measurement</span>
+                    <span className="text-sm">
+                      Community impact measurement
+                    </span>
                   </li>
                 </ul>
               </CardContent>
@@ -652,7 +683,8 @@ export const GetInvolved = ({ simplified = false }: GetInvolvedProps) => {
                 Ready to Partner?
               </h3>
               <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-                Let's discuss how we can work together to create lasting change in communities around the world.
+                Let's discuss how we can work together to create lasting change
+                in communities around the world.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
