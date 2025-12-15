@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, MapPin, Calendar, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import gifLogo from "@/assets/gif-logo.jpg";
 import financialEventImage from "@/assets/events/financial-reality-event.jpg";
@@ -117,187 +117,236 @@ export const Hero = () => {
             </div>
           </div>
 
-          {/* Carousel - Order first on mobile, second on desktop */}
-          <div
-            className="relative animate-scale-in order-2 lg:order-2"
-            style={{ height: "100%" }}
-          >
+          {/* Redesigned Carousel - Full height split layout */}
+          <div className="relative animate-scale-in h-full order-1 lg:order-2">
             <Carousel
               opts={{
                 align: "start",
                 loop: true,
               }}
-              className="w-full"
+              className="w-full h-full"
             >
-              <CarouselContent>
-                {/* Event 1: Financial Reality Workshop */}
+              <CarouselContent className="h-full">
+                {/* Event 1: Financial Reality Workshop - Split Layout */}
                 <CarouselItem>
-                  <div className="bg-card rounded-2xl md:rounded-3xl shadow-2xl overflow-hidden border-2 border-gif-orange">
-                    <div className="relative h-28 sm:h-32 md:h-40 w-full overflow-hidden">
+                  <div className="bg-white/95 backdrop-blur-sm rounded-2xl md:rounded-3xl shadow-2xl overflow-hidden border border-white/20 h-full flex flex-col lg:flex-row">
+                    {/* Image Section - Half width on desktop, full width on mobile */}
+                    <div className="lg:w-1/2 h-56 lg:h-auto relative overflow-hidden">
                       <img
                         src={financialEventImage}
                         alt="4 Days to a New Financial Reality Workshop"
-                        className="w-full h-full object-cover brightness-75"
+                        className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                      <div className="absolute top-2 left-3 md:top-3 md:left-4 flex items-center gap-1 md:gap-2 bg-gif-orange/90 backdrop-blur-sm px-2 md:px-3 py-1 md:py-1.5 rounded-full">
-                        <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-white rounded-full animate-pulse"></div>
-                        <span className="text-[10px] md:text-xs font-semibold text-white uppercase tracking-wider">
-                          Upcoming Event
-                        </span>
-                      </div>
-                      <h3 className="absolute bottom-2 left-3 right-3 md:bottom-3 md:left-4 md:right-4 text-base sm:text-lg md:text-xl lg:text-2xl font-display font-bold text-white drop-shadow-lg leading-tight">
-                        4 Days to a New Financial Reality
-                      </h3>
-                    </div>
-                    <div className="p-4 md:p-6">
-                      <p className="text-base md:text-lg font-medium text-primary mb-2 md:mb-3">
-                        Business and Wealth Reset Workshop
-                      </p>
-                      <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-muted-foreground mb-3 md:mb-4">
-                        <div className="flex items-center gap-2">
-                          <svg
-                            className="w-4 h-4 md:w-5 md:h-5"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                            />
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                            />
-                          </svg>
-                          <span className="text-sm md:text-base">Nigeria</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <svg
-                            className="w-4 h-4 md:w-5 md:h-5"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                            />
-                          </svg>
-                          <span className="text-sm md:text-base">
-                            4-Day Workshop
+                      {/* Gradient overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-gif-orange/20 to-transparent"></div>
+
+                      {/* Live badge */}
+                      <div className="absolute top-4 left-4">
+                        <div className="flex items-center gap-2 bg-black/80 backdrop-blur-sm px-3 py-1.5 rounded-full">
+                          <div className="w-2 h-2 bg-gif-orange rounded-full animate-pulse"></div>
+                          <span className="text-xs font-semibold text-white uppercase tracking-wider">
+                            Upcoming
                           </span>
                         </div>
                       </div>
-                      <p className="text-muted-foreground mb-3 md:mb-4 text-xs md:text-sm leading-relaxed">
-                        Join us for an intensive workshop designed to transform
-                        your mindset around business and wealth creation. Learn
-                        practical strategies to reset your financial reality and
-                        build sustainable prosperity.
-                      </p>
-                      <Button
-                        asChild
-                        className="bg-gif-orange hover:bg-gif-orange/90 text-white w-full text-sm md:text-base"
-                      >
-                        <Link to="/contact">Register Now</Link>
-                      </Button>
+
+                      {/* Event type tag */}
+                      <div className="absolute bottom-4 left-4">
+                        <div className="bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full">
+                          <span className="text-sm font-semibold text-gif-orange">
+                            Workshop
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Content Section - Half width on desktop, full width on mobile */}
+                    <div className="lg:w-1/2 p-6 md:p-8 flex flex-col justify-between">
+                      <div>
+                        <div className="flex items-center gap-2 mb-3">
+                          <div className="w-3 h-3 bg-gif-orange rounded-full"></div>
+                          <span className="text-sm font-medium text-gif-orange">
+                            Featured Event
+                          </span>
+                        </div>
+
+                        <h3 className="text-xl md:text-2xl lg:text-3xl font-display font-bold text-gray-900 mb-4 leading-tight">
+                          4 Days to a New Financial Reality
+                        </h3>
+
+                        <p className="text-lg md:text-xl font-medium text-gif-orange mb-3">
+                          Business and Wealth Reset Workshop
+                        </p>
+
+                        {/* Event details */}
+                        <div className="space-y-3 mb-6">
+                          <div className="flex items-center gap-3">
+                            <div className="bg-gif-orange/10 p-2 rounded-lg">
+                              <MapPin className="w-5 h-5 text-gif-orange" />
+                            </div>
+                            <div>
+                              <p className="text-sm text-gray-600">Location</p>
+                              <p className="font-medium text-gray-900">
+                                Nigeria
+                              </p>
+                            </div>
+                          </div>
+
+                          <div className="flex items-center gap-3">
+                            <div className="bg-gif-orange/10 p-2 rounded-lg">
+                              <Calendar className="w-5 h-5 text-gif-orange" />
+                            </div>
+                            <div>
+                              <p className="text-sm text-gray-600">Duration</p>
+                              <p className="font-medium text-gray-900">
+                                4-Day Intensive
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <p className="text-gray-600 mb-6 text-sm leading-relaxed">
+                          Transform your mindset around business and wealth
+                          creation. Join our intensive workshop for practical
+                          strategies to reset your financial reality and build
+                          sustainable prosperity.
+                        </p>
+                      </div>
+
+                      <div className="space-y-4">
+                        <Button
+                          asChild
+                          className="w-full bg-gif-orange hover:bg-gif-orange/90 text-white h-12 text-base group"
+                        >
+                          <Link to="/contact">
+                            Register Now
+                            <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                          </Link>
+                        </Button>
+
+                        <div className="text-center">
+                          <Link
+                            to="/events"
+                            className="inline-flex items-center text-sm text-gray-600 hover:text-gif-orange transition-colors"
+                          >
+                            View all events
+                            <ChevronRight className="ml-1 h-4 w-4" />
+                          </Link>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </CarouselItem>
 
-                {/* Event 2: UK-Africa Summit 2025 */}
+                {/* Event 2: UK-Africa Summit 2025 - Split Layout */}
                 <CarouselItem>
-                  <div className="bg-card rounded-2xl md:rounded-3xl shadow-2xl overflow-hidden border-2 border-gif-cyan">
-                    <div className="relative h-28 sm:h-32 md:h-40 w-full overflow-hidden">
+                  <div className="bg-white/95 backdrop-blur-sm rounded-2xl md:rounded-3xl shadow-2xl overflow-hidden border border-white/20 h-full flex flex-col lg:flex-row">
+                    {/* Image Section */}
+                    <div className="lg:w-1/2 h-56 lg:h-auto relative overflow-hidden">
                       <img
                         src={ukAfricaSummitImage}
                         alt="UK-Africa Summit 2025 - THINK Programme Launch"
-                        className="w-full h-full object-cover brightness-75"
+                        className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                      <div className="absolute top-2 left-3 md:top-3 md:left-4 flex items-center gap-1 md:gap-2 bg-gif-cyan/90 backdrop-blur-sm px-2 md:px-3 py-1 md:py-1.5 rounded-full">
-                        <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-white rounded-full animate-pulse"></div>
-                        <span className="text-[10px] md:text-xs font-semibold text-white uppercase tracking-wider">
-                          Upcoming Event
-                        </span>
+                      <div className="absolute inset-0 bg-gradient-to-t from-gif-cyan/20 to-transparent"></div>
+
+                      <div className="absolute top-4 left-4">
+                        <div className="flex items-center gap-2 bg-black/80 backdrop-blur-sm px-3 py-1.5 rounded-full">
+                          <div className="w-2 h-2 bg-gif-cyan rounded-full animate-pulse"></div>
+                          <span className="text-xs font-semibold text-white uppercase tracking-wider">
+                            Summit
+                          </span>
+                        </div>
                       </div>
-                      <h3 className="absolute bottom-2 left-3 right-3 md:bottom-3 md:left-4 md:right-4 text-base sm:text-lg md:text-xl lg:text-2xl font-display font-bold text-white drop-shadow-lg leading-tight">
-                        UK-Africa Summit 2025
-                      </h3>
+
+                      <div className="absolute bottom-4 left-4">
+                        <div className="bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full">
+                          <span className="text-sm font-semibold text-gif-cyan">
+                            Partnership Launch
+                          </span>
+                        </div>
+                      </div>
                     </div>
-                    <div className="p-4 md:p-6">
-                      <p className="text-base md:text-lg font-medium text-primary mb-2 md:mb-3">
-                        EGM + GIF Partnership - THINK Programme Launch
-                      </p>
-                      <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-muted-foreground mb-3 md:mb-4">
-                        <div className="flex items-center gap-2">
-                          <svg
-                            className="w-4 h-4 md:w-5 md:h-5"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                            />
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                            />
-                          </svg>
-                          <span className="text-sm md:text-base">
-                            United Kingdom
+
+                    {/* Content Section */}
+                    <div className="lg:w-1/2 p-6 md:p-8 flex flex-col justify-between">
+                      <div>
+                        <div className="flex items-center gap-2 mb-3">
+                          <div className="w-3 h-3 bg-gif-cyan rounded-full"></div>
+                          <span className="text-sm font-medium text-gif-cyan">
+                            Global Summit
                           </span>
                         </div>
-                        <div className="flex items-center gap-2">
-                          <svg
-                            className="w-4 h-4 md:w-5 md:h-5"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
+
+                        <h3 className="text-xl md:text-2xl lg:text-3xl font-display font-bold text-gray-900 mb-4 leading-tight">
+                          UK-Africa Summit 2025
+                        </h3>
+
+                        <p className="text-lg md:text-xl font-medium text-gif-cyan mb-3">
+                          EGM + GIF Partnership - THINK Programme Launch
+                        </p>
+
+                        <div className="space-y-3 mb-6">
+                          <div className="flex items-center gap-3">
+                            <div className="bg-gif-cyan/10 p-2 rounded-lg">
+                              <MapPin className="w-5 h-5 text-gif-cyan" />
+                            </div>
+                            <div>
+                              <p className="text-sm text-gray-600">Location</p>
+                              <p className="font-medium text-gray-900">
+                                United Kingdom
+                              </p>
+                            </div>
+                          </div>
+
+                          <div className="flex items-center gap-3">
+                            <div className="bg-gif-cyan/10 p-2 rounded-lg">
+                              <Calendar className="w-5 h-5 text-gif-cyan" />
+                            </div>
+                            <div>
+                              <p className="text-sm text-gray-600">Date</p>
+                              <p className="font-medium text-gray-900">
+                                November 5, 2025
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <p className="text-gray-600 mb-6 text-sm leading-relaxed">
+                          Join us at the UK-Africa Summit for the official
+                          launch of THINK! Discover how our innovative mindset
+                          programme is transforming businesses and empowering
+                          entrepreneurs across continents.
+                        </p>
+                      </div>
+
+                      <div className="space-y-4">
+                        <Button
+                          asChild
+                          className="w-full bg-gif-cyan hover:bg-gif-cyan/90 text-white h-12 text-base group"
+                        >
+                          <Link to="/contact">
+                            Learn More
+                            <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                          </Link>
+                        </Button>
+
+                        <div className="text-center">
+                          <Link
+                            to="/events"
+                            className="inline-flex items-center text-sm text-gray-600 hover:text-gif-cyan transition-colors"
                           >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                            />
-                          </svg>
-                          <span className="text-sm md:text-base">
-                            November 5, 2025
-                          </span>
+                            View all events
+                            <ChevronRight className="ml-1 h-4 w-4" />
+                          </Link>
                         </div>
                       </div>
-                      <p className="text-muted-foreground mb-3 md:mb-4 text-xs md:text-sm leading-relaxed">
-                        We're launching THINK at the UK-Africa Summit! Meet us
-                        and discover how our innovative mindset programme is
-                        transforming businesses and empowering entrepreneurs
-                        across continents.
-                      </p>
-                      <Button
-                        asChild
-                        className="bg-gif-cyan hover:bg-gif-cyan/90 text-white w-full text-sm md:text-base"
-                      >
-                        <Link to="/contact">Learn More</Link>
-                      </Button>
                     </div>
                   </div>
                 </CarouselItem>
               </CarouselContent>
-              <CarouselPrevious className="left-1 md:left-2 h-8 w-8 md:h-10 md:w-10" />
-              <CarouselNext className="right-1 md:right-2 h-8 w-8 md:h-10 md:w-10" />
+              <CarouselPrevious className="left-2 md:left-4 h-10 w-10 md:h-12 md:w-12 bg-white/90 hover:bg-white backdrop-blur-sm border-white/30" />
+              <CarouselNext className="right-2 md:right-4 h-10 w-10 md:h-12 md:w-12 bg-white/90 hover:bg-white backdrop-blur-sm border-white/30" />
             </Carousel>
           </div>
         </div>
