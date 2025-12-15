@@ -10,12 +10,34 @@ export const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
     subject: "",
     message: "",
   });
 
   const MAX_WORDS = 2500;
   const [wordCount, setWordCount] = useState(0);
+
+  const formatPhoneNumber = (value: string) => {
+    // Remove all non-digit characters
+    const digits = value.replace(/\D/g, "");
+
+    // Format based on length
+    if (digits.length <= 4) {
+      return digits;
+    } else if (digits.length <= 7) {
+      return digits.replace(/(\d{4})/, "$1 ");
+    } else {
+      return digits
+        .replace(/(\d{4})(\d{3})/, "$1 $2")
+        .replace(/(\d{4} \d{3})(\d{4})/, "$1 $2");
+    }
+  };
+
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const formatted = formatPhoneNumber(e.target.value);
+    setFormData({ ...formData, phone: formatted });
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -28,9 +50,15 @@ export const Contact = () => {
       return;
     }
 
+    // Validate phone number if provided
+    if (formData.phone && formData.phone.replace(/\D/g, "").length < 11) {
+      toast.error("Please enter a valid UK phone number (11 digits)");
+      return;
+    }
+
     // Here you would typically send the form data to your backend
     toast.success("Thank you! We'll get back to you soon.");
-    setFormData({ name: "", email: "", subject: "", message: "" });
+    setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
     setWordCount(0);
   };
 
@@ -121,18 +149,42 @@ export const Contact = () => {
                   </div>
                 </div>
 
-                <div className="space-y-2">
-                  <label htmlFor="subject" className="text-sm font-medium">
-                    Subject *
-                  </label>
-                  <Input
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    placeholder="How can we help you?"
-                    required
-                  />
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <label htmlFor="subject" className="text-sm font-medium">
+                      Subject *
+                    </label>
+                    <Input
+                      id="subject"
+                      name="subject"
+                      value={formData.subject}
+                      onChange={handleChange}
+                      placeholder="How can we help you?"
+                      required
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label htmlFor="phone" className="text-sm font-medium">
+                      Phone Number (Optional)
+                    </label>
+                    <div className="relative">
+                      <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-sm text-muted-foreground">
+                        +44
+                      </div>
+                      <Input
+                        id="phone"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handlePhoneChange}
+                        placeholder="XXXX XXX XXXX"
+                        className="pl-12"
+                        maxLength={13} // For UK format: 4 spaces + 11 digits
+                      />
+                    </div>
+                    <p className="text-xs text-muted-foreground mt-1">
+                      Enter your UK phone number (11 digits)
+                    </p>
+                  </div>
                 </div>
 
                 <div className="space-y-2">
@@ -268,6 +320,10 @@ export const Contact = () => {
               <p className="text-sm text-muted-foreground mb-2">
                 <strong>Word Limit:</strong> Maximum{" "}
                 {MAX_WORDS.toLocaleString()} words per message.
+              </p>
+              <p className="text-sm text-muted-foreground mb-2">
+                <strong>Phone Format:</strong> Enter your UK phone number (11
+                digits without the leading 0).
               </p>
               <p className="text-sm text-muted-foreground">
                 We typically respond within 48 hours. For urgent inquiries,
