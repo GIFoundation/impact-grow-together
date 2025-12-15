@@ -14,17 +14,61 @@ export const Contact = () => {
     message: "",
   });
 
+  const MAX_WORDS = 2500;
+  const [wordCount, setWordCount] = useState(0);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Check word limit before submitting
+    if (wordCount > MAX_WORDS) {
+      toast.error(
+        `Message exceeds ${MAX_WORDS} word limit. Please shorten your message.`
+      );
+      return;
+    }
+
     // Here you would typically send the form data to your backend
     toast.success("Thank you! We'll get back to you soon.");
     setFormData({ name: "", email: "", subject: "", message: "" });
+    setWordCount(0);
   };
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+
+    if (name === "message") {
+      // Count words in the message
+      const words = value
+        .trim()
+        .split(/\s+/)
+        .filter((word) => word.length > 0);
+      const currentWordCount = words.length;
+      setWordCount(currentWordCount);
+
+      // Prevent typing if word limit exceeded
+      if (currentWordCount > MAX_WORDS) {
+        // Truncate the message to stay within limit
+        const wordsArray = value.split(/\s+/);
+        const truncatedWords = wordsArray.slice(0, MAX_WORDS);
+        const truncatedMessage = truncatedWords.join(" ");
+
+        setFormData({ ...formData, [name]: truncatedMessage });
+        setWordCount(MAX_WORDS);
+        return;
+      }
+    }
+
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const getWordCountColor = () => {
+    const percentage = (wordCount / MAX_WORDS) * 100;
+    if (percentage >= 90) return "text-red-500";
+    if (percentage >= 75) return "text-amber-500";
+    return "text-muted-foreground";
   };
 
   return (
@@ -92,9 +136,17 @@ export const Contact = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor="message" className="text-sm font-medium">
-                    Message
-                  </label>
+                  <div className="flex justify-between items-center">
+                    <label htmlFor="message" className="text-sm font-medium">
+                      Message
+                    </label>
+                    <div className="text-xs flex items-center gap-2">
+                      <span className={`font-medium ${getWordCountColor()}`}>
+                        {wordCount} / {MAX_WORDS}
+                      </span>
+                      <span className="text-muted-foreground">words</span>
+                    </div>
+                  </div>
                   <Textarea
                     id="message"
                     name="message"
@@ -102,15 +154,43 @@ export const Contact = () => {
                     onChange={handleChange}
                     placeholder="Tell us more about your inquiry..."
                     rows={6}
+                    className={`transition-colors ${
+                      wordCount >= MAX_WORDS
+                        ? "border-red-300 focus:ring-red-200"
+                        : ""
+                    }`}
                   />
+                  <div className="flex justify-between items-center">
+                    <p className="text-xs text-muted-foreground">
+                      {wordCount >= MAX_WORDS && (
+                        <span className="text-red-500 font-medium">
+                          Word limit reached ({MAX_WORDS} words maximum)
+                        </span>
+                      )}
+                      {wordCount >= MAX_WORDS * 0.9 &&
+                        wordCount < MAX_WORDS && (
+                          <span className="text-amber-500 font-medium">
+                            Approaching word limit
+                          </span>
+                        )}
+                    </p>
+                    {wordCount === 0 && (
+                      <p className="text-xs text-muted-foreground text-right">
+                        Maximum {MAX_WORDS.toLocaleString()} words allowed
+                      </p>
+                    )}
+                  </div>
                 </div>
 
                 <Button
                   type="submit"
                   size="lg"
                   className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
+                  disabled={wordCount > MAX_WORDS}
                 >
-                  Send Message
+                  {wordCount > MAX_WORDS
+                    ? `Exceeds ${MAX_WORDS} Word Limit`
+                    : "Send Message"}
                 </Button>
               </form>
             </CardContent>
@@ -183,8 +263,12 @@ export const Contact = () => {
 
             <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-6">
               <h3 className="font-display font-bold text-xl mb-3">
-                Quick Response
+                Message Guidelines
               </h3>
+              <p className="text-sm text-muted-foreground mb-2">
+                <strong>Word Limit:</strong> Maximum{" "}
+                {MAX_WORDS.toLocaleString()} words per message.
+              </p>
               <p className="text-sm text-muted-foreground">
                 We typically respond within 48 hours. For urgent inquiries,
                 please mention it in your message.
