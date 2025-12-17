@@ -104,7 +104,7 @@ export const Programs = () => {
                 size="lg"
                 className="bg-primary text-primary-foreground hover:bg-primary/90 group"
               >
-                <a href="https://think.global-impact-foundation.org/" target="_blank" rel="noopener noreferrer">
+                <a href="https://think-global.io/" target="_blank" rel="noopener noreferrer">
                   Explore THINK Programme
                   <ExternalLink className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </a>
