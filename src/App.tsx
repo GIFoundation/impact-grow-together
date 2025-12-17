@@ -9,6 +9,7 @@ import ProgramsPage from "./pages/ProgramsPage";
 import ImpactPage from "./pages/ImpactPage";
 import PartnersPage from "./pages/PartnersPage";
 import GetInvolvedPage from "./pages/GetInvolvedPage";
+import VolunteerDetail from "./pages/VolunteerDetail";
 import ContactPage from "./pages/ContactPage";
 import DonatePage from "./pages/DonatePage";
 import NotFound from "./pages/NotFound";
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/impact" element={<ImpactPage />} />
           <Route path="/partners" element={<PartnersPage />} />
           <Route path="/get-involved" element={<GetInvolvedPage />} />
+          <Route path="/volunteer/:slug" element={<VolunteerDetail />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/donate" element={<DonatePage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

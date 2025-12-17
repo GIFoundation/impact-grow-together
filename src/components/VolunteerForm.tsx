@@ -18,14 +18,22 @@ interface FormData {
 }
 
 // Add to your existing component
-export const VolunteerForm = () => {
+interface VolunteerFormProps {
+  initialInterests?: string[];
+  role?: string; // optional role title to show/preselect
+}
+
+export const VolunteerForm = ({
+  initialInterests = [],
+  role,
+}: VolunteerFormProps) => {
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
     phone: "",
     location: "",
-    interests: [],
-    message: "",
+    interests: initialInterests,
+    message: role ? `Applying for: ${role}\n\n` : "",
     cvFile: null,
   });
 
