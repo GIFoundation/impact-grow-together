@@ -193,7 +193,7 @@ export const VolunteerForm = ({
                   onChange={(e) =>
                     setFormData({ ...formData, phone: e.target.value })
                   }
-                  placeholder="+1 (555) 000-0000"
+                  placeholder="+44 (000) 000-000"
                 />
               </div>
               <div className="space-y-2">
