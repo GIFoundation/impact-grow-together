@@ -262,10 +262,10 @@ export const Contact = () => {
                   <div>
                     <h3 className="font-semibold mb-2">Email Us</h3>
                     <a
-                      href="mailto:info@global-impact-foundation.org"
+                      href="mailto:admin@global-impact-foundation.org"
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      info@global-impact-foundation.org
+                      admin@global-impact-foundation.org
                     </a>
                   </div>
                 </div>
