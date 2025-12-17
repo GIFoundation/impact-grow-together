@@ -37,7 +37,10 @@ const VolunteerDetail = () => {
     <div className="min-h-screen">
       <Navigation />
       <main className="container mx-auto px-4 py-16">
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div
+          className="grid lg:grid-cols-3 gap-8"
+          style={{ paddingTop: "60px" }}
+        >
           <div className="lg:col-span-2">
             <h1 className="text-4xl font-display font-bold mb-4">
               {job.title}
