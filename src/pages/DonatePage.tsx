@@ -10,6 +10,8 @@ import { Heart, CheckCircle, Shield, Award, Users, DollarSign } from "lucide-rea
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
+const STRIPE_SERVER_URL = (import.meta.env.VITE_STRIPE_SERVER_URL as string) || "http://localhost:4242";
+
 const DonatePage = () => {
   const { toast } = useToast();
   const [donationType, setDonationType] = useState<"one-time" | "monthly">("monthly");
@@ -21,12 +23,43 @@ const DonatePage = () => {
     anonymous: false,
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    const donationAmount = customAmount ? Number(customAmount) : Number(amount);
+    if (!donationAmount || donationAmount <= 0) {
+      toast({ title: "Enter a valid amount", description: "Please provide an amount > 0" });
+      return;
+    }
+
+    setLoading(true);
     toast({
-      title: "Thank you for your generosity!",
-      description: "You will be redirected to our secure payment page.",
+      title: "Preparing checkout...",
+      description: "You will be redirected to a secure payment page.",
     });
+
+    try {
+      const res = await fetch(`${STRIPE_SERVER_URL}/create-checkout-session`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ amount: donationAmount, donationType, formData }),
+      });
+
+      const data = await res.json();
+      if (res.ok && data.url) {
+        window.location.href = data.url;
+      } else {
+        console.error(data);
+        toast({ title: "Payment error", description: data?.error || "Unable to create checkout session" });
+      }
+    } catch (err) {
+      console.error(err);
+      toast({ title: "Server error", description: "Could not reach payment server" });
+    } finally {
+      setLoading(false);
+    }
   };
 
   const presetAmounts = ["25", "50", "100", "250", "500"];
@@ -225,10 +258,11 @@ const DonatePage = () => {
                     <Button
                       type="submit"
                       size="lg"
+                      disabled={loading}
                       className="w-full bg-gif-orange hover:bg-gif-orange/90 text-white text-lg py-6"
                     >
                       <Heart className="mr-2 h-5 w-5" />
-                      Complete Donation
+                      {loading ? "Processing…" : "Complete Donation"}
                     </Button>
                   </form>
                 </div>

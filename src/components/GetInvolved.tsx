@@ -201,14 +201,15 @@ export const GetInvolved = ({ simplified = false }: GetInvolvedProps) => {
 
           <div className="text-center">
             <Button
-              asChild
+              onClick={() =>
+                (window.location.href =
+                  "https://donate.stripe.com/bIY16Y6KK5VbaFG144")
+              }
               size="lg"
               className="bg-gif-orange text-white hover:bg-gif-orange/90 text-lg group"
             >
-              <Link to="/donate">
-                Start Making a Difference
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </Link>
+              Start Making a Difference
+              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Button>
           </div>
         </div>
