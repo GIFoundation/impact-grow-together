@@ -3,7 +3,6 @@ import { ArrowRight, MapPin, Calendar, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import gifLogo from "@/assets/gif-logo.jpg";
 import financialEventImage from "@/assets/events/financial-reality-event.jpg";
-import ukAfricaSummitImage from "@/assets/events/uk-africa-summit.jpg";
 import {
   Carousel,
   CarouselContent,
@@ -238,112 +237,7 @@ export const Hero = () => {
                   </div>
                 </CarouselItem>
 
-                {/* Event 2: UK-Africa Summit 2025 - Split Layout */}
-                <CarouselItem>
-                  <div className="bg-white/95 backdrop-blur-sm rounded-2xl md:rounded-3xl shadow-2xl overflow-hidden border border-white/20 h-full flex flex-col lg:flex-row">
-                    {/* Image Section */}
-                    <div className="lg:w-1/2 h-56 lg:h-auto relative overflow-hidden">
-                      <img
-                        src={ukAfricaSummitImage}
-                        alt="UK-Africa Summit 2025 - THINK Programme Launch"
-                        className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-gif-cyan/20 to-transparent"></div>
-
-                      <div className="absolute top-4 left-4">
-                        <div className="flex items-center gap-2 bg-black/80 backdrop-blur-sm px-3 py-1.5 rounded-full">
-                          <div className="w-2 h-2 bg-gif-cyan rounded-full animate-pulse"></div>
-                          <span className="text-xs font-semibold text-white uppercase tracking-wider">
-                            Summit
-                          </span>
-                        </div>
-                      </div>
-
-                      <div className="absolute bottom-4 left-4">
-                        <div className="bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full">
-                          <span className="text-sm font-semibold text-gif-cyan">
-                            Partnership Launch
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Content Section */}
-                    <div className="lg:w-1/2 p-6 md:p-8 flex flex-col justify-between">
-                      <div>
-                        <div className="flex items-center gap-2 mb-3">
-                          <div className="w-3 h-3 bg-gif-cyan rounded-full"></div>
-                          <span className="text-sm font-medium text-gif-cyan">
-                            Global Summit
-                          </span>
-                        </div>
-
-                        <h3 className="text-xl md:text-2xl lg:text-3xl font-display font-bold text-gray-900 mb-4 leading-tight">
-                          UK-Africa Summit 2025
-                        </h3>
-
-                        <p className="text-lg md:text-xl font-medium text-gif-cyan mb-3">
-                          EGM + GIF Partnership - THINK Programme Launch
-                        </p>
-
-                        <div className="space-y-3 mb-6">
-                          <div className="flex items-center gap-3">
-                            <div className="bg-gif-cyan/10 p-2 rounded-lg">
-                              <MapPin className="w-5 h-5 text-gif-cyan" />
-                            </div>
-                            <div>
-                              <p className="text-sm text-gray-600">Location</p>
-                              <p className="font-medium text-gray-900">
-                                United Kingdom
-                              </p>
-                            </div>
-                          </div>
-
-                          <div className="flex items-center gap-3">
-                            <div className="bg-gif-cyan/10 p-2 rounded-lg">
-                              <Calendar className="w-5 h-5 text-gif-cyan" />
-                            </div>
-                            <div>
-                              <p className="text-sm text-gray-600">Date</p>
-                              <p className="font-medium text-gray-900">
-                                November 5, 2025
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-
-                        <p className="text-gray-600 mb-6 text-sm leading-relaxed">
-                          Join us at the UK-Africa Summit for the official
-                          launch of THINK! Discover how our innovative mindset
-                          programme is transforming businesses and empowering
-                          entrepreneurs across continents.
-                        </p>
-                      </div>
-
-                      <div className="space-y-4">
-                        <Button
-                          asChild
-                          className="w-full bg-gif-cyan hover:bg-gif-cyan/90 text-white h-12 text-base group"
-                        >
-                          <Link to="/contact">
-                            Learn More
-                            <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                          </Link>
-                        </Button>
-
-                        <div className="text-center">
-                          <Link
-                            to="/events"
-                            className="inline-flex items-center text-sm text-gray-600 hover:text-gif-cyan transition-colors"
-                          >
-                            View all events
-                            <ChevronRight className="ml-1 h-4 w-4" />
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </CarouselItem>
+                
               </CarouselContent>
               <CarouselPrevious className="left-2 md:left-4 h-10 w-10 md:h-12 md:w-12 bg-white/90 hover:bg-white backdrop-blur-sm border-white/30" />
               <CarouselNext className="right-2 md:right-4 h-10 w-10 md:h-12 md:w-12 bg-white/90 hover:bg-white backdrop-blur-sm border-white/30" />
