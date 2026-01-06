@@ -35,6 +35,7 @@ import { CarouselDots } from "@/components/ui/carousel-dots";
 import React from "react";
 import { VolunteerForm } from "./VolunteerForm";
 import volunteerJobs from "@/lib/volunteerJobs";
+import { AnonymousForm } from "./AnonymousForm";
 
 interface GetInvolvedProps {
   simplified?: boolean;
@@ -433,7 +434,7 @@ export const GetInvolved = ({ simplified = false }: GetInvolvedProps) => {
               </div>
 
               {/* Apply to Volunteer */}
-              <VolunteerForm />
+              <AnonymousForm />
             </>
           )}
         </div>
