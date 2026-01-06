@@ -236,8 +236,6 @@ export const Hero = () => {
                     </div>
                   </div>
                 </CarouselItem>
-
-                
               </CarouselContent>
               <CarouselPrevious className="left-2 md:left-4 h-10 w-10 md:h-12 md:w-12 bg-white/90 hover:bg-white backdrop-blur-sm border-white/30" />
               <CarouselNext className="right-2 md:right-4 h-10 w-10 md:h-12 md:w-12 bg-white/90 hover:bg-white backdrop-blur-sm border-white/30" />
