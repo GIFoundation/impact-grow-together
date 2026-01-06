@@ -73,6 +73,126 @@ export const volunteerJobs: VolunteerJob[] = [
     commitment: "Flexible (Unpaid)",
     interestTag: "Administrative Support",
   },
+  {
+    slug: "hr-volunteer",
+    title: "HR Volunteer",
+    location: "Remote/Hybrid",
+    short: "Support recruitment, onboarding and people processes.",
+    about:
+      "Support our people functions including recruitment, volunteer onboarding, and basic HR processes to help us build a sustainable, supported team.",
+    responsibilities: [
+      "Assist with volunteer recruitment and screening",
+      "Support onboarding and induction processes",
+      "Help maintain personnel records and HR admin",
+    ],
+    commitment: "Flexible (Unpaid)",
+    interestTag: "HR",
+  },
+  {
+    slug: "it-support-volunteer",
+    title: "IT Support Volunteer",
+    location: "Remote/Hybrid",
+    short: "Provide technical support and maintain our IT systems.",
+    about:
+      "Provide technical support, maintain basic systems, and help improve our digital tools so the team can operate smoothly.",
+    responsibilities: [
+      "Troubleshoot user issues and provide support",
+      "Maintain and document simple IT procedures",
+      "Support deployments and admin for cloud services",
+    ],
+    commitment: "Flexible (Unpaid)",
+    interestTag: "IT",
+  },
+  {
+    slug: "legal-advice-volunteer",
+    title: "Legal Advice Volunteer",
+    location: "Remote Worldwide",
+    short: "Provide pro bono legal guidance and document review.",
+    about:
+      "Offer pro bono legal guidance, help review policies and contracts, and ensure compliance with relevant regulations.",
+    responsibilities: [
+      "Review simple contracts and partnership agreements",
+      "Advise on policy and compliance matters",
+      "Help draft volunteer-facing documents",
+    ],
+    commitment: "Ad-hoc (Unpaid)",
+    interestTag: "Legal",
+  },
+  {
+    slug: "finance-volunteer",
+    title: "Finance Volunteer",
+    location: "Remote/Hybrid",
+    short: "Support bookkeeping, reporting and financial processes.",
+    about:
+      "Help maintain accurate financial records, support basic bookkeeping, and assist with budgeting and reporting.",
+    responsibilities: [
+      "Support bookkeeping and transaction reconciliation",
+      "Prepare simple financial reports",
+      "Assist with budgeting and expense tracking",
+    ],
+    commitment: "Flexible (Unpaid)",
+    interestTag: "Finance",
+  },
+  {
+    slug: "project-management-volunteer",
+    title: "Project Management Volunteer",
+    location: "Remote/Hybrid",
+    short: "Help plan, coordinate and track projects and programmes.",
+    about:
+      "Support planning and coordination of programmes and internal projects to ensure timely delivery and clear communication across teams.",
+    responsibilities: [
+      "Create and maintain project plans and timelines",
+      "Coordinate stakeholders and update project trackers",
+      "Help run regular project check-ins",
+    ],
+    commitment: "Flexible (Unpaid)",
+    interestTag: "Project Management",
+  },
+  {
+    slug: "operations-volunteer",
+    title: "Operations Volunteer",
+    location: "Remote/Hybrid",
+    short: "Support operational processes and logistics.",
+    about:
+      "Support the organisation's operational needs including logistics, vendor coordination, and process improvements to keep programmes running.",
+    responsibilities: [
+      "Support logistics and vendor coordination",
+      "Help document and improve operational processes",
+      "Assist with programme logistics and resource planning",
+    ],
+    commitment: "Flexible (Unpaid)",
+    interestTag: "Operations",
+  },
+  {
+    slug: "marketing-communications-volunteer",
+    title: "Marketing & Communications Volunteer",
+    location: "Remote Worldwide",
+    short: "Support storytelling, comms strategy and stakeholder engagement.",
+    about:
+      "Work on storytelling, communications strategy, and stakeholder engagement to raise awareness and support for our programmes.",
+    responsibilities: [
+      "Draft social and email content",
+      "Support PR and stakeholder communications",
+      "Help develop campaign messaging",
+    ],
+    commitment: "Flexible (Unpaid)",
+    interestTag: "Marketing & Communications",
+  },
+  {
+    slug: "visual-designer-volunteer",
+    title: "Visual Design Volunteer",
+    location: "Remote Worldwide",
+    short: "Create visual assets for campaigns and programmes.",
+    about:
+      "Design visual assets such as social graphics, presentation templates and marketing materials to support our outreach.",
+    responsibilities: [
+      "Create social and campaign graphics",
+      "Design presentation and programme materials",
+      "Help maintain brand asset library",
+    ],
+    commitment: "Project-based / Flexible (Unpaid)",
+    interestTag: "Visual Design",
+  },
 ];
 
 export default volunteerJobs;

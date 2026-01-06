@@ -1,4 +1,4 @@
-import { useState, useRef, ChangeEvent } from "react";
+import { useState, useRef, ChangeEvent, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -32,7 +32,7 @@ export const VolunteerForm = ({
     email: "",
     phone: "",
     location: "",
-    interests: initialInterests,
+    interests: initialInterests ?? [],
     message: role ? `Applying for: ${role}\n\n` : "",
     cvFile: null,
   });
@@ -142,8 +142,21 @@ export const VolunteerForm = ({
     }));
   };
 
+  useEffect(() => {
+    setFormData((prev) => ({
+      ...prev,
+      interests: initialInterests ?? prev.interests,
+      message: role
+        ? `Applying for: ${role}\n\n${prev.message.replace(
+            /^Applying for:.*?\n\n/,
+            ""
+          )}`
+        : prev.message,
+    }));
+  }, [initialInterests, role]);
+
   return (
-    <div className="max-w-3xl mx-auto">
+    <div id="apply-form" className="max-w-3xl mx-auto">
       <div className="bg-gradient-to-r from-gif-cyan via-gif-lime to-gif-cyan rounded-3xl p-1">
         <div className="bg-background rounded-3xl p-8 md:p-12">
           <h3 className="text-3xl font-display font-bold text-center mb-6">
@@ -217,6 +230,14 @@ export const VolunteerForm = ({
                   "Digital Marketing & Content",
                   "Event Support",
                   "Administrative Support",
+                  "HR",
+                  "IT",
+                  "Legal",
+                  "Finance",
+                  "Project Management",
+                  "Operations",
+                  "Marketing & Communications",
+                  "Visual Design",
                 ].map((interest) => (
                   <div key={interest} className="flex items-center space-x-2">
                     <Checkbox

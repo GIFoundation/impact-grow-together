@@ -24,7 +24,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   Carousel,
   CarouselContent,
@@ -52,6 +52,7 @@ export const GetInvolved = ({ simplified = false }: GetInvolvedProps) => {
     interests: [] as string[],
     message: "",
   });
+  const navigate = useNavigate();
 
   React.useEffect(() => {
     if (!carouselApi) return;
@@ -199,6 +200,18 @@ export const GetInvolved = ({ simplified = false }: GetInvolvedProps) => {
             </Card>
           </div>
 
+          <div
+            style={{
+              // display: "flex",
+              // alignSelf: "center",
+              // margin: "0 auto",
+              width: "100%",
+              textAlign: "center",
+            }}
+          >
+            By clicking the button below, you will be redirected to our secure
+            donation page.
+          </div>
           <div className="text-center">
             <Button
               onClick={() =>
@@ -348,11 +361,11 @@ export const GetInvolved = ({ simplified = false }: GetInvolvedProps) => {
                       {/** Render job cards from volunteerJobs to keep data DRY and link to detail pages */}
                       {volunteerJobs.map((job) => (
                         <CarouselItem key={job.slug} className="md:basis-1/2">
-                          <Link
-                            to={`/volunteer/${job.slug}`}
-                            className="block h-full"
-                          >
-                            <Card className="border-2 hover:border-gif-cyan/50 hover:bg-gif-cyan/5 transition-all h-full">
+                          <div className="block h-full">
+                            <Card
+                              className="border-2 hover:border-gif-cyan/50 hover:bg-gif-cyan/5 transition-all h-full cursor-pointer"
+                              onClick={() => navigate(`/volunteer/${job.slug}`)}
+                            >
                               <CardHeader>
                                 <div className="w-12 h-12 rounded-xl bg-gif-cyan/10 flex items-center justify-center mb-3">
                                   <Megaphone className="h-6 w-6 text-gif-cyan" />
@@ -397,13 +410,22 @@ export const GetInvolved = ({ simplified = false }: GetInvolvedProps) => {
                                 </div>
                               </CardContent>
                             </Card>
-                          </Link>
+                            <div className="mt-3 text-right">
+                              <Link
+                                to={`/volunteer/${job.slug}`}
+                                className="text-sm text-muted-foreground hover:underline"
+                                onClick={(e) => e.stopPropagation()}
+                              >
+                                View details
+                              </Link>
+                            </div>
+                          </div>
                         </CarouselItem>
                       ))}
                     </CarouselContent>
                   </Carousel>
                   <CarouselDots
-                    total={4}
+                    total={volunteerJobs.length}
                     current={currentSlide}
                     onDotClick={(index) => carouselApi?.scrollTo(index)}
                   />
