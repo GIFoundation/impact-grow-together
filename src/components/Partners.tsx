@@ -1,5 +1,17 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { Globe, Users, Heart, Target } from "lucide-react";
 import accaImg from "@/assets/partners/acca.jpg";
 import affordImg from "@/assets/partners/afford.jpg";
@@ -15,7 +27,8 @@ const partners = [
   {
     country: "United Kingdom",
     name: "ACCA",
-    description: "ACCA (Association of Chartered Certified Accountants) is the largest global accountancy body. GIF partners with Moracle Foundation to deliver practical hands-on experience in accountancy, AI, and mindset to ACCA students in or just leaving university.",
+    description:
+      "ACCA (Association of Chartered Certified Accountants) is the largest global accountancy body. GIF partners with Moracle Foundation to deliver practical hands-on experience in accountancy, AI, and mindset to ACCA students in or just leaving university.",
     image: accaImg,
     highlights: [
       "Global reach with students worldwide",
@@ -27,7 +40,8 @@ const partners = [
   {
     country: "United Kingdom",
     name: "AFFORD",
-    description: "AFFORD partners with GIF to roll out mindset programmes integrated into their delivery to Africa and the Diaspora worldwide. They have significant database access and funding reach across global communities.",
+    description:
+      "AFFORD partners with GIF to roll out mindset programmes integrated into their delivery to Africa and the Diaspora worldwide. They have significant database access and funding reach across global communities.",
     image: affordImg,
     highlights: [
       "Global reach across Africa and Diaspora communities",
@@ -36,40 +50,42 @@ const partners = [
       "Strong leadership partnership",
     ],
   },
-  {
-    country: "Nigeria",
-    name: "African Center for Youth Sports and Development",
-    description: "ACYSD strives to raise the value of youth sports by providing accessible opportunities for young people to engage in sports activities, develop their talents, and unlock their full potential. Through their programmes, ACYSD aims to instil the values of teamwork, discipline, leadership, and resilience, while promoting a healthy and active lifestyle.",
-    image: acysdImg,
-  },
-  {
-    country: "Zambia",
-    name: "African Impact Foundation",
-    description: "African Impact Foundation's holistic approach gives young people in Southern and Eastern Africa the best chance of real, long-term change to break the cycle of poverty for themselves and their community.",
-    image: africanImpactImg,
-    pillars: [
-      {
-        title: "Gender Equality",
-        description: "Girls and young women are equipped to choose their own pathways to become healthy, positive and prosperous leaders.",
-      },
-      {
-        title: "Education",
-        description: "Students have the opportunity and ability to finish school and seek sustainable livelihoods.",
-      },
-      {
-        title: "Wellness",
-        description: "Young people are mindful of the choices they make about their health and wellbeing.",
-      },
-      {
-        title: "Livelihood",
-        description: "Young people are able to access pathways to sustainable livelihoods through entrepreneurship, skills training and further education.",
-      },
-    ],
-  },
+  // {
+  //   country: "Nigeria",
+  //   name: "African Center for Youth Sports and Development",
+  //   description:
+  //     "ACYSD strives to raise the value of youth sports by providing accessible opportunities for young people to engage in sports activities, develop their talents, and unlock their full potential. Through their programmes, ACYSD aims to instil the values of teamwork, discipline, leadership, and resilience, while promoting a healthy and active lifestyle.",
+  //   image: acysdImg,
+  // },
+  // {
+  //   country: "Zambia",
+  //   name: "African Impact Foundation",
+  //   description: "African Impact Foundation's holistic approach gives young people in Southern and Eastern Africa the best chance of real, long-term change to break the cycle of poverty for themselves and their community.",
+  //   image: africanImpactImg,
+  //   pillars: [
+  //     {
+  //       title: "Gender Equality",
+  //       description: "Girls and young women are equipped to choose their own pathways to become healthy, positive and prosperous leaders.",
+  //     },
+  //     {
+  //       title: "Education",
+  //       description: "Students have the opportunity and ability to finish school and seek sustainable livelihoods.",
+  //     },
+  //     {
+  //       title: "Wellness",
+  //       description: "Young people are mindful of the choices they make about their health and wellbeing.",
+  //     },
+  //     {
+  //       title: "Livelihood",
+  //       description: "Young people are able to access pathways to sustainable livelihoods through entrepreneurship, skills training and further education.",
+  //     },
+  //   ],
+  // },
   {
     country: "Cameroon",
     name: "AGAPE Association",
-    description: "AGAPE is a non-lucrative association who works in a multidimensional way in the care of Vulnerable Children in order to facilitate the optimization of their social, educational, professional status and their integration into society.",
+    description:
+      "AGAPE is a non-lucrative association who works in a multidimensional way in the care of Vulnerable Children in order to facilitate the optimization of their social, educational, professional status and their integration into society.",
     image: agapeImg,
     objectives: [
       "Improve the living conditions of vulnerable children",
@@ -83,13 +99,15 @@ const partners = [
   {
     country: "Botswana",
     name: "Botswana Ministry of Youth and BNYC",
-    description: "Partnership with Botswana's Ministry of Youth and the Botswana National Youth Council to deliver impactful youth development programmes across the nation.",
+    description:
+      "Partnership with Botswana's Ministry of Youth and the Botswana National Youth Council to deliver impactful youth development programmes across the nation.",
     image: botswanaYouthImg,
   },
   {
     country: "United Kingdom",
     name: "Empowered Growth Marketing",
-    description: "EGM delivers AI-powered growth marketing solutions for premium brands in wellness, luxury, F&B, and tech. A unique partnership combining international GTM and cross-cultural trade expertise with mindset development, delivering three-tier programmes to businesses with over 100 staff.",
+    description:
+      "EGM delivers AI-powered growth marketing solutions for premium brands in wellness, luxury, F&B, and tech. A unique partnership combining international GTM and cross-cultural trade expertise with mindset development, delivering three-tier programmes to businesses with over 100 staff.",
     image: empoweredGrowthImg,
     highlights: [
       "AI Marketing Agents delivered in 10 days",
@@ -101,15 +119,17 @@ const partners = [
   {
     country: "Liberia",
     name: "Liberian Youth National Bank",
-    description: "Initiative from the LYNB to increase youth entrepreneurship, creativity, and innovation for youth and national sustainability. Focused on empowering young Liberians with financial literacy and entrepreneurial skills.",
+    description:
+      "Initiative from the LYNB to increase youth entrepreneurship, creativity, and innovation for youth and national sustainability. Focused on empowering young Liberians with financial literacy and entrepreneurial skills.",
     image: liberianYouthBankImg,
   },
-  {
-    country: "Kenya",
-    name: "Youth Café",
-    description: "The Youth Cafe is Africa's largest and most diverse convening community of professionals harnessing youth advocacy, policy, and research for socio-economic and political impact, with over 3,500 member organisations, over 1,200 experts, and over 947,000 individual members aged between 18 to 35 virtually from every country in Africa.",
-    image: youthCafeImg,
-  },
+  // {
+  //   country: "Kenya",
+  //   name: "Youth Café",
+  //   description:
+  //     "The Youth Cafe is Africa's largest and most diverse convening community of professionals harnessing youth advocacy, policy, and research for socio-economic and political impact, with over 3,500 member organisations, over 1,200 experts, and over 947,000 individual members aged between 18 to 35 virtually from every country in Africa.",
+  //   image: youthCafeImg,
+  // },
 ];
 
 export const Partners = () => {
@@ -117,14 +137,15 @@ export const Partners = () => {
     <section id="partners" className="pt-8 pb-24 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/5 to-background"></div>
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">
             Our Partners
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Building stronger communities through strategic partnerships across Africa
+            Building stronger communities through strategic partnerships across
+            Africa
           </p>
         </div>
 
@@ -153,15 +174,17 @@ export const Partners = () => {
                       </span>
                     </div>
                   </div>
-                  
+
                   <CardHeader>
                     <CardTitle className="text-2xl">{partner.name}</CardTitle>
                     <CardDescription className="text-base leading-relaxed pt-2">
                       {partner.description}
                     </CardDescription>
                   </CardHeader>
-                  
-                  {(partner.highlights || partner.pillars || partner.objectives) && (
+
+                  {(partner.highlights ||
+                    partner.pillars ||
+                    partner.objectives) && (
                     <CardContent>
                       <div className="space-y-3">
                         {partner.highlights && (
@@ -172,15 +195,20 @@ export const Partners = () => {
                             </div>
                             <ul className="space-y-2">
                               {partner.highlights.map((highlight, idx) => (
-                                <li key={idx} className="flex items-start gap-2 text-sm">
+                                <li
+                                  key={idx}
+                                  className="flex items-start gap-2 text-sm"
+                                >
                                   <span className="text-primary mt-1">•</span>
-                                  <span className="text-muted-foreground">{highlight}</span>
+                                  <span className="text-muted-foreground">
+                                    {highlight}
+                                  </span>
                                 </li>
                               ))}
                             </ul>
                           </>
                         )}
-                        
+
                         {partner.pillars && (
                           <>
                             <div className="flex items-center gap-2 text-sm font-semibold text-foreground mb-3">
@@ -189,15 +217,22 @@ export const Partners = () => {
                             </div>
                             <div className="grid gap-3">
                               {partner.pillars.map((pillar, idx) => (
-                                <div key={idx} className="bg-secondary/30 p-3 rounded-lg">
-                                  <h4 className="font-semibold text-sm mb-1">{pillar.title}</h4>
-                                  <p className="text-sm text-muted-foreground">{pillar.description}</p>
+                                <div
+                                  key={idx}
+                                  className="bg-secondary/30 p-3 rounded-lg"
+                                >
+                                  <h4 className="font-semibold text-sm mb-1">
+                                    {pillar.title}
+                                  </h4>
+                                  <p className="text-sm text-muted-foreground">
+                                    {pillar.description}
+                                  </p>
                                 </div>
                               ))}
                             </div>
                           </>
                         )}
-                        
+
                         {partner.objectives && (
                           <>
                             <div className="flex items-center gap-2 text-sm font-semibold text-foreground mb-3">
@@ -206,9 +241,14 @@ export const Partners = () => {
                             </div>
                             <ul className="space-y-2">
                               {partner.objectives.map((objective, idx) => (
-                                <li key={idx} className="flex items-start gap-2 text-sm">
+                                <li
+                                  key={idx}
+                                  className="flex items-start gap-2 text-sm"
+                                >
                                   <span className="text-primary mt-1">•</span>
-                                  <span className="text-muted-foreground">{objective}</span>
+                                  <span className="text-muted-foreground">
+                                    {objective}
+                                  </span>
                                 </li>
                               ))}
                             </ul>
@@ -234,11 +274,12 @@ export const Partners = () => {
               </div>
               <CardTitle className="text-3xl">Partner With Us</CardTitle>
               <CardDescription className="text-base pt-2">
-                It's easy to get in touch with us and explore possible collaboration and partnerships.
+                It's easy to get in touch with us and explore possible
+                collaboration and partnerships.
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <a 
+              <a
                 href="#contact"
                 className="inline-flex items-center justify-center rounded-md bg-primary text-primary-foreground px-8 py-3 text-sm font-medium shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
               >
