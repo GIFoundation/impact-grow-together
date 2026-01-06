@@ -111,9 +111,10 @@ export const Footer = () => {
               reserved.
             </p>
             <div className="flex items-center gap-2 text-sm text-white/60">
-              <span>Made</span>
+              <span>Privacy Policy</span>
+              <span>|</span>
               {/* <Heart className="h-4 w-4 text-gif-orange fill-gif-orange" /> */}
-              <span>for transforming minds</span>
+              <span>Terms of use</span>
             </div>
           </div>
         </div>
