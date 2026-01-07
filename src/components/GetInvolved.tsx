@@ -434,7 +434,7 @@ export const GetInvolved = ({ simplified = false }: GetInvolvedProps) => {
               </div>
 
               {/* Apply to Volunteer */}
-              <AnonymousForm />
+              <VolunteerForm />
             </>
           )}
         </div>

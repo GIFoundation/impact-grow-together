@@ -5,6 +5,7 @@ import { useParams, Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { VolunteerForm } from "@/components/VolunteerForm";
 import { ArrowRight } from "lucide-react";
+import { AnonymousForm } from "@/components/AnonymousForm";
 
 const VolunteerDetail = () => {
   const { slug } = useParams();
@@ -81,10 +82,11 @@ const VolunteerDetail = () => {
                 </p>
               </div>
 
-              <VolunteerForm
+              {/* <VolunteerForm
                 initialInterests={job.interestTag ? [job.interestTag] : []}
                 role={job.title}
-              />
+              /> */}
+              <AnonymousForm />
             </div>
           </aside>
         </div>
