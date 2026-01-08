@@ -21,9 +21,12 @@ export const Footer = () => {
               across Africa and beyond.
             </p>
             <div className="flex items-center gap-2 text-sm text-white/60">
-              <span>Registered in UK & US</span>
-              <span>•</span>
-              <span>Operating Globally</span>
+              <span>
+                Company Registration Number: 12696742 960 Capability Green
+                Luton, England LU1 3PE
+              </span>
+              {/* <span>•</span>
+              <span>Operating Globally</span> */}
             </div>
           </div>
 
