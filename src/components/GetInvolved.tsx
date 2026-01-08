@@ -97,7 +97,7 @@ export const GetInvolved = ({ simplified = false }: GetInvolvedProps) => {
 
   return (
     <div className="bg-background">
-      {/* Become a Donor Section */}
+      {/* removed the told partners Section */}
       <section
         id="become-donor"
         className="pt-6 pb-20 bg-gradient-to-b from-transparent via-gif-orange/5 to-background relative overflow-hidden"
@@ -210,14 +210,17 @@ export const GetInvolved = ({ simplified = false }: GetInvolvedProps) => {
               textAlign: "center",
             }}
           >
-            By clicking the button below, you will be redirected to our secure
-            donation page.
+            By clicking the button below, you’re being redirected to Stripe to
+            complete your payment. We do not store payment details.
           </div>
           <div className="text-center">
             <Button
               onClick={() =>
-                (window.location.href =
-                  "https://donate.stripe.com/bIY16Y6KK5VbaFG144")
+                window.open(
+                  "https://donate.stripe.com/bIY16Y6KK5VbaFG144",
+                  "_blank",
+                  "noopener,noreferrer"
+                )
               }
               size="lg"
               className="bg-gif-orange text-white hover:bg-gif-orange/90 text-lg group"
