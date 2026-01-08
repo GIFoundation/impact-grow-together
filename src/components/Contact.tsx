@@ -271,12 +271,23 @@ export const Contact = () => {
                   <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
                     <MapPin className="h-6 w-6 text-accent" />
                   </div>
-                  <div>
+                  <div
+                    style={{
+                      display: "flex",
+                      gap: "10px",
+                      flexDirection: "column",
+                    }}
+                  >
                     <h3 className="font-semibold mb-2">Our Offices</h3>
                     <p className="text-muted-foreground text-sm">
-                      Registered in UK and US
-                      <br />
-                      Operating across Africa
+                      UK Branch 960 Capability Green Luton, England LU1 3PE
+                    </p>
+                    <p className="text-muted-foreground text-sm">
+                      Zambia Branch Plot no. 143/401a St. Bonaventure Makeni,
+                      Lusaka, Lusaka Province
+                    </p>
+                    <p className="text-muted-foreground text-sm">
+                      USA Branch 13629 W. Windsor Blvd Litchfield Park AZ 85340
                     </p>
                   </div>
                 </div>
