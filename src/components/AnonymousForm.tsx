@@ -37,10 +37,10 @@ export const AnonymousForm = ({
     cvFile: null,
   });
 
-  const [wordCount, setWordCount] = useState(0);
+  const [charCount, setCharCount] = useState(0);
   const fileInputRef = useRef<HTMLInputElement | null>(null);
   const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB limit
-  const MAX_WORDS = 2500;
+  const MAX_CHARS = 1500;
 
   const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -72,31 +72,23 @@ export const AnonymousForm = ({
   const handleMessageChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
     const value = e.target.value;
 
-    // Count words
-    const words = value
-      .trim()
-      .split(/\s+/)
-      .filter((word) => word.length > 0);
-    const currentWordCount = words.length;
-    setWordCount(currentWordCount);
+    // Count characters
+    const currentCharCount = value.length;
+    setCharCount(currentCharCount);
 
-    // Prevent typing if word limit exceeded
-    if (currentWordCount > MAX_WORDS) {
-      // Truncate the message to stay within limit
-      const wordsArray = value.split(/\s+/);
-      const truncatedWords = wordsArray.slice(0, MAX_WORDS);
-      const truncatedMessage = truncatedWords.join(" ");
-
+    // Prevent typing if char limit exceeded
+    if (currentCharCount > MAX_CHARS) {
+      const truncatedMessage = value.slice(0, MAX_CHARS);
       setFormData({ ...formData, message: truncatedMessage });
-      setWordCount(MAX_WORDS);
+      setCharCount(MAX_CHARS);
       return;
     }
 
     setFormData({ ...formData, message: value });
   };
 
-  const getWordCountColor = () => {
-    const percentage = (wordCount / MAX_WORDS) * 100;
+  const getCountColor = () => {
+    const percentage = (charCount / MAX_CHARS) * 100;
     if (percentage >= 90) return "text-red-500";
     if (percentage >= 75) return "text-amber-500";
     return "text-muted-foreground";
@@ -105,10 +97,10 @@ export const AnonymousForm = ({
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
 
-    // Check word limit before submitting
-    if (wordCount > MAX_WORDS) {
+    // Check character limit before submitting
+    if (charCount > MAX_CHARS) {
       alert(
-        `Message exceeds ${MAX_WORDS} word limit. Please shorten your message.`
+        `Message exceeds ${MAX_CHARS} character limit. Please shorten your message.`
       );
       return;
     }
@@ -126,7 +118,7 @@ export const AnonymousForm = ({
       message: "",
       cvFile: null,
     });
-    setWordCount(0);
+    setCharCount(0);
 
     if (fileInputRef.current) {
       fileInputRef.current.value = "";
@@ -312,15 +304,15 @@ export const AnonymousForm = ({
               </div>
             </div>
 
-            {/* Tell Us About Yourself Section with Word Limit */}
+            {/* Tell Us About Yourself (1500 characters max) */}
             <div className="space-y-3">
               <div className="flex justify-between items-center">
                 <Label htmlFor="message">Tell Us About Yourself *</Label>
                 <div className="text-xs flex items-center gap-2">
-                  <span className={`font-medium ${getWordCountColor()}`}>
-                    {wordCount} / {MAX_WORDS}
+                  <span className={`font-medium ${getCountColor()}`}>
+                    {charCount} / {MAX_CHARS}
                   </span>
-                  <span className="text-muted-foreground">words</span>
+                  <span className="text-muted-foreground">characters</span>
                 </div>
               </div>
               <Textarea
@@ -330,7 +322,7 @@ export const AnonymousForm = ({
                 placeholder="Share your skills, experience, and why you want to volunteer with GIF..."
                 rows={5}
                 className={`transition-colors ${
-                  wordCount >= MAX_WORDS
+                  charCount >= MAX_CHARS
                     ? "border-red-300 focus:ring-red-200"
                     : ""
                 }`}
@@ -338,20 +330,20 @@ export const AnonymousForm = ({
               />
               <div className="flex justify-between items-center">
                 <p className="text-xs text-muted-foreground">
-                  {wordCount >= MAX_WORDS && (
+                  {charCount >= MAX_CHARS && (
                     <span className="text-red-500 font-medium">
-                      Word limit reached ({MAX_WORDS} words maximum)
+                      Character limit reached ({MAX_CHARS} characters maximum)
                     </span>
                   )}
-                  {wordCount >= MAX_WORDS * 0.9 && wordCount < MAX_WORDS && (
+                  {charCount >= MAX_CHARS * 0.9 && charCount < MAX_CHARS && (
                     <span className="text-amber-500 font-medium">
-                      Approaching word limit
+                      Approaching character limit
                     </span>
                   )}
                 </p>
-                {wordCount === 0 && (
+                {charCount === 0 && (
                   <p className="text-xs text-muted-foreground text-right">
-                    Maximum {MAX_WORDS.toLocaleString()} words allowed
+                    Maximum {MAX_CHARS.toLocaleString()} characters allowed
                   </p>
                 )}
               </div>
@@ -361,10 +353,10 @@ export const AnonymousForm = ({
               type="submit"
               size="lg"
               className="w-full bg-gif-cyan text-white hover:bg-gif-cyan/90 text-lg"
-              disabled={wordCount > MAX_WORDS}
+              disabled={charCount > MAX_CHARS}
             >
-              {wordCount > MAX_WORDS
-                ? `Exceeds ${MAX_WORDS} Word Limit`
+              {charCount > MAX_CHARS
+                ? `Exceeds ${MAX_CHARS} Character Limit`
                 : "Submit Application"}
             </Button>
           </form>

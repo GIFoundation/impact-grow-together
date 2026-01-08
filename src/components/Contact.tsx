@@ -15,8 +15,8 @@ export const Contact = () => {
     message: "",
   });
 
-  const MAX_WORDS = 2500;
-  const [wordCount, setWordCount] = useState(0);
+  const MAX_CHARS = 1500;
+  const [charCount, setCharCount] = useState(0);
 
   const formatPhoneNumber = (value: string) => {
     // Remove all non-digit characters
@@ -42,10 +42,10 @@ export const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Check word limit before submitting
-    if (wordCount > MAX_WORDS) {
+    // Check character limit before submitting
+    if (charCount > MAX_CHARS) {
       toast.error(
-        `Message exceeds ${MAX_WORDS} word limit. Please shorten your message.`
+        `Message exceeds ${MAX_CHARS} character limit. Please shorten your message.`
       );
       return;
     }
@@ -59,7 +59,7 @@ export const Contact = () => {
     // Here you would typically send the form data to your backend
     toast.success("Thank you! We'll get back to you soon.");
     setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
-    setWordCount(0);
+    setCharCount(0);
   };
 
   const handleChange = (
@@ -68,23 +68,15 @@ export const Contact = () => {
     const { name, value } = e.target;
 
     if (name === "message") {
-      // Count words in the message
-      const words = value
-        .trim()
-        .split(/\s+/)
-        .filter((word) => word.length > 0);
-      const currentWordCount = words.length;
-      setWordCount(currentWordCount);
+      // Count characters in the message
+      const currentCharCount = value.length;
+      setCharCount(currentCharCount);
 
-      // Prevent typing if word limit exceeded
-      if (currentWordCount > MAX_WORDS) {
-        // Truncate the message to stay within limit
-        const wordsArray = value.split(/\s+/);
-        const truncatedWords = wordsArray.slice(0, MAX_WORDS);
-        const truncatedMessage = truncatedWords.join(" ");
-
+      // Prevent typing if char limit exceeded
+      if (currentCharCount > MAX_CHARS) {
+        const truncatedMessage = value.slice(0, MAX_CHARS);
         setFormData({ ...formData, [name]: truncatedMessage });
-        setWordCount(MAX_WORDS);
+        setCharCount(MAX_CHARS);
         return;
       }
     }
@@ -92,8 +84,8 @@ export const Contact = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const getWordCountColor = () => {
-    const percentage = (wordCount / MAX_WORDS) * 100;
+  const getCountColor = () => {
+    const percentage = (charCount / MAX_CHARS) * 100;
     if (percentage >= 90) return "text-red-500";
     if (percentage >= 75) return "text-amber-500";
     return "text-muted-foreground";
@@ -193,10 +185,10 @@ export const Contact = () => {
                       Message
                     </label>
                     <div className="text-xs flex items-center gap-2">
-                      <span className={`font-medium ${getWordCountColor()}`}>
-                        {wordCount} / {MAX_WORDS}
+                      <span className={`font-medium ${getCountColor()}`}>
+                        {charCount} / {MAX_CHARS}
                       </span>
-                      <span className="text-muted-foreground">words</span>
+                      <span className="text-muted-foreground">characters</span>
                     </div>
                   </div>
                   <Textarea
@@ -207,28 +199,29 @@ export const Contact = () => {
                     placeholder="Tell us more about your inquiry..."
                     rows={6}
                     className={`transition-colors ${
-                      wordCount >= MAX_WORDS
+                      charCount >= MAX_CHARS
                         ? "border-red-300 focus:ring-red-200"
                         : ""
                     }`}
                   />
                   <div className="flex justify-between items-center">
                     <p className="text-xs text-muted-foreground">
-                      {wordCount >= MAX_WORDS && (
+                      {charCount >= MAX_CHARS && (
                         <span className="text-red-500 font-medium">
-                          Word limit reached ({MAX_WORDS} words maximum)
+                          Character limit reached ({MAX_CHARS} characters
+                          maximum)
                         </span>
                       )}
-                      {wordCount >= MAX_WORDS * 0.9 &&
-                        wordCount < MAX_WORDS && (
+                      {charCount >= MAX_CHARS * 0.9 &&
+                        charCount < MAX_CHARS && (
                           <span className="text-amber-500 font-medium">
-                            Approaching word limit
+                            Approaching character limit
                           </span>
                         )}
                     </p>
-                    {wordCount === 0 && (
+                    {charCount === 0 && (
                       <p className="text-xs text-muted-foreground text-right">
-                        Maximum {MAX_WORDS.toLocaleString()} words allowed
+                        Maximum {MAX_CHARS.toLocaleString()} characters allowed
                       </p>
                     )}
                   </div>
@@ -238,10 +231,10 @@ export const Contact = () => {
                   type="submit"
                   size="lg"
                   className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
-                  disabled={wordCount > MAX_WORDS}
+                  disabled={charCount > MAX_CHARS}
                 >
-                  {wordCount > MAX_WORDS
-                    ? `Exceeds ${MAX_WORDS} Word Limit`
+                  {charCount > MAX_CHARS
+                    ? `Exceeds ${MAX_CHARS} Character Limit`
                     : "Send Message"}
                 </Button>
               </form>
@@ -318,8 +311,8 @@ export const Contact = () => {
                 Message Guidelines
               </h3>
               <p className="text-sm text-muted-foreground mb-2">
-                <strong>Word Limit:</strong> Maximum{" "}
-                {MAX_WORDS.toLocaleString()} words per message.
+                <strong>Character Limit:</strong> Maximum{" "}
+                {MAX_CHARS.toLocaleString()} characters per message.
               </p>
               <p className="text-sm text-muted-foreground mb-2">
                 <strong>Phone Format:</strong> Enter your UK phone number (11
