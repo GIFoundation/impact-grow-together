@@ -160,7 +160,7 @@ export const VolunteerForm = ({
       <div className="bg-gradient-to-r from-gif-cyan via-gif-lime to-gif-cyan rounded-3xl p-1">
         <div className="bg-background rounded-3xl p-8 md:p-12">
           <h3 className="text-3xl font-display font-bold text-center mb-6">
-            Apply to Volunteer
+            Volunteer Spauntanious Application
           </h3>
           <p className="text-center text-muted-foreground mb-8">
             Fill out the form below and we'll be in touch to discuss the best
