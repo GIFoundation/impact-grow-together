@@ -19,9 +19,9 @@ export const Footer = () => {
             <p className="text-white/80 mb-4" style={{ fontWeight: "bold" }}>
               Unlocking Human Potential for a Sustainable World
             </p>
-            <p className="text-white/80 mb-4">
+            {/* <p className="text-white/80 mb-4">
               Empowering young people across Africa and beyond.
-            </p>
+            </p> */}
             <div className="flex items-center gap-2 text-sm text-white/60">
               <span>Company Registration Number: 12696742</span>
 
