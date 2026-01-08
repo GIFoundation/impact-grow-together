@@ -205,13 +205,16 @@ export const GetInvolved = ({ simplified = false }: GetInvolvedProps) => {
             style={{
               // display: "flex",
               // alignSelf: "center",
-              // margin: "0 auto",
-              width: "100%",
+              margin: "0 auto",
+              paddingBottom: "20px",
+              width: "50%",
               textAlign: "center",
+              fontSize: "0.815rem",
             }}
           >
-            By clicking the button below, you’re being redirected to Stripe to
-            complete your payment. We do not store payment details.
+            You'll be securely redirected to Stripe's site, a third-party
+            payment processor, to complete your transaction. We do not store or
+            process your payment details.
           </div>
           <div className="text-center">
             <Button
