@@ -16,12 +16,19 @@ export const Footer = () => {
             <h3 className="font-display text-2xl font-bold mb-4">
               Global Impact Foundation
             </h3>
+            <p className="text-white/80 mb-4" style={{ fontWeight: "bold" }}>
+              Unlocking Human Potential for a Sustainable World
+            </p>
             <p className="text-white/80 mb-4">
-              Transforming lives by transforming minds. Empowering young people
-              across Africa and beyond.
+              Empowering young people across Africa and beyond.
             </p>
             <div className="flex items-center gap-2 text-sm text-white/60">
               <span>Company Registration Number: 12696742</span>
+
+              {/* <span>•</span>
+              <span>Operating Globally</span> */}
+            </div>
+            <div className="flex items-center gap-2 text-sm text-white/60">
               <span>960 Capability Green Luton, England LU1 3PE</span>
               {/* <span>•</span>
               <span>Operating Globally</span> */}
