@@ -226,7 +226,10 @@ export const Contact = () => {
                     )}
                   </div>
                 </div>
-
+                <p className="text-sm text-muted-foreground">
+                  We typically respond within 48 hours. For urgent inquiries,
+                  please mention it in your message.
+                </p>
                 <Button
                   type="submit"
                   size="lg"
@@ -316,24 +319,6 @@ export const Contact = () => {
                 </div>
               </CardContent>
             </Card>
-
-            <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-6">
-              <h3 className="font-display font-bold text-xl mb-3">
-                Message Guidelines
-              </h3>
-              <p className="text-sm text-muted-foreground mb-2">
-                <strong>Character Limit:</strong> Maximum{" "}
-                {MAX_CHARS.toLocaleString()} characters per message.
-              </p>
-              <p className="text-sm text-muted-foreground mb-2">
-                <strong>Phone Format:</strong> Enter your UK phone number (11
-                digits without the leading 0).
-              </p>
-              <p className="text-sm text-muted-foreground">
-                We typically respond within 48 hours. For urgent inquiries,
-                please mention it in your message.
-              </p>
-            </div>
           </div>
         </div>
       </div>
