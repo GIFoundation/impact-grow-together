@@ -251,7 +251,9 @@ export const GetInvolved = ({ simplified = false }: GetInvolvedProps) => {
               Volunteer <span className="text-gif-cyan">with Us</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Share your skills and experience to help expand our impact.
+              Bring your skills, experience, or wisdom to a cause that matters.
+              Whether you're early in your career or planning your retirement,
+              your contribution will help us deepen and extend our impact.
             </p>
           </div>
 
