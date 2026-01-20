@@ -12,7 +12,7 @@ export interface VolunteerJob {
 export const volunteerJobs: VolunteerJob[] = [
   {
     slug: "corporate-fundraiser-uk",
-    title: "Volunteer Corporate Fundraiser (UK)",
+    title: "Volunteer Corporate Fundraiser (UK and US)",
     location: "Remote Worldwide",
     short: "Lead our corporate fundraising efforts in the UK and US.",
     about:
@@ -27,7 +27,7 @@ export const volunteerJobs: VolunteerJob[] = [
   },
   {
     slug: "digital-marketing-content-creator-uk",
-    title: "Volunteer Digital Marketing & Content Creator (UK)",
+    title: "Volunteer Digital Marketing & Content Creator (UK and US)",
     location: "Remote Worldwide",
     short:
       "Lead and execute our online presence, combining strategy and content creation.",
@@ -38,7 +38,7 @@ export const volunteerJobs: VolunteerJob[] = [
       "Create graphics, video, and social media content",
       "Manage social media and track analytics",
     ],
-    commitment: "15-20 hours/week for 12 months (Unpaid, Remote)",
+    commitment: "20 hours per week for 1 year (Unpaid, Remote)",
     interestTag: "Digital Marketing & Content",
   },
   {
@@ -54,7 +54,7 @@ export const volunteerJobs: VolunteerJob[] = [
       "Participant registration and support",
       "Workshop assistance",
     ],
-    commitment: "Variable depending on event (Unpaid)",
+    commitment: "20 hours per week for 1 year (Unpaid)",
     interestTag: "Event Support",
   },
   {
@@ -70,7 +70,7 @@ export const volunteerJobs: VolunteerJob[] = [
       "Communications support",
       "Project coordination",
     ],
-    commitment: "Flexible (Unpaid)",
+    commitment: "20 hours per week for 1 year (Unpaid)",
     interestTag: "Administrative Support",
   },
   {
@@ -85,7 +85,7 @@ export const volunteerJobs: VolunteerJob[] = [
       "Support onboarding and induction processes",
       "Help maintain personnel records and HR admin",
     ],
-    commitment: "Flexible (Unpaid)",
+    commitment: "20 hours per week for 1 year (Unpaid)",
     interestTag: "HR",
   },
   {
@@ -100,7 +100,7 @@ export const volunteerJobs: VolunteerJob[] = [
       "Maintain and document simple IT procedures",
       "Support deployments and admin for cloud services",
     ],
-    commitment: "Flexible (Unpaid)",
+    commitment: "20 hours per week for 1 year (Unpaid)",
     interestTag: "IT",
   },
   {
@@ -115,7 +115,7 @@ export const volunteerJobs: VolunteerJob[] = [
       "Advise on policy and compliance matters",
       "Help draft volunteer-facing documents",
     ],
-    commitment: "Ad-hoc (Unpaid)",
+    commitment: "20 hours per week for 1 year (Unpaid)",
     interestTag: "Legal",
   },
   {
@@ -130,7 +130,7 @@ export const volunteerJobs: VolunteerJob[] = [
       "Prepare simple financial reports",
       "Assist with budgeting and expense tracking",
     ],
-    commitment: "Flexible (Unpaid)",
+    commitment: "20 hours per week for 1 year (Unpaid)",
     interestTag: "Finance",
   },
   {
@@ -145,7 +145,7 @@ export const volunteerJobs: VolunteerJob[] = [
       "Coordinate stakeholders and update project trackers",
       "Help run regular project check-ins",
     ],
-    commitment: "Flexible (Unpaid)",
+    commitment: "20 hours per week for 1 year (Unpaid)",
     interestTag: "Project Management",
   },
   {
@@ -160,7 +160,7 @@ export const volunteerJobs: VolunteerJob[] = [
       "Help document and improve operational processes",
       "Assist with programme logistics and resource planning",
     ],
-    commitment: "Flexible (Unpaid)",
+    commitment: "20 hours per week for 1 year (Unpaid)",
     interestTag: "Operations",
   },
   {
@@ -175,7 +175,7 @@ export const volunteerJobs: VolunteerJob[] = [
       "Support PR and stakeholder communications",
       "Help develop campaign messaging",
     ],
-    commitment: "Flexible (Unpaid)",
+    commitment: "20 hours per week for 1 year (Unpaid)",
     interestTag: "Marketing & Communications",
   },
   {
@@ -190,7 +190,7 @@ export const volunteerJobs: VolunteerJob[] = [
       "Design presentation and programme materials",
       "Help maintain brand asset library",
     ],
-    commitment: "Project-based / Flexible (Unpaid)",
+    commitment: "20 hours per week for 1 year  (Unpaid)",
     interestTag: "Visual Design",
   },
 ];

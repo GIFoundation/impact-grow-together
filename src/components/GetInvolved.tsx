@@ -222,7 +222,7 @@ export const GetInvolved = ({ simplified = false }: GetInvolvedProps) => {
                 window.open(
                   "https://donate.stripe.com/bIY16Y6KK5VbaFG144",
                   "_blank",
-                  "noopener,noreferrer"
+                  "noopener,noreferrer",
                 )
               }
               size="lg"
@@ -326,6 +326,12 @@ export const GetInvolved = ({ simplified = false }: GetInvolvedProps) => {
                       <CheckCircle className="h-5 w-5 text-gif-cyan mt-0.5 flex-shrink-0" />
                       <span className="text-sm">
                         Volunteer appreciation events
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-5 w-5 text-gif-cyan mt-0.5 flex-shrink-0" />
+                      <span className="text-sm">
+                        mandatory growth mindset training for all volunteers
                       </span>
                     </li>
                   </ul>
