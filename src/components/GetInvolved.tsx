@@ -333,7 +333,7 @@ export const GetInvolved = ({ simplified = false }: GetInvolvedProps) => {
                     <li className="flex items-start gap-2">
                       <CheckCircle className="h-5 w-5 text-gif-cyan mt-0.5 flex-shrink-0" />
                       <span className="text-sm">
-                        mandatory growth mindset training for all volunteers
+                        Mandatory Growth Mindset training 
                       </span>
                     </li>
                   </ul>
