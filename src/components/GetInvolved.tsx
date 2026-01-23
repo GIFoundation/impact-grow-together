@@ -333,7 +333,7 @@ export const GetInvolved = ({ simplified = false }: GetInvolvedProps) => {
                     <li className="flex items-start gap-2">
                       <CheckCircle className="h-5 w-5 text-gif-cyan mt-0.5 flex-shrink-0" />
                       <span className="text-sm">
-                        Mandatory Growth Mindset training 
+                        Mandatory Growth Mindset training
                       </span>
                     </li>
                   </ul>
@@ -398,7 +398,7 @@ export const GetInvolved = ({ simplified = false }: GetInvolvedProps) => {
                                     About the Position
                                   </h4>
                                   <p className="text-sm text-muted-foreground">
-                                    {job.about}
+                                    {job?.short}
                                   </p>
                                 </div>
                                 <div>
@@ -417,6 +417,7 @@ export const GetInvolved = ({ simplified = false }: GetInvolvedProps) => {
                                     ))}
                                   </ul>
                                 </div>
+
                                 <div className="pt-2 border-t">
                                   <p className="text-xs text-muted-foreground">
                                     <strong>Commitment:</strong>{" "}

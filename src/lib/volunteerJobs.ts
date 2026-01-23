@@ -9,21 +9,47 @@ export interface VolunteerJob {
   interestTag?: string; // maps to VolunteerForm interests
 }
 
-export const volunteerJobs: VolunteerJob[] = [
+export const volunteerJobs = [
+  // {
+  //   slug: "corporate-fundraiser-uk",
+  //   title: "Volunteer Corporate Fundraiser (UK and US)",
+  //   location: "Remote Worldwide",
+  //   short: "Lead our corporate fundraising efforts in the UK and US.",
+  //   about:
+  //     "Lead our corporate fundraising efforts in the UK and US. This role combines hands-on prospecting (cold calling and emailing) with strategic planning to develop and implement a corporate fundraising strategy.",
+  //   responsibilities: [
+  //     "Research and identify potential corporate donors",
+  //     "Develop corporate fundraising strategy",
+  //     "Build relationships with corporate partners",
+  //   ],
+  //   commitment: "20 hours/week for 12 months (Unpaid, Remote)",
+  //   interestTag: "Corporate Fundraising",
+  // },
   {
-    slug: "corporate-fundraiser-uk",
-    title: "Volunteer Corporate Fundraiser (UK and US)",
+    slug: "volunteer-project-manager",
+    title: "Volunteer Project Manager",
     location: "Remote Worldwide",
-    short: "Lead our corporate fundraising efforts in the UK and US.",
+    short:
+      "The Volunteer Project Manager is responsible for supporting the planning, coordination, and ongoing management of Global Impact Foundation’s projects and partnerships.",
     about:
-      "Lead our corporate fundraising efforts in the UK and US. This role combines hands-on prospecting (cold calling and emailing) with strategic planning to develop and implement a corporate fundraising strategy.",
+      "The Volunteer Project Manager is responsible for supporting the planning, coordination, and ongoing management of Global Impact Foundation’s projects and partnerships. Working closely with senior leadership, this role ensures that projects are implemented in a structured, timely, and effective manner, and that activities remain aligned with the organisation’s strategic objectives and mission. Key aspects of the role include monitoring project progress, supporting coordination across internal teams and external partners, and contributing to the preparation of mid-project and end-of-project impact reports. The Volunteer Project Manager also supports documentation, reporting, and process improvement to strengthen project delivery and accountability. To gain a comprehensive understanding of the Foundation’s methodology and values, the Volunteer Project Manager is required to participate in the Global Impact Foundation mindset program. A demonstrated interest in personal development and mindset-based approaches is essential, as these principles underpin both the organisation’s work and its internal culture.",
     responsibilities: [
-      "Research and identify potential corporate donors",
-      "Develop corporate fundraising strategy",
-      "Build relationships with corporate partners",
+      "Support the planning and coordination of ongoing and new projects",
+      "Accountable and reliable, consistently following through on commitments",
+      "Track project timelines, milestones, and deliverables",
     ],
-    commitment: "20 hours/week for 12 months (Unpaid, Remote)",
-    interestTag: "Corporate Fundraising",
+    commitment: "20 hours per week for 1 year (Unpaid, Remote)",
+    interestTag: "Project Management",
+    comp: [
+      "Self-starter with the ability to work independently and take initiative",
+      "Proactive problem-solver with a solution-focused mindset",
+      "Accountable and reliable, consistently following through on commitments",
+      "Strong relationship-builder able to collaborate with diverse stakeholders",
+      "Clear and professional communicator, both written and verbal",
+      "Well-organised, with strong time and priority management skills",
+      "Adaptable and flexible in a dynamic, mission-driven environment",
+      "•	Aligned with organisational values, with a genuine interest in personal growth and self-development",
+    ],
   },
   {
     slug: "digital-marketing-content-creator-uk",
@@ -54,7 +80,7 @@ export const volunteerJobs: VolunteerJob[] = [
       "Participant registration and support",
       "Workshop assistance",
     ],
-    commitment: "20 hours per week for 1 year (Unpaid)",
+    commitment: "20 hours per week for 1 year (Unpaid, remote)",
     interestTag: "Event Support",
   },
   {
@@ -70,7 +96,7 @@ export const volunteerJobs: VolunteerJob[] = [
       "Communications support",
       "Project coordination",
     ],
-    commitment: "20 hours per week for 1 year (Unpaid)",
+    commitment: "20 hours per week for 1 year (Unpaid, remote)",
     interestTag: "Administrative Support",
   },
   {
@@ -85,7 +111,7 @@ export const volunteerJobs: VolunteerJob[] = [
       "Support onboarding and induction processes",
       "Help maintain personnel records and HR admin",
     ],
-    commitment: "20 hours per week for 1 year (Unpaid)",
+    commitment: "20 hours per week for 1 year (Unpaid, remote)",
     interestTag: "HR",
   },
   {
@@ -100,7 +126,7 @@ export const volunteerJobs: VolunteerJob[] = [
       "Maintain and document simple IT procedures",
       "Support deployments and admin for cloud services",
     ],
-    commitment: "20 hours per week for 1 year (Unpaid)",
+    commitment: "20 hours per week for 1 year (Unpaid, remote)",
     interestTag: "IT",
   },
   {
@@ -115,7 +141,7 @@ export const volunteerJobs: VolunteerJob[] = [
       "Advise on policy and compliance matters",
       "Help draft volunteer-facing documents",
     ],
-    commitment: "20 hours per week for 1 year (Unpaid)",
+    commitment: "20 hours per week for 1 year (Unpaid, remote)",
     interestTag: "Legal",
   },
   {
@@ -130,7 +156,7 @@ export const volunteerJobs: VolunteerJob[] = [
       "Prepare simple financial reports",
       "Assist with budgeting and expense tracking",
     ],
-    commitment: "20 hours per week for 1 year (Unpaid)",
+    commitment: "20 hours per week for 1 year (Unpaid, remote)",
     interestTag: "Finance",
   },
   {
@@ -160,7 +186,7 @@ export const volunteerJobs: VolunteerJob[] = [
       "Help document and improve operational processes",
       "Assist with programme logistics and resource planning",
     ],
-    commitment: "20 hours per week for 1 year (Unpaid)",
+    commitment: "20 hours per week for 1 year (Unpaid, remote)",
     interestTag: "Operations",
   },
   {
@@ -175,7 +201,7 @@ export const volunteerJobs: VolunteerJob[] = [
       "Support PR and stakeholder communications",
       "Help develop campaign messaging",
     ],
-    commitment: "20 hours per week for 1 year (Unpaid)",
+    commitment: "20 hours per week for 1 year (Unpaid, remote)",
     interestTag: "Marketing & Communications",
   },
   {
@@ -190,7 +216,7 @@ export const volunteerJobs: VolunteerJob[] = [
       "Design presentation and programme materials",
       "Help maintain brand asset library",
     ],
-    commitment: "20 hours per week for 1 year  (Unpaid)",
+    commitment: "20 hours per week for 1 year  (Unpaid, remote)",
     interestTag: "Visual Design",
   },
 ];
