@@ -100,7 +100,7 @@ export const AnonymousForm = ({
     // Check character limit before submitting
     if (charCount > MAX_CHARS) {
       alert(
-        `Message exceeds ${MAX_CHARS} character limit. Please shorten your message.`
+        `Message exceeds ${MAX_CHARS} character limit. Please shorten your message.`,
       );
       return;
     }
@@ -135,16 +135,36 @@ export const AnonymousForm = ({
   };
 
   useEffect(() => {
-    setFormData((prev) => ({
-      ...prev,
-      interests: initialInterests ?? prev.interests,
-      message: role
-        ? `Applying for: ${role}\n\n${prev.message.replace(
-            /^Applying for:.*?\n\n/,
-            ""
-          )}`
-        : prev.message,
-    }));
+    setFormData((prev) => {
+      let updated = false;
+
+      // Handle interests safely
+      if (
+        initialInterests &&
+        initialInterests.length > 0 &&
+        prev.interests.join("|") !== initialInterests.join("|")
+      ) {
+        updated = true;
+      }
+
+      // Handle role message safely
+      const cleanMessage = prev.message.replace(/^Applying for:.*?\n\n/, "");
+      const nextMessage = role
+        ? `Applying for: ${role}\n\n${cleanMessage}`
+        : prev.message;
+
+      if (prev.message !== nextMessage) {
+        updated = true;
+      }
+
+      if (!updated) return prev; // 🛑 stop infinite loop
+
+      return {
+        ...prev,
+        interests: initialInterests.length ? initialInterests : prev.interests,
+        message: nextMessage,
+      };
+    });
   }, [initialInterests, role]);
 
   return (

@@ -105,7 +105,7 @@ export const Footer = () => {
                   onClick={() => scrollToSection("contact")}
                   className="text-white/80 hover:text-white transition-colors"
                 >
-                  Contact
+                  Get in Touch
                 </button>
               </li>
             </ul>

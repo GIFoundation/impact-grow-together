@@ -21,7 +21,7 @@ const Index = () => {
         <PartnersPreview />
         <TheoryOfChangePreview />
         <GetInvolved simplified />
-        <Contact />
+        {/* <Contact /> */}
       </main>
       <Footer />
     </div>

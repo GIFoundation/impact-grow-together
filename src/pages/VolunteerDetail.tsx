@@ -54,7 +54,12 @@ const VolunteerDetail = () => {
                 <CardTitle>About the Role</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-muted-foreground">{job.about}</p>
+                {job.about.split("\n\n").map((paragraph, idx) => (
+                  <p key={idx} className="text-sm text-muted-foreground mb-4">
+                    {paragraph}
+                  </p>
+                ))}
+                {/* <p className="text-sm text-muted-foreground">{job.about}</p> */}
               </CardContent>
             </Card>
 
@@ -65,6 +70,30 @@ const VolunteerDetail = () => {
               <CardContent>
                 <ul className="list-disc pl-5 space-y-2 text-sm text-muted-foreground">
                   {job.responsibilities.map((r) => (
+                    <li key={r}>{r}</li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+            <Card className="mb-6">
+              <CardHeader>
+                <CardTitle>Qualifications & Experience</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="list-disc pl-5 space-y-2 text-sm text-muted-foreground">
+                  {job?.Qualifications?.map((r) => (
+                    <li key={r}>{r}</li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+            <Card className="mb-6">
+              <CardHeader>
+                <CardTitle>Key Competencies & Attributes</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="list-disc pl-5 space-y-2 text-sm text-muted-foreground">
+                  {job?.competencies?.map((r) => (
                     <li key={r}>{r}</li>
                   ))}
                 </ul>
