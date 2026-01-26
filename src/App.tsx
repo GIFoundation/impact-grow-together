@@ -13,8 +13,9 @@ import VolunteerDetail from "./pages/VolunteerDetail";
 import ContactPage from "./pages/ContactPage";
 import DonatePage from "./pages/DonatePage";
 import NotFound from "./pages/NotFound";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import { ScrollToTop } from "./components/ScrollToTop";
-
+import TermsOfUse from "./pages/TermsOfUse";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -34,6 +35,8 @@ const App = () => (
           <Route path="/volunteer/:slug" element={<VolunteerDetail />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/donate" element={<DonatePage />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-use" element={<TermsOfUse />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

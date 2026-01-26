@@ -1,5 +1,5 @@
 import { Heart } from "lucide-react";
-
+import { useNavigate } from "react-router-dom";
 export const Footer = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -7,7 +7,7 @@ export const Footer = () => {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
-
+  const navigate = useNavigate();
   return (
     <footer className="bg-gif-gray text-white py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -104,6 +104,7 @@ export const Footer = () => {
                 <button
                   onClick={() => scrollToSection("contact")}
                   className="text-white/80 hover:text-white transition-colors"
+                  style={{ cursor: "pointer" }}
                 >
                   Get in Touch
                 </button>
@@ -119,10 +120,20 @@ export const Footer = () => {
               reserved.
             </p>
             <div className="flex items-center gap-2 text-sm text-white/60">
-              <span>Privacy Policy</span>
+              <span
+                onClick={() => navigate("/privacy-policy")}
+                style={{ cursor: "pointer" }}
+              >
+                Privacy Policy
+              </span>
               <span>|</span>
               {/* <Heart className="h-4 w-4 text-gif-orange fill-gif-orange" /> */}
-              <span>Terms of use</span>
+              <span
+                onClick={() => navigate("/terms-of-use")}
+                style={{ cursor: "pointer" }}
+              >
+                Terms of use
+              </span>
             </div>
           </div>
         </div>
