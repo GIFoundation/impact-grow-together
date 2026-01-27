@@ -45,7 +45,7 @@ export const Contact = () => {
     // Check character limit before submitting
     if (charCount > MAX_CHARS) {
       toast.error(
-        `Message exceeds ${MAX_CHARS} character limit. Please shorten your message.`
+        `Message exceeds ${MAX_CHARS} character limit. Please shorten your message.`,
       );
       return;
     }
@@ -63,7 +63,7 @@ export const Contact = () => {
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
 
@@ -285,13 +285,13 @@ export const Contact = () => {
                     <p className="text-muted-foreground text-sm">
                       UK Branch 960 Capability Green Luton, England LU1 3PE
                     </p>
-                    <p className="text-muted-foreground text-sm">
+                    {/* <p className="text-muted-foreground text-sm">
                       Zambia Branch Plot no. 143/401a St. Bonaventure Makeni,
                       Lusaka, Lusaka Province
                     </p>
                     <p className="text-muted-foreground text-sm">
                       USA Branch 13629 W. Windsor Blvd Litchfield Park AZ 85340
-                    </p>
+                    </p> */}
                   </div>
                 </div>
               </CardContent>
