@@ -324,12 +324,12 @@ export const GetInvolved = ({ simplified = false }: GetInvolvedProps) => {
                         Recognition for your contributions
                       </span>
                     </li>
-                    <li className="flex items-start gap-2">
+                    {/* <li className="flex items-start gap-2">
                       <CheckCircle className="h-5 w-5 text-gif-cyan mt-0.5 flex-shrink-0" />
                       <span className="text-sm">
                         Volunteer appreciation events
                       </span>
-                    </li>
+                    </li> */}
                     <li className="flex items-start gap-2">
                       <CheckCircle className="h-5 w-5 text-gif-cyan mt-0.5 flex-shrink-0" />
                       <span className="text-sm">
