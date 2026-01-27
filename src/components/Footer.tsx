@@ -40,7 +40,7 @@ export const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <button
-                  onClick={() => scrollToSection("about")}
+                  onClick={() => navigate("/about")}
                   className="text-white/80 hover:text-white transition-colors"
                 >
                   About Us
@@ -48,7 +48,7 @@ export const Footer = () => {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection("programs")}
+                  onClick={() => navigate("/programs")}
                   className="text-white/80 hover:text-white transition-colors"
                 >
                   Our Programmes
@@ -56,7 +56,7 @@ export const Footer = () => {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection("impact")}
+                  onClick={() => navigate("/impact")}
                   className="text-white/80 hover:text-white transition-colors"
                 >
                   Our Impact
@@ -64,7 +64,7 @@ export const Footer = () => {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection("get-involved")}
+                  onClick={() => navigate("/get-involved")}
                   className="text-white/80 hover:text-white transition-colors"
                 >
                   Get Involved
@@ -78,7 +78,7 @@ export const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <button
-                  onClick={() => scrollToSection("contact")}
+                  onClick={() => navigate("/get-involved")}
                   className="text-white/80 hover:text-white transition-colors"
                 >
                   Donate
@@ -86,7 +86,7 @@ export const Footer = () => {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection("contact")}
+                  onClick={() => navigate("/get-involved")}
                   className="text-white/80 hover:text-white transition-colors"
                 >
                   Volunteer
@@ -94,7 +94,7 @@ export const Footer = () => {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection("contact")}
+                  onClick={() => navigate("/partners")}
                   className="text-white/80 hover:text-white transition-colors"
                 >
                   Partner with Us
@@ -102,7 +102,7 @@ export const Footer = () => {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection("contact")}
+                  onClick={() => navigate("/contact")}
                   className="text-white/80 hover:text-white transition-colors"
                   style={{ cursor: "pointer" }}
                 >
