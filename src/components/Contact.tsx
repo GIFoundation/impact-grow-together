@@ -260,6 +260,7 @@ export const Contact = () => {
                     <a
                       href="mailto:admin@global-impact-foundation.org"
                       className="text-muted-foreground hover:text-primary transition-colors"
+                      style={{ fontSize: "13px" }}
                     >
                       admin@global-impact-foundation.org
                     </a>
@@ -281,9 +282,9 @@ export const Contact = () => {
                       flexDirection: "column",
                     }}
                   >
-                    <h3 className="font-semibold mb-2">Our Offices</h3>
+                    <h3 className="font-semibold mb-2">Our Office</h3>
                     <p className="text-muted-foreground text-sm">
-                      UK Branch 960 Capability Green Luton, England LU1 3PE
+                      960 Capability Green Luton, England LU1 3PE
                     </p>
                     {/* <p className="text-muted-foreground text-sm">
                       Zambia Branch Plot no. 143/401a St. Bonaventure Makeni,
@@ -306,13 +307,13 @@ export const Contact = () => {
                   <div>
                     <h3 className="font-semibold mb-2">Call Us</h3>
                     <p className="text-muted-foreground text-sm">
-                      Available Mon-Fri, 9am-5pm
+                      Available Mon-Fri, 9am-5pm GMT
                       <br />
                       <a
-                        href="tel:+44000000000"
+                        href="tel:+44 7799 791388"
                         className="hover:text-primary transition-colors"
                       >
-                        Contact for number
+                        Call Us Now
                       </a>
                     </p>
                   </div>

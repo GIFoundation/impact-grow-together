@@ -51,10 +51,16 @@ export const Hero = () => {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-12 md:mt-0">
-        <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
+        <div className="grid lg:grid-cols-1 gap-6 md:gap-8 lg:gap-12 items-center">
           {/* Text Content - Mobile adjustments */}
-          <div className="space-y-4 md:space-y-6 lg:space-y-8 animate-fade-in order-2 lg:order-1 mt-8 lg:mt-0">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-tight text-white drop-shadow-lg">
+          <div
+            className="space-y-4 md:space-y-6 lg:space-y-8 animate-fade-in order-2 lg:order-1 mt-8 lg:mt-0"
+            style={{ width: "100%" }}
+          >
+            <h1
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-tight text-white drop-shadow-lg"
+              style={{ width: "70%" }}
+            >
               Transforming <span className="text-black">Lives</span> by
               Transforming <span className="text-black">Minds</span>
             </h1>
@@ -117,7 +123,7 @@ export const Hero = () => {
           </div>
 
           {/* Redesigned Carousel - Full height split layout */}
-          <div className="relative animate-scale-in h-full order-1 lg:order-2"></div>
+          {/* <div className="relative animate-scale-in h-full order-1 lg:order-2"></div> */}
         </div>
       </div>
 
