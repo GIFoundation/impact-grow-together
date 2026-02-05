@@ -1,6 +1,18 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { Globe, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import accaImg from "@/assets/partners/acca.jpg";
@@ -9,43 +21,56 @@ import empoweredGrowthImg from "@/assets/partners/empowered-growth.jpg";
 import africanImpactImg from "@/assets/partners/african-impact.jpg";
 import youthCafeImg from "@/assets/partners/youth-cafe.jpg";
 import liberianYouthBankImg from "@/assets/partners/liberian-youth-bank.jpg";
-
+import agapeImg from "@/assets/partners/agape.jpg";
 const partnersPreview = [
+  {
+    country: "Uganda",
+    name: "Era92 Elevate 2026",
+    description:
+      "Era92 Elevate 2026 is a national skills and empowerment initiative in Uganda. GIF partners with Era92 to deliver mindset transformation alongside digital skills training, equipping 3,000 underserved youth with confidence, resilience, and pathways to dignified employment.",
+    image: "/hero.jpg",
+  },
   {
     country: "United Kingdom",
     name: "ACCA",
-    description: "Global accountancy body partnering to deliver practical experience in accountancy, AI, and mindset development.",
+    description:
+      "Global accountancy body partnering to deliver practical experience in accountancy, AI, and mindset development.",
     image: accaImg,
   },
   {
     country: "United Kingdom",
     name: "AFFORD",
-    description: "Delivering mindset programmes across Africa and the Diaspora with global reach and funding access.",
+    description:
+      "Delivering mindset programmes across Africa and the Diaspora with global reach and funding access.",
     image: affordImg,
+  },
+  {
+    country: "Cameroon",
+    name: "AGAPE Association",
+    description:
+      "AGAPE is a non-lucrative association who works in a multidimensional way in the care of Vulnerable Children in order to facilitate the optimization of their social, educational, professional status and their integration into society.",
+    image: agapeImg,
   },
   {
     country: "Zambia",
     name: "African Impact Foundation",
-    description: "Empowering young people in Southern and Eastern Africa to break the cycle of poverty.",
+    description:
+      "Empowering young people in Southern and Eastern Africa to break the cycle of poverty.",
     image: africanImpactImg,
   },
   {
     country: "United Kingdom",
     name: "Empowered Growth Marketing",
-    description: "AI-powered growth marketing solutions for premium brands across global markets.",
+    description:
+      "AI-powered growth marketing solutions for premium brands across global markets.",
     image: empoweredGrowthImg,
   },
   {
     country: "Liberia",
     name: "Liberian Youth National Bank",
-    description: "Empowering youth entrepreneurship, creativity, and innovation for national sustainability.",
+    description:
+      "Empowering youth entrepreneurship, creativity, and innovation for national sustainability.",
     image: liberianYouthBankImg,
-  },
-  {
-    country: "Kenya",
-    name: "Youth Café",
-    description: "Africa's largest community of youth professionals driving socio-economic impact.",
-    image: youthCafeImg,
   },
 ];
 
@@ -53,14 +78,15 @@ export const PartnersPreview = () => {
   return (
     <section id="partners" className="py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/5 to-background"></div>
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">
             Our Partners
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Building stronger communities through strategic partnerships across Africa
+            Building stronger communities through strategic partnerships across
+            Africa
           </p>
         </div>
 
@@ -89,7 +115,7 @@ export const PartnersPreview = () => {
                       </span>
                     </div>
                   </div>
-                  
+
                   <CardHeader>
                     <CardTitle className="text-xl">{partner.name}</CardTitle>
                     <CardDescription className="text-sm leading-relaxed">
