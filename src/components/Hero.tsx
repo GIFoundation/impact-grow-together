@@ -162,7 +162,7 @@ export const Hero = () => {
                       <div className="absolute bottom-4 left-4">
                         <div className="bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full">
                           <span className="text-sm font-semibold text-gif-orange">
-                            Workshop
+                            Training
                           </span>
                         </div>
                       </div>
