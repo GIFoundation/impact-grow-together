@@ -25,6 +25,19 @@ import youthCafeImg from "@/assets/partners/youth-cafe.jpg";
 
 const partners = [
   {
+    country: "Uganda",
+    name: "Era92 Elevate 2026",
+    description:
+      "Era92 Elevate 2026 is a national skills and empowerment initiative in Uganda. GIF partners with Era92 to deliver mindset transformation alongside digital skills training, equipping 3,000 underserved youth with confidence, resilience, and pathways to dignified employment.",
+    image: "/hero.jpg",
+    highlights: [
+      "Training 3,000 youth aged 15–35 in market‑relevant digital skills.",
+      "Six community hubs offering mentorship, internships, and real‑world exposure.",
+      "GIF’s integrated six‑month mindset curriculum with weekly coaching.",
+      "Train‑the‑Trainer pathway empowering youth leaders to sustain transformation locally.",
+    ],
+  },
+  {
     country: "United Kingdom",
     name: "ACCA",
     description:
